@@ -1,0 +1,48 @@
+import React from 'react';
+import Code from './Code/Code';
+
+export default function GettingStrted() {
+  return (
+    <div id="#getting-started" className="_container _container_large">
+      <div className="content--session-container">
+        <h1 className="base--h1">Installation</h1>
+
+        <h2 className="base--h2">npm</h2>
+        <Code type="bash">
+          npm install watson-developer-cloud-react-components --save
+        </Code>
+        <p className="base--p">
+          Add components to your React file where needed:
+        </p>
+        <Code type="jsx">
+{`import { Header, Jumbotron, Code, Tabs } from
+'./node_modules/watson-developer-cloud-react-components/dist/components/index.js';`}
+        </Code>
+        <p className="base--p">
+          Add a reference to the stylesheet:
+        </p>
+        <Code type="markup">
+{`<!-- HTML if you use Gulp or Grunt -->
+<link
+rel="stylesheet"
+type="text/css"
+href="./node_modules/watson-developer-cloud-react-components/dist/css/
+watson-developer-cloud-react-components.min.css"
+>`}
+        </Code>
+
+        <h2 className="base--h2">Browser</h2>
+        <Code type="markup">{`
+<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>
+<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />
+`}
+        </Code>
+        <p className="base--p">
+          To use components that use images or fonts, make sure that the image or
+          fonts files are correctly referenced in your project relative to the CSS
+          output file.
+        </p>
+      </div>
+    </div>
+  );
+}

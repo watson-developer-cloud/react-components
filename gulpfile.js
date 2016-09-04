@@ -3,21 +3,32 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
+const ghPages = require('gulp-gh-pages');
 const autoprefixer = require('gulp-autoprefixer');
-const source = require('vinyl-source-stream');
-const browserify = require('browserify');
 const minifyCss = require('gulp-minify-css');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
+const source = require('vinyl-source-stream');
+const browserify = require('browserify');
+const browserSync = require('browser-sync').create();
+
+const reloadBrowser = (done) => {
+  browserSync.reload();
+  done();
+};
+
 const pkg = require('./package.json');
 
 const paths = {
   build: 'dist',
-  gh_pages: `docs/${pkg.version}`,
   main_css: 'src/stylesheets/main.scss',
   js: 'src/components/**/*.js*',
   static: 'static',
   ui_components: './node_modules/watson-developer-cloud-ui-components',
+  example_css: 'example/src/app.scss',
+  example_js: 'example/src/index.js',
+  example_build: 'example/build',
 };
 
 gulp.task('css', () =>
@@ -35,11 +46,9 @@ gulp.task('css', () =>
     }))
     .pipe(rename(`css/${pkg.name}.css`))
     .pipe(gulp.dest(paths.build))
-    .pipe(gulp.dest(paths.gh_pages))
     .pipe(minifyCss())
     .pipe(rename(`css/${pkg.name}.min.css`))
     .pipe(gulp.dest(paths.build))
-    .pipe(gulp.dest(paths.gh_pages))
 );
 
 
@@ -55,7 +64,7 @@ gulp.task('js', ['components'], () => {
     if (isProduction) {
       bundler = bundler.plugin('minifyify', {
         map: true,
-        output: `${paths.build}/${pkg.name}.min.js.map`,
+        output: `${paths.build}/js/${pkg.name}.min.js.map`,
         compress: {
           drop_debugger: true,
           drop_console: true,
@@ -63,17 +72,18 @@ gulp.task('js', ['components'], () => {
       });
       bundler = bundler.plugin('uglifyify', { global: true });
     }
-    bundler.bundle().on('error', (err) =>
+    return bundler.bundle().on('error', (err) =>
       // eslint-disable-next-line
       console.log('[browserify error] prod:', isProduction, err.message)
     )
-    .pipe(source(`${pkg.name}${isProduction ? '.min' : ''}.js`))
-    .pipe(gulp.dest(paths.build))
-    .pipe(gulp.dest(paths.gh_pages));
+    .pipe(source(`js/${pkg.name}${isProduction ? '.min' : ''}.js`))
+    .pipe(gulp.dest(paths.build));
   };
 
-  createJsBundle(false); // uncompressed js with source maps
-  createJsBundle(true);  // minimized and uglified js
+  return [
+    createJsBundle(false), // uncompressed js with source maps
+    createJsBundle(true),  // minimized and uglified js
+  ];
 });
 
 // compile the components and place them in dist.
@@ -86,6 +96,7 @@ gulp.task('components', () =>
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.build}/components`))
+    .pipe(browserSync.stream())
 );
 
 // merge ui-component fonts and static fonts in this library
@@ -95,7 +106,6 @@ gulp.task('fonts', () =>
     `${paths.static}/fonts/**`,
   ])
   .pipe(gulp.dest(`${paths.build}/fonts`))
-  .pipe(gulp.dest(`${paths.gh_pages}/fonts`))
 );
 
 // merge ui-component images and static images in this library
@@ -104,10 +114,68 @@ gulp.task('images', () =>
     `${paths.ui_components}/dist/images/**`,
     `${paths.static}/images/**`,
   ])
+  .pipe(imagemin())
   .pipe(gulp.dest(`${paths.build}/images`))
-  .pipe(gulp.dest(`${paths.gh_pages}/images`))
 );
 
-gulp.task('build', ['images', 'fonts', 'css', 'components', 'js']);
+gulp.task('prepare-site', ['build', 'example'], () =>
+  [
+    gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('gh-pages/images')),
+    gulp.src(`${paths.build}/fonts/**/*`).pipe(gulp.dest('gh-pages/fonts')),
+    gulp.src(['example/**/*', '!example/src/**']).pipe(gulp.dest('gh-pages')),
+  ]
+);
+
+gulp.task('gh-pages', ['prepare-site'], () =>
+  gulp.src('gh-pages/**/*').pipe(ghPages({ force: true }))
+);
+
+gulp.task('example-css', () =>
+  gulp.src(paths.example_css)
+    .pipe(
+      sass({
+        errLogToConsole: true,
+        includePaths: ['./node_modules'],
+        outputStyle: 'nested',
+      }).on('error', sass.logError)
+    )
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false,
+    }))
+    .pipe(rename('bundle.css'))
+    .pipe(gulp.dest(paths.example_build))
+    .pipe(browserSync.stream())
+);
+
+gulp.task('example-js', () =>
+  browserify(paths.example_js)
+  .transform('babelify', {
+    presets: ['es2015', 'stage-0', 'react'],
+    plugins: ['transform-object-assign'],
+  }).bundle().on('error', (err) =>
+    // eslint-disable-next-line
+    console.log('[browserify error]', err.message)
+  )
+  .pipe(source('bundle.js'))
+  .pipe(gulp.dest(paths.example_build))
+);
+
+gulp.task('example-js-watch', ['example-js'], reloadBrowser);
+
+gulp.task('build', ['images', 'fonts', 'css', 'components', 'js', 'example']);
+gulp.task('example', ['example-css', 'example-js']);
 
 gulp.task('default', ['build']);
+
+gulp.task('serve', ['example'], () => {
+  browserSync.init({
+    ui: { port: 3000 },
+    server: ['./dist', './example'],
+  });
+
+  gulp.watch(['src/stylesheets/**/*.scss', 'example/src/**/*.scss'], ['example-css']);
+  gulp.watch(['src/components/**/*.js*', 'example/src/**/*.js*'], ['example-js-watch']);
+  gulp.watch('example/*.html').on('change', browserSync.reload);
+});
+

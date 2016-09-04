@@ -6,9 +6,10 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 ## Getting Started
 
 1. Install the library
-```
-npm install watson-developer-cloud-react-components
-```
+
+  ```
+  npm install watson-developer-cloud-react-components
+  ```
 
 2. Add components to your React file where needed:
 
@@ -21,6 +22,8 @@ npm install watson-developer-cloud-react-components
 ```html
 <link rel="stylesheet" type="text/css" href="./PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/watson-developer-cloud-react-components.min.css">
 ```
+
+4. Images and fonts should be copied from `/PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/` into your static folder.
 
 ## How to Contribute
 
@@ -35,7 +38,7 @@ npm install watson-developer-cloud-react-components
   ```
   npm run dev
   ```
-  Changes will refresh the page thanks to livereload.
+  Changes will refresh the page thanks to [browsersync](https://www.browsersync.io).
 
 
 3. Run the build command before pushing merge request:
@@ -52,20 +55,19 @@ npm install watson-developer-cloud-react-components
 ├── gulpfile.js
 ├── package.json
 ├── dist
-│   ├── components            // ES5 react components
+│   ├── components             // ES5 react components
 │   ├── css
 │   ├── fonts
 │   ├── images
 │   ├── watson-developer-cloud-react-components.js
 │   ├── watson-developer-cloud-react-components.min.js
 │   └── watson-developer-cloud-react-components.min.js.map
-├── docs                      // Github pages
-│   └── 0.0.1                 // documentation for v0.0.1
-│       ├── css
-│       ├── fonts
-│       ├── images
-│       ├── watson-developer-cloud-react-components.js
-│       └── watson-developer-cloud-react-components.min.js
+├── example                    // Example to be use in gh-pages
+│   ├── build
+│   │   ├── bundle.css
+│   │   └── bundle.js
+│   ├── index.html
+│   └── src
 ├── src
 │   ├── components             // React components
 │   └── stylesheets            // Sass files
