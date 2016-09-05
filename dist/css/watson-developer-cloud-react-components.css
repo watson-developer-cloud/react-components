@@ -710,11 +710,6 @@ input[type="week"]::-webkit-inner-spin-button {
   margin-top: 3rem;
   margin-bottom: 3rem; }
 
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icon-fonts/icons.eot");
-  src: url("../fonts/icon-fonts/icons.eot?#iefix") format("eot"), url("../fonts/icon-fonts/icons.woff2") format("woff2"), url("../fonts/icon-fonts/icons.woff") format("woff"), url("../fonts/icon-fonts/icons.ttf") format("truetype"), url("../fonts/icon-fonts/icons.svg#icons") format("svg"); }
-
 .icon:before {
   font-family: "icons";
   -webkit-font-smoothing: antialiased;

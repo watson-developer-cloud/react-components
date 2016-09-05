@@ -25,7 +25,6 @@ const paths = {
   main_css: 'src/stylesheets/main.scss',
   js: 'src/components/**/*.js*',
   static: 'static',
-  ui_components: './node_modules/watson-developer-cloud-ui-components',
   example_css: 'example/src/app.scss',
   example_js: 'example/src/index.js',
   example_build: 'example/build',
@@ -101,19 +100,13 @@ gulp.task('components', () =>
 
 // merge ui-component fonts and static fonts in this library
 gulp.task('fonts', () =>
-  gulp.src([
-    `${paths.ui_components}/dist/fonts/**`,
-    `${paths.static}/fonts/**`,
-  ])
+  gulp.src(`${paths.static}/fonts/**`)
   .pipe(gulp.dest(`${paths.build}/fonts`))
 );
 
 // merge ui-component images and static images in this library
 gulp.task('images', () =>
-  gulp.src([
-    `${paths.ui_components}/dist/images/**`,
-    `${paths.static}/images/**`,
-  ])
+  gulp.src(`${paths.static}/images/**`)
   .pipe(imagemin())
   .pipe(gulp.dest(`${paths.build}/images`))
 );
@@ -170,6 +163,7 @@ gulp.task('default', ['build']);
 
 gulp.task('serve', ['example'], () => {
   browserSync.init({
+    notify: true,
     ui: { port: 3000 },
     server: ['./dist', './example'],
   });

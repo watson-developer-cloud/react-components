@@ -191,7 +191,7 @@ function GettingStrted() {
       _react2.default.createElement(
         _Code2.default,
         { type: 'markup' },
-        '<!-- HTML if you use Gulp or Grunt -->\n<link\nrel="stylesheet"\ntype="text/css"\nhref="./node_modules/watson-developer-cloud-react-components/dist/css/\nwatson-developer-cloud-react-components.min.css"\n>'
+        '<!-- HTML if you use Gulp or Grunt -->\n<link\n  rel="stylesheet"\n  type="text/css"\n  href="./node_modules/watson-developer-cloud-react-components/dist/css/\n  watson-developer-cloud-react-components.min.css"\n>'
       ),
       _react2.default.createElement(
         'h2',

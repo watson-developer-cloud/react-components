@@ -24,10 +24,10 @@ export default function GettingStrted() {
         <Code type="markup">
 {`<!-- HTML if you use Gulp or Grunt -->
 <link
-rel="stylesheet"
-type="text/css"
-href="./node_modules/watson-developer-cloud-react-components/dist/css/
-watson-developer-cloud-react-components.min.css"
+  rel="stylesheet"
+  type="text/css"
+  href="./node_modules/watson-developer-cloud-react-components/dist/css/
+  watson-developer-cloud-react-components.min.css"
 >`}
         </Code>
 
