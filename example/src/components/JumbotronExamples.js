@@ -17,7 +17,7 @@ export default function HeaderExamples() {
               documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
               apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
               version="Beta"
-              serviceIcon="/images/service-icon.svg"
+              serviceIcon="images/service-icon.svg"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             />
           </div>
@@ -29,7 +29,7 @@ export default function HeaderExamples() {
   documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
   apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
   version="Beta"
-  serviceIcon="/images/service-icon.png"
+  serviceIcon="images/service-icon.svg"
   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 />`}</Code>
           </div>
