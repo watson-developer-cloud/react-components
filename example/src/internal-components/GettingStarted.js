@@ -1,11 +1,11 @@
 import React from 'react';
-import Code from './Code/Code';
+import Code from '../../../src/components/Code';
 
 export default function GettingStrted() {
   return (
-    <div id="#getting-started" className="_container _container_large">
+    <div className="_container _container_large">
       <div className="content--session-container">
-        <h1 className="base--h1">Installation</h1>
+        <h1 id="#getting-started" className="base--h1">Installation</h1>
 
         <h2 className="base--h2">npm</h2>
         <Code type="bash">

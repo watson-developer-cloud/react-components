@@ -1,27 +1,44 @@
 'use strict';
 
-var React = require('react');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Code = exports.TabsPane = exports.Tabs = exports.Jumbotron = exports.Header = exports.Footer = undefined;
 
-var Header = require('./Header');
-// const Footer = require('./Footer');
-var Jumbotron = require('./Jumbotron');
-var App = require('./App');
+var _Footer2 = require('./Footer');
 
-module.exports = function Index() {
-  return React.createElement(
-    'div',
-    null,
-    React.createElement(Header, null),
-    React.createElement(Jumbotron, {
-      serviceName: 'Similarity Search',
-      repository: 'https://github.ibm.com/watson-developer-cloud/similarity-search-nodejs',
-      docLink: 'https://www.ibm.com/watson/developercloud/doc/visual-recognition/',
-      apiReferenceLink: 'https://www.ibm.com/watson/developercloud/visual-recognition/api/v3',
-      version: 'Beta',
-      serviceIcon: '/images/service-icon.png',
-      description: 'Visual Recognition uses deep learning algorithms to analyze images for \u0003scenes, objects, faces, text, and other subjects.'
-    }),
-    React.createElement(App, null)
-  );
-};
+var _Footer3 = _interopRequireDefault(_Footer2);
+
+var _Header2 = require('./Header');
+
+var _Header3 = _interopRequireDefault(_Header2);
+
+var _Jumbotron2 = require('./Jumbotron');
+
+var _Jumbotron3 = _interopRequireDefault(_Jumbotron2);
+
+var _Tabs2 = require('./Tabs');
+
+var _Tabs3 = _interopRequireDefault(_Tabs2);
+
+var _Pane = require('./Tabs/Pane');
+
+var _Pane2 = _interopRequireDefault(_Pane);
+
+var _Code2 = require('./Code');
+
+var _Code3 = _interopRequireDefault(_Code2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Footer = _Footer3.default; // Layout
+
+exports.Header = _Header3.default;
+exports.Jumbotron = _Jumbotron3.default;
+
+// Elements
+
+exports.Tabs = _Tabs3.default;
+exports.TabsPane = _Pane2.default;
+exports.Code = _Code3.default;
 //# sourceMappingURL=index.js.map

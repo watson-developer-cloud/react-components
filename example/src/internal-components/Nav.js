@@ -11,11 +11,6 @@ export default function Nav() {
         </div>
         <div className="top-nav--spacer" />
         <nav role="menubar" className="top-nav--nav">
-          <a href="#getting-started" role="menuitem" className="base--a top-nav--nav-li-link">
-            <li role="presentation" className="base--li top-nav--nav-li">
-              GETTING STARTED
-            </li>
-          </a>
           <a href="#components" role="menuitem" className="base--a top-nav--nav-li-link">
             <li role="presentation" className="base--li top-nav--nav-li">
               COMPONENTS

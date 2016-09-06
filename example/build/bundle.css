@@ -1597,6 +1597,11 @@ header {
     width: 100%; }
   .header--header {
     line-height: 1; }
+  .header--get-started-icon {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    height: 16px;
+    width: 16px; }
   .header--nav-ul.base--ul_inline .header--nav-li {
     display: block;
     margin-bottom: 0.25rem; }
@@ -2839,3 +2844,39 @@ code[class*="language-"], pre[class*="language-"] {
   white-space: pre;
   word-break: normal;
   word-spacing: normal; }
+
+.example {
+  padding: 1em; }
+
+.block, .example {
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  height: 100%; }
+
+.icon-example .icon {
+  height: 2em;
+  width: 2em;
+  margin-right: .3em;
+  vertical-align: middle; }
+
+.block-example {
+  display: block;
+  padding: 1rem;
+  color: #fff; }
+  @media (min-width: 1024px) {
+    .block-example {
+      width: 48.93617%;
+      margin-right: 2.12766%;
+      float: left;
+      display: block; } }
+
+.block-code {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  margin-top: 0; }
+  @media (min-width: 1024px) {
+    .block-code {
+      width: 48.93617%;
+      float: left;
+      display: block; } }

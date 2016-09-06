@@ -511,3 +511,40 @@ code[class*="language-"], pre[class*="language-"] {
     word-break: normal;
     word-spacing: normal;
 }
+
+.example {
+  padding: 1em;
+}
+.block, .example {
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  height: 100%;
+}
+
+.icon-example .icon {
+  height: 2em;
+  width: 2em;
+  margin-right: .3em;
+  vertical-align: middle;
+}
+
+.block-example {
+  display: block;
+  padding: get('rhythm') / 2;
+  color: get('white');
+
+  @include breakpoint(get('large')) {
+    @include grid(6);
+  }
+}
+
+.block-code {
+  display: block;
+  padding: get('rhythm') / 2;
+  color: get('white');
+  margin-top: 0;
+
+  @include breakpoint(get('large')) {
+    @include grid(6, $has-right-gutter: false);
+  }
+}

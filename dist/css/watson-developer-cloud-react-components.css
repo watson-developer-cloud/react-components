@@ -1597,6 +1597,11 @@ header {
     width: 100%; }
   .header--header {
     line-height: 1; }
+  .header--get-started-icon {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    height: 16px;
+    width: 16px; }
   .header--nav-ul.base--ul_inline .header--nav-li {
     display: block;
     margin-bottom: 0.25rem; }
