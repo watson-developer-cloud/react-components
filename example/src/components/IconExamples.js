@@ -86,36 +86,6 @@ export default function IconExamples() {
             </Code>
           </div>
         </div>
-        <h3 className="base--h3">Custom color and size</h3>
-        <div className="row">
-          <div className="block-example">
-            <p className="base--p icon-example">
-              <Icon type="plus" size="1em" />
-              - 1em
-            </p>
-            <p className="base--p icon-example">
-              <Icon type="plus" size="80px" />
-              - 80px
-            </p>
-            <p className="base--p icon-example">
-              <Icon type="plus" fill="#333333" />
-              - #333333
-            </p>
-            <p className="base--p icon-example">
-              <Icon type="plus" fill="green" />
-              - green
-            </p>
-          </div>
-          <div className="block-code">
-            <Code type="jsx">
-{`<Icon type="plus" size="1em" />
-<Icon type="plus" size="80px" />
-<Icon type="plus" fill="#333333" />
-<Icon type="plus" fill="green" />
-`}
-            </Code>
-          </div>
-        </div>
       </div>
     </section>
   );

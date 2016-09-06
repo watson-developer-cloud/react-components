@@ -21,10 +21,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Tabs = function (_React$Component) {
   _inherits(Tabs, _React$Component);
 
-  function Tabs() {
+  function Tabs(props) {
     _classCallCheck(this, Tabs);
 
-    return _possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).call(this, props));
+
+    _this.state = {
+      selected: props.selected,
+      children: []
+    };
+    return _this;
   }
 
   _createClass(Tabs, [{
@@ -90,10 +96,6 @@ Tabs.propTypes = {
 };
 Tabs.defaultProps = {
   selected: 0,
-  children: []
-};
-Tabs.initialState = {
-  selected: undefined.props.selected,
   children: []
 };
 exports.default = Tabs;

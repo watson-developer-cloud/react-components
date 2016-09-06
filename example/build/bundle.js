@@ -305,52 +305,6 @@ function IconExamples() {
             '<Icon type="plus" />\n<Icon type="back" />\n<Icon type="close" />\n<Icon type="check" />\n<Icon type="success" />\n<Icon type="success-o" />\n<Icon type="error" />\n<Icon type="error-o" />\n<Icon type="warning" />\n<Icon type="info" />\n<Icon type="reset" />\n<Icon type="up" />\n<Icon type="link" />\n<Icon type="loader" />\n'
           )
         )
-      ),
-      _react2.default.createElement(
-        'h3',
-        { className: 'base--h3' },
-        'Custom color and size'
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'block-example' },
-          _react2.default.createElement(
-            'p',
-            { className: 'base--p icon-example' },
-            _react2.default.createElement(_Icon2.default, { type: 'plus', size: '1em' }),
-            '- 1em'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'base--p icon-example' },
-            _react2.default.createElement(_Icon2.default, { type: 'plus', size: '80px' }),
-            '- 80px'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'base--p icon-example' },
-            _react2.default.createElement(_Icon2.default, { type: 'plus', fill: '#333333' }),
-            '- #333333'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'base--p icon-example' },
-            _react2.default.createElement(_Icon2.default, { type: 'plus', fill: 'green' }),
-            '- green'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'block-code' },
-          _react2.default.createElement(
-            _Code2.default,
-            { type: 'jsx' },
-            '<Icon type="plus" size="1em" />\n<Icon type="plus" size="80px" />\n<Icon type="plus" fill="#333333" />\n<Icon type="plus" fill="green" />\n'
-          )
-        )
       )
     )
   );
