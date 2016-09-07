@@ -607,7 +607,7 @@ function GettingStrted() {
       _react2.default.createElement(
         _Code2.default,
         { type: 'markup' },
-        '\n<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>\n<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />\n'
+        '<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>\n<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />\n'
       ),
       _react2.default.createElement(
         'p',
