@@ -2400,8 +2400,6 @@ body {
   .code-block--ui {
     margin-top: 0rem;
     text-align: center; }
-  .code-block--code {
-    margin-top: 2rem; }
   .code-block .base--pre {
     transition: 0.2s;
     width: 100%;
