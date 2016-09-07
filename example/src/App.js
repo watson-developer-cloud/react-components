@@ -9,7 +9,7 @@ import HeaderExamples from './components/HeaderExamples';
 import FooterExamples from './components/FooterExamples';
 import JumbotronExamples from './components/JumbotronExamples';
 import TabsExamples from './components/TabsExamples';
-
+import CodeExamples from './components/CodeExamples';
 export default function App() {
   return (
     <div>
@@ -21,6 +21,7 @@ export default function App() {
       <FooterExamples />
       <JumbotronExamples />
       <TabsExamples />
+      <CodeExamples />
     </div>
   );
 }

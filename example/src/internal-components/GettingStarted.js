@@ -16,7 +16,7 @@ export default function GettingStrted() {
         </p>
         <Code type="jsx">
 {`import { Header, Jumbotron, Code, Tabs } from
-'./node_modules/watson-developer-cloud-react-components/dist/components/index.js';`}
+'./node_modules/watson-developer-cloud-react-components/dist/components';`}
         </Code>
         <p className="base--p">
           Add a reference to the stylesheet:
