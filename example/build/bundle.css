@@ -2148,6 +2148,14 @@ header {
 #root {
   margin-top: 0px; }
 
+.react-icon {
+  text-align: left; }
+
+.react-icon-image {
+  margin-top: 0.5rem;
+  max-width: 7rem;
+  max-height: 7rem; }
+
 .header--version-tag {
   margin-left: 1rem; }
 

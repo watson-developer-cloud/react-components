@@ -638,8 +638,20 @@ function LeadSpace() {
     { className: "_full-width-row _full-width-row_gray header" },
     _react2.default.createElement(
       "div",
-      { className: "_container _container_xx-large" },
-      _react2.default.createElement("div", { className: "_full-width-row--aside" }),
+      { className: "_container _container_large" },
+      _react2.default.createElement(
+        "div",
+        { className: "_full-width-row--aside" },
+        _react2.default.createElement(
+          "div",
+          { className: "header--icon react-icon" },
+          _react2.default.createElement("img", {
+            className: "header--icon-image react-icon-image",
+            src: "/images/react-logo.svg",
+            alt: "React Components Logo"
+          })
+        )
+      ),
       _react2.default.createElement(
         "div",
         { className: "_full-width-row--main" },
