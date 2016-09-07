@@ -51,8 +51,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
     "browser-sync": "^2.14.3",
-    "browserify-global-shim": "^1.0.3",
     "browserify": "^13.1.0",
+    "browserify-global-shim": "^1.0.3",
     "eslint": "^3.3.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.14.0",
@@ -73,7 +73,7 @@
     "react-prism": "^3.2.1",
     "uglifyify": "^3.0.2",
     "vinyl-source-stream": "^1.1.0",
-    "watson-developer-cloud-ui-components": "../ui-components"
+    "watson-developer-cloud-ui-components": "^0.4.0"
   },
   "peerDependencies": {
     "react": "~0.14 || ~15.3.0",

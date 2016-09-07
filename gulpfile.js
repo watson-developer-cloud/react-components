@@ -35,7 +35,10 @@ gulp.task('css', () =>
     .pipe(
       sass({
         errLogToConsole: true,
-        includePaths: ['./node_modules'],
+        includePaths: [
+          './node_modules/watson-developer-cloud-ui-components/node_modules/',
+          './node_modules/',
+        ],
         outputStyle: 'nested',
       }).on('error', sass.logError)
     )
@@ -128,7 +131,10 @@ gulp.task('example-css', () =>
     .pipe(
       sass({
         errLogToConsole: true,
-        includePaths: ['./node_modules'],
+        includePaths: [
+          './node_modules/watson-developer-cloud-ui-components/node_modules/',
+          './node_modules/',
+        ],
         outputStyle: 'nested',
       }).on('error', sass.logError)
     )
@@ -172,4 +178,3 @@ gulp.task('serve', ['example'], () => {
   gulp.watch(['src/components/**/*.js*', 'example/src/**/*.js*'], ['example-js-watch']);
   gulp.watch('example/*.html').on('change', browserSync.reload);
 });
-
