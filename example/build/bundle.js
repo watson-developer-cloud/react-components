@@ -607,7 +607,7 @@ function GettingStrted() {
       _react2.default.createElement(
         _Code2.default,
         { type: 'markup' },
-        '\n<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>\n<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />\n'
+        '<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>\n<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />\n'
       ),
       _react2.default.createElement(
         'p',
@@ -638,8 +638,20 @@ function LeadSpace() {
     { className: "_full-width-row _full-width-row_gray header" },
     _react2.default.createElement(
       "div",
-      { className: "_container _container_xx-large" },
-      _react2.default.createElement("div", { className: "_full-width-row--aside" }),
+      { className: "_container _container_large" },
+      _react2.default.createElement(
+        "div",
+        { className: "_full-width-row--aside" },
+        _react2.default.createElement(
+          "div",
+          { className: "header--icon react-icon" },
+          _react2.default.createElement("img", {
+            className: "header--icon-image react-icon-image",
+            src: "/images/react-logo.svg",
+            alt: "React Components Logo"
+          })
+        )
+      ),
       _react2.default.createElement(
         "div",
         { className: "_full-width-row--main" },

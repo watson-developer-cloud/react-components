@@ -1787,7 +1787,9 @@ header {
   .go-back .icon {
     font-size: 0.75em;
     vertical-align: middle;
-    margin-right: 0.4rem; }
+    margin-right: 0.4rem;
+    width: 1rem;
+    height: 1rem; }
   .go-back--link-span {
     vertical-align: middle; }
 
@@ -2148,6 +2150,14 @@ header {
 #root {
   margin-top: 0px; }
 
+.react-icon {
+  text-align: left; }
+
+.react-icon-image {
+  margin-top: 0.5rem;
+  max-width: 7rem;
+  max-height: 7rem; }
+
 .header--version-tag {
   margin-left: 1rem; }
 
@@ -2400,8 +2410,6 @@ body {
   .code-block--ui {
     margin-top: 0rem;
     text-align: center; }
-  .code-block--code {
-    margin-top: 2rem; }
   .code-block .base--pre {
     transition: 0.2s;
     width: 100%;
