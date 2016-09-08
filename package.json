@@ -74,7 +74,7 @@
     "react-prism": "^3.2.1",
     "uglifyify": "^3.0.2",
     "vinyl-source-stream": "^1.1.0",
-    "watson-developer-cloud-ui-components": "0.4.0"
+    "watson-developer-cloud-ui-components": "^0.4.0"
   },
   "peerDependencies": {
     "react": "~0.14 || ~15.3.0",

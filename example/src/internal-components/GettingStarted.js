@@ -32,8 +32,8 @@ export default function GettingStrted() {
         </Code>
 
         <h2 className="base--h2">Browser</h2>
-        <Code type="markup">{`
-<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>
+        <Code type="markup">
+{`<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>
 <link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />
 `}
         </Code>
