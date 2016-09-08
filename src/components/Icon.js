@@ -43,7 +43,9 @@ export default class Icon extends React.Component {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
-        fill={colors.green_50}
+        fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <g>
@@ -60,6 +62,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="-4.9 9.1 24 24"
         fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path
@@ -75,6 +79,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 12 9.1"
         fill={colors.green_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <polygon className="checkbox" points="4.2,6.5 1.3,3.6 0,4.8 4.2,9.1 12,1.3 10.7,0 " />
@@ -84,6 +90,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.red_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path
@@ -104,6 +112,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.red_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path className="path1" d="M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM554.667 725.333h-85.333v-85.333h85.333v85.333zM554.667 426.667l-25.6 153.6h-34.133l-25.6-153.6v-170.667h85.333v170.667z" />
@@ -113,6 +123,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.yellow_20}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <g>
@@ -126,6 +138,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.blue_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <g>
@@ -137,6 +151,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <circle fill="none" className="st0" cx="11.9" cy="12" r="10" />
@@ -148,6 +164,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.green_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path d="M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM426.667 699.733l-157.867-157.867 59.733-59.733 98.133 98.133 268.8-238.933 55.467 64-324.267 294.4z" />
@@ -157,6 +175,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.green_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path
@@ -171,6 +191,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1024 1024"
         fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path
@@ -182,6 +204,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
         fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path
@@ -194,6 +218,8 @@ export default class Icon extends React.Component {
         viewBox="25 25 50 50"
         className="loader"
         fill={colors.purple_50}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <circle cx="50" cy="50" r="20" className="loader--path" />
@@ -203,6 +229,8 @@ export default class Icon extends React.Component {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
         fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
         {...this.props}
       >
         <path

@@ -25,7 +25,7 @@ function Jumbotron(props) {
       _react2.default.createElement(_Icon2.default, { type: 'back' }),
       _react2.default.createElement(
         'a',
-        { href: '#go-back', className: 'base--a go-back--link' },
+        { href: props.backTo, className: 'base--a go-back--link' },
         _react2.default.createElement(
           'span',
           { className: 'go-back--link-span' },

@@ -23318,7 +23318,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 16 16',
-          fill: _Colors2.default.green_50
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement(
           'g',
@@ -23336,7 +23338,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '-4.9 9.1 24 24',
-          fill: _Colors2.default.gray_100
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           d: 'M7.1,9.1c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S13.7,9.1,7.1,9.1z M7.1,31.4 c-5.7,0-10.3-4.6-10.3-10.3S1.4,10.8,7.1,10.8s10.3,4.6,10.3,10.3S12.8,31.4,7.1,31.4z'
@@ -23351,7 +23355,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 12 9.1',
-          fill: _Colors2.default.green_50
+          fill: _Colors2.default.green_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('polygon', { className: 'checkbox', points: '4.2,6.5 1.3,3.6 0,4.8 4.2,9.1 12,1.3 10.7,0 ' })
       ),
@@ -23360,7 +23366,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.red_50
+          fill: _Colors2.default.red_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           className: 'path1',
@@ -23380,7 +23388,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.red_50
+          fill: _Colors2.default.red_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', { className: 'path1', d: 'M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM554.667 725.333h-85.333v-85.333h85.333v85.333zM554.667 426.667l-25.6 153.6h-34.133l-25.6-153.6v-170.667h85.333v170.667z' })
       ),
@@ -23389,7 +23399,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.yellow_20
+          fill: _Colors2.default.yellow_20,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement(
           'g',
@@ -23404,7 +23416,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.blue_50
+          fill: _Colors2.default.blue_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement(
           'g',
@@ -23417,7 +23431,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 24 24',
-          fill: _Colors2.default.gray_100
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('circle', { fill: 'none', className: 'st0', cx: '11.9', cy: '12', r: '10' }),
         _react2.default.createElement('polygon', { fill: '#A6276E', points: '15.2,7.6 11.9,10.9 8.5,7.6 7.4,8.7 10.8,12 7.4,15.4 8.5,16.5 11.9,13.1 15.2,16.5 16.3,15.4 13,12 16.3,8.7 ' }),
@@ -23428,7 +23444,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.green_50
+          fill: _Colors2.default.green_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', { d: 'M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM426.667 699.733l-157.867-157.867 59.733-59.733 98.133 98.133 268.8-238.933 55.467 64-324.267 294.4z' })
       ),
@@ -23437,7 +23455,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.green_50
+          fill: _Colors2.default.green_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           d: 'M512 69.818c242.036 0 442.182 200.145 442.182 442.182s-200.145 442.182-442.182 442.182-442.182-200.145-442.182-442.182 200.145-442.182 442.182-442.182zM512 0c-283.927 0-512 228.073-512 512s228.073 512 512 512 512-228.073 512-512-228.073-512-512-512z'
@@ -23451,7 +23471,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 1024 1024',
-          fill: _Colors2.default.gray_100
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           d: 'M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z'
@@ -23462,7 +23484,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 16 16',
-          fill: _Colors2.default.gray_100
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           d: 'M14.9,1.1C14.2,0.4,13.2,0,12.1,0c-1.1,0-2,0.4-2.8,1.1L7.7,2.8C7,3.5,6.5,4.5,6.5,5.6 c0,0.4,0.1,0.8,0.2,1.2C6.4,6.6,6,6.5,5.6,6.5c-1.1,0-2,0.4-2.8,1.1L1.1,9.4C0.4,10.1,0,11,0,12.1c0,1.1,0.4,2.1,1.1,2.8 C1.8,15.6,2.8,16,3.9,16c1.1,0,2-0.4,2.8-1.1l1.7-1.7c0.7-0.7,1.1-1.7,1.1-2.8c0-0.4-0.1-0.8-0.2-1.2c0.4,0.1,0.8,0.2,1.2,0.2 c1.1,0,2-0.4,2.8-1.1l1.7-1.7C15.6,5.9,16,5,16,3.9C16,2.8,15.6,1.8,14.9,1.1z M7.3,12.2l-1.7,1.7c-0.5,0.5-1.1,0.7-1.7,0.7 c-0.7,0-1.3-0.3-1.8-0.7c-0.4-0.4-0.7-1.1-0.7-1.8c0-0.7,0.3-1.3,0.7-1.7l1.7-1.7C4.3,8.3,4.9,8,5.6,8C6,8,6.3,8.1,6.7,8.3l-2.1,2.1 l1,1l2.1-2.1C7.9,9.7,8,10,8,10.4C8,11.1,7.7,11.7,7.3,12.2z M13.8,5.6l-1.7,1.7C11.7,7.7,11.1,8,10.4,8C10,8,9.6,7.9,9.3,7.7 l2.1-2.1l-1-1L8.3,6.7C8.1,6.4,8,6,8,5.6c0-0.7,0.3-1.3,0.7-1.7l1.7-1.7c0.5-0.5,1.1-0.7,1.7-0.7c0.7,0,1.3,0.3,1.7,0.7 s0.7,1.1,0.7,1.7C14.5,4.5,14.3,5.2,13.8,5.6z'
@@ -23474,7 +23498,9 @@ var Icon = function (_React$Component) {
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '25 25 50 50',
           className: 'loader',
-          fill: _Colors2.default.purple_50
+          fill: _Colors2.default.purple_50,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('circle', { cx: '50', cy: '50', r: '20', className: 'loader--path' })
       ),
@@ -23483,7 +23509,9 @@ var Icon = function (_React$Component) {
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
           viewBox: '0 0 32 32',
-          fill: _Colors2.default.gray_100
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
           d: 'M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z'
@@ -23553,7 +23581,7 @@ function Jumbotron(props) {
       _react2.default.createElement(_Icon2.default, { type: 'back' }),
       _react2.default.createElement(
         'a',
-        { href: '#go-back', className: 'base--a go-back--link' },
+        { href: props.backTo, className: 'base--a go-back--link' },
         _react2.default.createElement(
           'span',
           { className: 'go-back--link-span' },
