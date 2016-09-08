@@ -7,3 +7,5 @@ export Jumbotron from './Jumbotron';
 export Tabs from './Tabs';
 export TabsPane from './Tabs/Pane';
 export Code from './Code';
+
+export Icon from './Icon';
