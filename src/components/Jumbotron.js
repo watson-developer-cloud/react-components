@@ -9,7 +9,7 @@ export default function Jumbotron(props) {
         (
         <div className="go-back">
           <Icon type="back" />
-          <a href="#go-back" className="base--a go-back--link">
+          <a href={props.backTo} className="base--a go-back--link">
             <span className="go-back--link-span">{props.backToLabel}</span>
           </a>
         </div>
