@@ -1772,7 +1772,7 @@ header {
       border-width: 1px; }
 
 .go-back {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding-left: 1.75rem; }
   @media (min-width: 1140px) {
     .go-back {
@@ -1869,7 +1869,8 @@ header {
   width: 100%;
   position: relative;
   text-align: center;
-  border: 2px dashed #ececec; }
+  border: 2px dashed #ececec;
+  display: block; }
   .input--tile-input-container:before {
     display: block;
     content: " ";
@@ -1883,6 +1884,9 @@ header {
     bottom: 0; }
   .input--tile-input-container .content {
     padding: 1rem; }
+
+.input--file-input {
+  display: none; }
 
 .input--tile-input-icon {
   margin-top: 0;
