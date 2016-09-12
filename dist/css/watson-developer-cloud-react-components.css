@@ -2149,6 +2149,16 @@ header {
   width: auto;
   height: auto; }
 
+.icon {
+  height: 2rem;
+  width: 2rem; }
+  .icon_small {
+    height: 1rem;
+    width: 1rem; }
+  .icon_large {
+    height: 4rem;
+    width: 4rem; }
+
 .loader--path {
   stroke: #959595; }
 

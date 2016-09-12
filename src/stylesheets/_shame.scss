@@ -478,6 +478,11 @@ $tile-padding: 0.2rem;
   height: 2rem;
   width: 2rem;
 
+  &_small {
+    height: 1rem;
+    width: 1rem;
+  }
+
   &_large {
     height: 4rem;
     width: 4rem;
