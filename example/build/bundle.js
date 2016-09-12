@@ -23470,13 +23470,13 @@ var Icon = function (_React$Component) {
         'svg',
         _extends({
           xmlns: 'http://www.w3.org/2000/svg',
-          viewBox: '0 0 1024 1024',
+          viewBox: '0 0 24 24',
           fill: _Colors2.default.gray_100,
           width: '1rem',
           height: '1rem'
         }, _this.props),
         _react2.default.createElement('path', {
-          d: 'M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z'
+          d: 'M4,1h16v3H4V1z M4.5,13.5L6,15l5-5v13h2V10l5,5l1.5-1.5L12,6L4.5,13.5z'
         })
       ),
       link: _react2.default.createElement(
