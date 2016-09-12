@@ -469,6 +469,11 @@ $tile-padding: 0.2rem;
   }
 }
 
+.loader-container {
+  width: auto;
+  height: auto;
+}
+
 .loader--path {
   stroke: color('gray', 40);
 }

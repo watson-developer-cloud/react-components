@@ -213,17 +213,19 @@ export default class Icon extends React.Component {
         />
       </svg>,
     loader:
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="25 25 50 50"
-        className="loader"
-        fill={colors.purple_50}
-        width="1rem"
-        height="1rem"
-        {...this.props}
-      >
-        <circle cx="50" cy="50" r="20" className="loader--path" />
-      </svg>,
+      <div className="loader-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="25 25 50 50"
+          fill={colors.purple_50}
+          width="1rem"
+          height="1rem"
+          {...this.props}
+          className={`${this.props.className} loader`}
+        >
+          <circle cx="50" cy="50" r="20" className="loader--path" />
+        </svg>
+      </div>,
     reset:
       <svg
         xmlns="http://www.w3.org/2000/svg"

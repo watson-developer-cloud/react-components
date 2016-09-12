@@ -23493,16 +23493,21 @@ var Icon = function (_React$Component) {
         })
       ),
       loader: _react2.default.createElement(
-        'svg',
-        _extends({
-          xmlns: 'http://www.w3.org/2000/svg',
-          viewBox: '25 25 50 50',
-          className: 'loader',
-          fill: _Colors2.default.purple_50,
-          width: '1rem',
-          height: '1rem'
-        }, _this.props),
-        _react2.default.createElement('circle', { cx: '50', cy: '50', r: '20', className: 'loader--path' })
+        'div',
+        { className: 'loader-container' },
+        _react2.default.createElement(
+          'svg',
+          _extends({
+            xmlns: 'http://www.w3.org/2000/svg',
+            viewBox: '25 25 50 50',
+            fill: _Colors2.default.purple_50,
+            width: '1rem',
+            height: '1rem'
+          }, _this.props, {
+            className: _this.props.className + ' loader'
+          }),
+          _react2.default.createElement('circle', { cx: '50', cy: '50', r: '20', className: 'loader--path' })
+        )
       ),
       reset: _react2.default.createElement(
         'svg',
