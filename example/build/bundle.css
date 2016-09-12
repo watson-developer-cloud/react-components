@@ -2149,6 +2149,13 @@ header {
   width: auto;
   height: auto; }
 
+.icon {
+  height: 2rem;
+  width: 2rem; }
+  .icon_large {
+    height: 4rem;
+    width: 4rem; }
+
 .loader--path {
   stroke: #959595; }
 
@@ -2870,8 +2877,6 @@ code[class*="language-"], pre[class*="language-"] {
   height: 100%; }
 
 .icon-example .icon {
-  height: 2em;
-  width: 2em;
   margin-right: .3em;
   vertical-align: middle; }
 

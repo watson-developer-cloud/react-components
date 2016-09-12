@@ -86,6 +86,86 @@ export default function IconExamples() {
             </Code>
           </div>
         </div>
+
+        <div className="row">
+          <div className="block-example">
+            <p className="base--p icon-example">
+              <Icon type="plus" sizeType="large" />
+              - large plus
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="back" sizeType="large" />
+              - large back
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="close" sizeType="large" />
+              - large close
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="check" sizeType="large" />
+              - large check
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="success" sizeType="large" />
+              - large success
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="success-o" sizeType="large" />
+              - large success-o
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="error" sizeType="large" />
+              - large error
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="error-o" sizeType="large" />
+              - large error-o
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="warning" sizeType="large" />
+              - large warning
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="info" sizeType="large" />
+              - large info
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="reset" sizeType="large" />
+              - large reset
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="up" sizeType="large" />
+              - large up
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="link" sizeType="large" />
+              - large link
+            </p>
+            <p className="base--p icon-example">
+              <Icon type="loader" sizeType="large" />
+              - large loader
+            </p>
+          </div>
+          <div className="block-code">
+            <Code type="jsx">
+{`<Icon type="plus" sizeType="large" />
+<Icon type="back" sizeType="large" />
+<Icon type="close" sizeType="large" />
+<Icon type="check" sizeType="large" />
+<Icon type="success" sizeType="large" />
+<Icon type="success-o" sizeType="large" />
+<Icon type="error" sizeType="large" />
+<Icon type="error-o" sizeType="large" />
+<Icon type="warning" sizeType="large" />
+<Icon type="info" sizeType="large" />
+<Icon type="reset" sizeType="large" />
+<Icon type="up" sizeType="large" />
+<Icon type="link" sizeType="large" />
+<Icon type="loader" sizeType="large" />
+`}
+            </Code>
+          </div>
+        </div>
       </div>
     </section>
   );

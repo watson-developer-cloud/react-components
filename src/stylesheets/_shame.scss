@@ -474,6 +474,16 @@ $tile-padding: 0.2rem;
   height: auto;
 }
 
+.icon {
+  height: 2rem;
+  width: 2rem;
+
+  &_large {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
 .loader--path {
   stroke: color('gray', 40);
 }
