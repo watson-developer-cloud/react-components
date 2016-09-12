@@ -2145,6 +2145,10 @@ header {
   margin-right: 1rem;
   margin-top: 0rem; }
 
+.loader-container {
+  width: auto;
+  height: auto; }
+
 .loader--path {
   stroke: #959595; }
 
