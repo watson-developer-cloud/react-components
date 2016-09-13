@@ -53,6 +53,10 @@ gulp.task('css', () =>
     .pipe(gulp.dest(paths.build))
 );
 
+gulp.task('scss', () =>
+  gulp.src(['src/stylesheets/**/*.scss', '!src/stylesheets/main.scss'])
+    .pipe(gulp.dest(`${paths.build}/scss`))
+);
 
 // concat, minimize, uglify components into a bundle
 gulp.task('js', ['components'], () => {
@@ -162,7 +166,7 @@ gulp.task('example-js', () =>
 
 gulp.task('example-js-watch', ['example-js'], reloadBrowser);
 
-gulp.task('build', ['images', 'fonts', 'css', 'components', 'js', 'example']);
+gulp.task('build', ['images', 'fonts', 'css', 'scss', 'components', 'js', 'example']);
 gulp.task('example', ['example-css', 'example-js']);
 
 gulp.task('default', ['build']);
