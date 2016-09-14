@@ -13,7 +13,7 @@ export default function HeaderExamples() {
           <div>
             <Jumbotron
               serviceName="Demo title"
-              repository="https://github.ibm.com/watson-developer-cloud/react-components"
+              repository="https://github.com/watson-developer-cloud/react-components"
               documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
               apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
               version="Beta"
@@ -25,7 +25,7 @@ export default function HeaderExamples() {
             <Code type="jsx">
 {`<Jumbotron
   serviceName="Demo title"
-  repository="https://github.ibm.com/watson-developer-cloud/react-components"
+  repository="https://github.com/watson-developer-cloud/react-components"
   documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
   apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
   version="Beta"

@@ -17,7 +17,7 @@ export default function Nav() {
             </li>
           </a>
           <a
-            href="https://github.ibm.com/germanatt/react-components"
+            href="https://github.com/watson-developer-cloud/react-components"
             target="_blank"
             rel="noopener noreferrer"
             role="menuitem"
