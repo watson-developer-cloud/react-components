@@ -22,7 +22,7 @@ function Jumbotron(props) {
     props.backTo ? _react2.default.createElement(
       'div',
       { className: 'go-back' },
-      _react2.default.createElement(_Icon2.default, { type: 'back', sizeType: 'small' }),
+      _react2.default.createElement(_Icon2.default, { type: 'back', size: 'small' }),
       _react2.default.createElement(
         'a',
         { href: props.backTo, className: 'base--a go-back--link' },
@@ -77,7 +77,7 @@ function Jumbotron(props) {
           _react2.default.createElement(
             'h5',
             { className: 'base--h5 header--get-started' },
-            _react2.default.createElement(_Icon2.default, { className: 'header--get-started-icon icon', type: 'link', sizeType: 'small' }),
+            _react2.default.createElement(_Icon2.default, { className: 'header--get-started-icon icon', type: 'link', size: 'small' }),
             _react2.default.createElement(
               'span',
               { className: 'header--get-started-span' },
