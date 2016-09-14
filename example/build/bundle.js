@@ -698,7 +698,7 @@ function LeadSpace() {
           { className: "header--icon react-icon" },
           _react2.default.createElement("img", {
             className: "header--icon-image react-icon-image",
-            src: "/images/react-logo.svg",
+            src: "./images/react-logo.svg",
             alt: "React Components Logo"
           })
         )

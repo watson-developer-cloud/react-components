@@ -8,7 +8,7 @@ export default function LeadSpace() {
           <div className="header--icon react-icon">
             <img
               className="header--icon-image react-icon-image"
-              src="/images/react-logo.svg"
+              src="./images/react-logo.svg"
               alt="React Components Logo"
             />
           </div>
