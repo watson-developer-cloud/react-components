@@ -67,7 +67,6 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 ├── dist
 │   ├── components             // ES5 react components
 │   ├── css
-│   ├── fonts
 │   ├── images
 │   ├── watson-developer-cloud-react-components.js
 │   ├── watson-developer-cloud-react-components.min.js
@@ -82,7 +81,6 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 │   ├── components             // React components
 │   └── stylesheets            // Sass files
 └── static                     // static files
-    ├── fonts                  // fonts
     └── images                 // images
 
 ```

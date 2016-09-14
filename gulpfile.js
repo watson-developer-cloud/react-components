@@ -105,12 +105,6 @@ gulp.task('components', () =>
     .pipe(browserSync.stream())
 );
 
-// merge ui-component fonts and static fonts in this library
-gulp.task('fonts', () =>
-  gulp.src(`${paths.static}/fonts/**`)
-  .pipe(gulp.dest(`${paths.build}/fonts`))
-);
-
 // merge ui-component images and static images in this library
 gulp.task('images', () =>
   gulp.src(`${paths.static}/images/**`)
@@ -121,7 +115,6 @@ gulp.task('images', () =>
 gulp.task('prepare-site', ['build', 'example'], () =>
   [
     gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('gh-pages/images')),
-    gulp.src(`${paths.build}/fonts/**/*`).pipe(gulp.dest('gh-pages/fonts')),
     gulp.src(['example/**/*', '!example/src/**']).pipe(gulp.dest('gh-pages')),
   ]
 );
@@ -166,7 +159,7 @@ gulp.task('example-js', () =>
 
 gulp.task('example-js-watch', ['example-js'], reloadBrowser);
 
-gulp.task('build', ['images', 'fonts', 'css', 'scss', 'components', 'js', 'example']);
+gulp.task('build', ['images', 'css', 'scss', 'components', 'js', 'example']);
 gulp.task('example', ['example-css', 'example-js']);
 
 gulp.task('default', ['build']);

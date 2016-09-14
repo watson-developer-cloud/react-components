@@ -663,7 +663,7 @@ function GettingStrted() {
       _react2.default.createElement(
         'p',
         { className: 'base--p' },
-        'To use components that use images or fonts, make sure that the image or fonts files are correctly referenced in your project relative to the CSS output file.'
+        'To use components that use images, make sure that the image files are correctly referenced in your project relative to the CSS output file.'
       )
     )
   );
