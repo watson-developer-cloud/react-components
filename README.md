@@ -18,13 +18,22 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
     import Icon from 'watson-developer-cloud-react-components';
     ```
 
-3. Add a reference to the stylesheet:
+3. Make the assets public. For a Node.js/Express server, the following code should work:
 
-    ```html
-    <link rel="stylesheet" type="text/css" href="./PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/watson-developer-cloud-react-components.min.css">
-    ```
+   ```js
+   app.use(express.static('./node_modules/watson-developer-cloud-react-components/dist/'));
+   ```
 
-4. Images and fonts should be copied from `/PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/` into your static folder.
+   For other environments, copy the contents of the `dist/` into your static folder.
+
+4. Add a reference to the stylesheet.
+
+   ```html
+   <link rel="stylesheet" type="text/css" href="/css/watson-developer-cloud-react-components.min.css">
+   ```
+
+   Adjust the `href` as necessary if a different location was chosen in step 3
+
 
 ## How to Contribute
 
