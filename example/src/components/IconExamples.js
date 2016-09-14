@@ -61,10 +61,12 @@ export default function IconExamples() {
               <Icon type="link" />
               - link
             </p>
-            <p className="base--p icon-example">
+            <div>
               <Icon type="loader" />
-              - loader
-            </p>
+              <p className="base--p icon-example" style={{ display: 'inline-block' }}>
+                - loader
+              </p>
+            </div>
           </div>
           <div className="block-code">
             <Code type="jsx">
@@ -82,6 +84,36 @@ export default function IconExamples() {
 <Icon type="up" />
 <Icon type="link" />
 <Icon type="loader" />
+`}
+            </Code>
+          </div>
+        </div>
+        <div className="row">
+          <div className="block-example">
+            <div>
+              <Icon type="loader" size="small" />
+              <p className="base--p icon-example" style={{ display: 'inline-block' }}>
+                - small loader
+              </p>
+            </div>
+            <div>
+              <Icon type="loader" size="regular" />
+              <p className="base--p icon-example" style={{ display: 'inline-block' }}>
+                - regular loader
+              </p>
+            </div>
+            <div>
+              <Icon type="loader" size="large" />
+              <p className="base--p icon-example" style={{ display: 'inline-block' }}>
+                - large loader
+              </p>
+            </div>
+          </div>
+          <div className="block-code">
+            <Code type="jsx">
+{`<Icon type="loader" size="small" />
+<Icon type="loader" />
+<Icon type="loader" size="large" />
 `}
             </Code>
           </div>

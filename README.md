@@ -7,21 +7,22 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 
 1. Install the library
 
-  ```
-  npm install watson-developer-cloud-react-components
-  ```
+    ```
+    npm install watson-developer-cloud-react-components
+    ```
 
 2. Add components to your React file where needed:
 
-  ```
-  // TODO
-  ```
+    Example:
+    ```js
+    import Icon from 'watson-developer-cloud-react-components';
+    ```
 
 3. Add a reference to the stylesheet:
 
-```html
-<link rel="stylesheet" type="text/css" href="./PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/watson-developer-cloud-react-components.min.css">
-```
+    ```html
+    <link rel="stylesheet" type="text/css" href="./PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/watson-developer-cloud-react-components.min.css">
+    ```
 
 4. Images and fonts should be copied from `/PATH-TO-YOUR/node_modules/watson-developer-cloud-react-components/dist/` into your static folder.
 
@@ -29,23 +30,23 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 
 1. Install Dependencies
 
-  ```
-  npm install
-  ```
+    ```
+    npm install
+    ```
 
 2. Start the development server
 
-  ```
-  npm run dev
-  ```
+    ```
+    npm run dev
+    ```
   Changes will refresh the page thanks to [browsersync](https://www.browsersync.io).
 
 
 3. Run the build command before pushing merge request:
 
-  ```
-  npm run build
-  ```
+    ```
+    npm run build
+    ```
 
 ### Directory structure
 

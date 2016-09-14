@@ -8,7 +8,7 @@ export default function Jumbotron(props) {
       {props.backTo ?
         (
         <div className="go-back">
-          <Icon type="back" sizeType="small" />
+          <Icon type="back" size="small" />
           <a href={props.backTo} className="base--a go-back--link">
             <span className="go-back--link-span">{props.backToLabel}</span>
           </a>
@@ -39,7 +39,7 @@ export default function Jumbotron(props) {
           </div>
           <nav className="header--nav">
             <h5 className="base--h5 header--get-started">
-              <Icon className="header--get-started-icon icon" type="link" sizeType="small" />
+              <Icon className="header--get-started-icon icon" type="link" size="small" />
               <span className="header--get-started-span">Get Started</span>
             </h5>
             <ul className="header--nav-ul base--ul base--ul_inline base--ul_no-bullets">
