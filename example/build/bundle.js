@@ -46,10 +46,6 @@ var _CodeExamples = require('./components/CodeExamples');
 
 var _CodeExamples2 = _interopRequireDefault(_CodeExamples);
 
-var _Jumbotron = require('../../src/components/Jumbotron');
-
-var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -57,15 +53,6 @@ function App() {
     'div',
     null,
     _react2.default.createElement(_Nav2.default, null),
-    _react2.default.createElement(_Jumbotron2.default, {
-      serviceName: 'Demo title',
-      repository: 'https://github.com/watson-developer-cloud/react-components',
-      documentation: 'https://www.ibm.com/watson/developercloud/doc/visual-recognition/',
-      apiReference: 'https://www.ibm.com/watson/developercloud/visual-recognition/api/v3',
-      version: 'Beta',
-      serviceIcon: 'images/service-icon.svg',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    }),
     _react2.default.createElement(_LeadSpace2.default, null),
     _react2.default.createElement(_GettingStarted2.default, null),
     _react2.default.createElement(_IconExamples2.default, null),
@@ -77,7 +64,7 @@ function App() {
   );
 }
 
-},{"../../src/components/Jumbotron":195,"./components/CodeExamples":2,"./components/FooterExamples":3,"./components/HeaderExamples":4,"./components/IconExamples":5,"./components/JumbotronExamples":6,"./components/TabsExamples":7,"./internal-components/GettingStarted":9,"./internal-components/LeadSpace":10,"./internal-components/Nav":11,"react":189}],2:[function(require,module,exports){
+},{"./components/CodeExamples":2,"./components/FooterExamples":3,"./components/HeaderExamples":4,"./components/IconExamples":5,"./components/JumbotronExamples":6,"./components/TabsExamples":7,"./internal-components/GettingStarted":9,"./internal-components/LeadSpace":10,"./internal-components/Nav":11,"react":189}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23757,8 +23744,7 @@ Jumbotron.propTypes = {
   serviceName: _react2.default.PropTypes.string.isRequired,
   serviceIcon: _react2.default.PropTypes.string.isRequired,
   apiReference: _react2.default.PropTypes.string.isRequired,
-  repository: _react2.default.PropTypes.string.isRequired,
-  backToLabel: _react2.default.PropTypes.string
+  repository: _react2.default.PropTypes.string.isRequired
 };
 
 },{"./Icon":194,"react":189}],196:[function(require,module,exports){

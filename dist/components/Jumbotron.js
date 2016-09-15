@@ -112,8 +112,7 @@ Jumbotron.propTypes = {
   serviceName: _react2.default.PropTypes.string.isRequired,
   serviceIcon: _react2.default.PropTypes.string.isRequired,
   apiReference: _react2.default.PropTypes.string.isRequired,
-  repository: _react2.default.PropTypes.string.isRequired,
-  backToLabel: _react2.default.PropTypes.string
+  repository: _react2.default.PropTypes.string.isRequired
 };
 module.exports = exports['default'];
 //# sourceMappingURL=Jumbotron.js.map
