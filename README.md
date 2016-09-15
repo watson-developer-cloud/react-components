@@ -15,7 +15,7 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 
     Example:
     ```js
-    import Icon from 'watson-developer-cloud-react-components';
+    import { Header, Footer, /*...*/} from 'watson-developer-cloud-react-components';
     ```
 
 3. Make the assets public. For a Node.js/Express server, the following code should work:
