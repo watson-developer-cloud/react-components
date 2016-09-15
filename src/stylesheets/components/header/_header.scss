@@ -18,11 +18,39 @@
     line-height: 1;
   }
 
-  &--get-started-icon {
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    height: 16px;
-    width: 16px;
+  &--description {
+    font-weight: 300;
+  }
+
+  &--get-started {
+    display: inline-block;
+    margin-right: get('rhythm') / 2;
+  }
+
+  &--get-started-span {
+    margin-left: get('rhythm') / 4;
+    font-weight: bold;
+  }
+
+  &--version-tag {
+    display: inline-block;
+    padding: 0.25em 1em;
+    background-color: color('white', 30);
+    color: color('blue', 80);
+    border-left: 8px solid color('purple', 30);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  &--nav {
+    font-size: 0.9rem;
+  }
+
+  &--nav-ul {
+    display: inline-block;
+    width: auto;
+    margin-top: 0rem;
   }
 
   &--nav-ul.base--ul_inline .header--nav-li {
