@@ -1571,11 +1571,29 @@ header {
     width: 100%; }
   .header--header {
     line-height: 1; }
-  .header--get-started-icon {
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    height: 16px;
-    width: 16px; }
+  .header--description {
+    font-weight: 300; }
+  .header--get-started {
+    display: inline-block;
+    margin-right: 1rem; }
+  .header--get-started-span {
+    margin-left: 0.5rem;
+    font-weight: bold; }
+  .header--version-tag {
+    display: inline-block;
+    padding: 0.25em 1em;
+    background-color: #f9f9f9;
+    color: #1d3649;
+    border-left: 8px solid #ba8ff7;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold; }
+  .header--nav {
+    font-size: 0.9rem; }
+  .header--nav-ul {
+    display: inline-block;
+    width: auto;
+    margin-top: 0rem; }
   .header--nav-ul.base--ul_inline .header--nav-li {
     display: block;
     margin-bottom: 0.25rem; }
@@ -1673,9 +1691,6 @@ header {
   margin-top: 0.5rem;
   max-width: 7rem;
   max-height: 7rem; }
-
-.header--version-tag {
-  margin-left: 1rem; }
 
 .github-icon {
   vertical-align: middle;
