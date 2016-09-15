@@ -712,17 +712,17 @@ function LeadSpace() {
           _react2.default.createElement(
             "h2",
             { className: "base--h2 header--header" },
-            "React Components",
-            _react2.default.createElement(
-              "span",
-              { className: "header--version-tag" },
-              "v0.0.1"
-            )
+            "React Components"
           ),
           _react2.default.createElement(
             "p",
             { className: "base--p header--description description" },
             "The Watson Platform Component React Component Library translates Watson design language into React components to help develop web UI."
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "header--version-tag" },
+            "v0.0.1"
           )
         )
       )
