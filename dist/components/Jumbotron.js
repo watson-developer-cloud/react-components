@@ -110,7 +110,6 @@ Jumbotron.propTypes = {
   version: _react2.default.PropTypes.string,
   description: _react2.default.PropTypes.string.isRequired,
   serviceName: _react2.default.PropTypes.string.isRequired,
-  serviceIcon: _react2.default.PropTypes.string.isRequired,
   apiReference: _react2.default.PropTypes.string.isRequired,
   repository: _react2.default.PropTypes.string.isRequired
 };
