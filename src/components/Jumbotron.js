@@ -5,7 +5,7 @@ import Icon from './Icon';
 export default function Jumbotron(props) {
   return (
     <section className="_full-width-row _full-width-row_gray header">
-      <div className="_container _container_xx-large">
+      <div className="_container">
         <div className="header--heading-section">
           <h2 className="base--h2 header--header">
             {props.serviceName}

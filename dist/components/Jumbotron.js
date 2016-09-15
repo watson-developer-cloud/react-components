@@ -21,7 +21,7 @@ function Jumbotron(props) {
     { className: '_full-width-row _full-width-row_gray header' },
     _react2.default.createElement(
       'div',
-      { className: '_container _container_xx-large' },
+      { className: '_container' },
       _react2.default.createElement(
         'div',
         { className: 'header--heading-section' },
