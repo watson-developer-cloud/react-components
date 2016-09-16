@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LeadSpace() {
   return (
-    <section className="_full-width-row _full-width-row_gray header">
+    <section className="_full-width-row _full-width-row_gray jumbotron">
       <div className="_container _container_large">
         <div className="_full-width-row--aside">
           <div className="header--icon react-icon">
