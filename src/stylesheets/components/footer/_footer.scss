@@ -1,0 +1,177 @@
+// @mixin wrapper {
+//   margin: 0 auto;
+//   max-width: get('fixed container');
+//   padding: 0 get('rhythm') / .625;
+//
+//   @include breakpoint(get('main nav break')) {
+//     padding: 0 get('rhythm') / .2;
+//   }
+//
+//   @include breakpoint(get('fixed container break')) {
+//     padding: 0;
+//   }
+// }
+
+.footer {
+  background-color: color('gray', 80);
+  .base--h2 {
+    color: color('purple', 20);
+    font-weight: 300;
+  }
+  .base--h3 {
+    color: color('white', 10);
+  }
+
+  &--nav {
+    margin-top: get('rhythm');
+  }
+
+  &--nav-ul.base--ul_inline .base--li {
+    display: block;
+    margin-bottom: get('rhythm') / 8;
+
+    @include breakpoint($breakpoint-nav-items) {
+      margin-right: get('rhythm') / 2;
+      margin-bottom: 0rem;
+      display: inline-block;
+    }
+  }
+
+  &--nav-link {
+    color: color('purple', 20);
+    border-color: color('purple', 20);
+
+    &:visited {
+      color: color('purple', 20);
+      border-color: color('purple', 20);
+    }
+
+    &:hover,
+    &:focus {
+      color: lighten(color('purple', 20), 10%);
+      border-color: lighten(color('purple', 20), 10%);
+    }
+  }
+}
+
+// ._site-footer {
+//   background-color: color('gray', 80);
+//   color: get('white');
+//   padding: get('rhythm') / .25 0;
+//   margin-top: 0;
+// }
+//
+// .footer {
+//   @include wrapper;
+//
+//   &--modules {
+//     @media (min-width: 500px) {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: space-between;
+//     }
+//
+//     @media (min-width: 1200px) {
+//       flex-wrap: nowrap;
+//     }
+//   }
+//
+//   &--module {
+//     margin-top: get('rhythm') / .5;
+//
+//     &:first-of-type {
+//       margin-top: 0;
+//     }
+//
+//     @media (min-width: 500px) {
+//       min-width: (85/6 * 3 * 1%) + (1.5% * 4);
+//
+//       &:nth-child(2) {
+//         margin-top: 0;
+//       }
+//     }
+//
+//     @media (min-width: 600px) {
+//       margin-top: get('rhythm') / .25;
+//       min-width: (85/6 * 2 * 1%) + (1.5% * 2);
+//
+//       &:nth-child(3) {
+//         margin-top: 0;
+//       }
+//     }
+//
+//     @media (min-width: 1200px) {
+//       min-width: (85/6 * 1 * 1%);
+//       margin: 0 1.5%;
+//
+//       &:first-of-type {
+//         margin-left: 0;
+//       }
+//
+//       &:last-of-type {
+//         margin: 0 0 0 (85/6 * 1 * 1%) + (1.5% * 3);
+//         width: 23.5%;
+//       }
+//     }
+//   }
+//
+//   &--item {
+//     margin-top: get('rhythm') / 2;
+//
+//     &:first-of-type {
+//       margin-top: 0;
+//     }
+//   }
+//
+//   &--need-help {
+//     width: 70%;
+//
+//     @media (min-width: 600px) {
+//       width: 70%;
+//     }
+//
+//     @media (min-width: 1200px) {
+//       width: 100%;
+//     }
+//   }
+//
+//   &--link {
+//     @include link(color('gray', 30), color('gray', 30), get('primary accent color'), get('primary accent color'));
+//     display: table;
+//     line-height: 1.5em;
+//   }
+//
+//   &--button {
+//     @include button(transparent, get('white'), get('white'), get('active link color'), get('active link color'), get('white'));
+//     margin-top: get('rhythm');
+//   }
+//
+//   &--ibm {
+//     margin-top: get('rhythm') / .25;
+//   }
+//
+//   &--ibm-link {
+//     display: block;
+//     line-height: 1.5em;
+//     @include link(color('gray', 30), color('gray', 30), get('primary accent color'), get('primary accent color'));
+//   }
+//
+//   &--ibm-links {
+//     align-items: center;
+//     display: flex;
+//
+//     > :first-of-type a {
+//       border: 0 none;
+//     }
+//   }
+//
+//   &--ibm-item {
+//     display: block;
+//     margin: 0 get('rhythm') / .5 0 0;
+//   }
+//
+//   &--ibm-eight-bar {
+//     display: block;
+//     fill: get('white');
+//   }
+// }
