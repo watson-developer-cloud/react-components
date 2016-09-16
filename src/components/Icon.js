@@ -23,6 +23,7 @@ export default class Icon extends React.Component {
       'loader',
       'link',
       'right',
+      'ibm',
     ]).isRequired,
     fill: PropTypes.string,
     className: PropTypes.string,
