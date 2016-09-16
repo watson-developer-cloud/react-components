@@ -1,19 +1,22 @@
 .bottom-nav-bar {
-  padding: get('rhythm') 0rem;
-  background-color: color('white', 50);
 
-  ._full-width-row--aside {
-    display: block;
-
-    @include breakpoint($breakpoint-nav-items) {
-      display: inline-block;
-    }
+  // targeting the padding
+  &._full-width-row {
+    padding: get('rhythm') / 2 0rem;
   }
-  ._full-width-row--main {
-    display: block;
-    @include breakpoint($breakpoint-nav-items) {
-      display: inline-block;
-    }
+  background-color: color('gray', 80);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &--icon {
+    display: inline-block;
+    margin-right: get('rhythm');
+  }
+
+  &--nav {
+    display: inline-block;
+    margin-top: 0rem;
   }
 
   &--nav-ul.base--ul_inline .bottom-nav-bar--nav-li {
@@ -24,6 +27,23 @@
       margin-right: get('rhythm') / 2;
       margin-bottom: 0rem;
       display: inline-block;
+    }
+  }
+
+  &--nav-link {
+    line-height: 1.5;
+    border-bottom: 2px solid color('gray', 30);
+    color: color('gray', 30);
+
+    &:visited {
+      border-bottom: 2px solid color('gray', 30);
+      color: color('gray', 30);
+    }
+
+    &:active,
+    &:hover {
+      border-bottom: 2px solid color('purple', 20);
+      color: color('purple', 20);
     }
   }
 }

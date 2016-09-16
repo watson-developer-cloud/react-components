@@ -284,28 +284,6 @@ body {
   }
 }
 
-.bottom-nav-bar {
-
-  &--container {
-    width: 100%;
-    padding: 1rem;
-
-    &_standalone {
-      @include breakpoint(get('medium')) {
-        position: absolute;
-        bottom: get('rhythm') / 2;
-      }
-    }
-  }
-
-  &--nav {
-    text-align: center;
-    margin: 0 auto;
-    font-size: ms(-1);
-    color: color('gray', 60);
-  }
-}
-
 .basic-header {
   color: color('purple', 60);
   text-transform: uppercase;

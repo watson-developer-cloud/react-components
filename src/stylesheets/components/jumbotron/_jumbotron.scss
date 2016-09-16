@@ -19,7 +19,9 @@
   }
 
   &--description {
+    @include grid(11);
     font-weight: 300;
+    display: block;
   }
 
   &--get-started {
@@ -44,7 +46,7 @@
   }
 
   &--nav {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 
   &--nav-ul {

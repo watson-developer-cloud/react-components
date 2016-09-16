@@ -78,7 +78,7 @@
     "react": "^15.3.1",
     "uglifyify": "^3.0.2",
     "vinyl-source-stream": "^1.1.0",
-    "watson-developer-cloud-ui-components": "^0.4.0"
+    "watson-ui-components": "^0.5.3"
   },
   "dependencies": {
   },
@@ -86,7 +86,7 @@
     "breakpoint-sass": "^2.7.0",
     "modular-scale": "^4.4.1",
     "modularscale-sass": "^2.1.1",
-    "watson-developer-cloud-ui-components": "^0.4.0",
+    "watson-ui-components": "^0.5.3",
     "react": "~0.14 || ~15.3.0",
     "react-dom": "~0.14.0 || ~15.3.0",
     "prismjs": "^1.5.1",

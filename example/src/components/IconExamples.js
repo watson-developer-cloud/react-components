@@ -71,6 +71,10 @@ export default function IconExamples() {
               <Icon type="right" />
               - link
             </p>
+            <p className="base--p icon-example">
+              <Icon type="ibm" />
+              - IBM
+            </p>
           </div>
           <div className="block-code">
             <Code type="jsx">
@@ -89,6 +93,7 @@ export default function IconExamples() {
 <Icon type="link" />
 <Icon type="loader" />
 <Icon type="right" />
+<Icon type="ibm" />
 `}
             </Code>
           </div>
