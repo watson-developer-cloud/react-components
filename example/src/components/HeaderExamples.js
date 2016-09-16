@@ -4,12 +4,12 @@ import Code from '../../../src/components/Code';
 
 export default function HeaderExamples() {
   return (
-    <section className="_full-width-row header" id="Header">
+    <section className="_full-width-row" id="Header">
       <div className="_container _container_large">
         <h2 className="base--h2">Header</h2>
         <div className="row">
           <div>
-            <Header />
+            <Header linkText="Demo Link" />
           </div>
           <div>
             <Code type="jsx">

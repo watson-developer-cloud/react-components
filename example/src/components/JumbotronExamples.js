@@ -6,7 +6,7 @@ import Code from '../../../src/components/Code';
 
 export default function HeaderExamples() {
   return (
-    <section className="_full-width-row header" id="Jumbotron">
+    <section className="_full-width-row" id="Jumbotron">
       <div className="_container _container_large">
         <h2 className="base--h2">Jumbotron</h2>
         <div className="row">
