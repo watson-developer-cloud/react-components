@@ -48,7 +48,7 @@ gulp.task('css', () =>
     }))
     .pipe(rename(`css/${pkg.name}.css`))
     .pipe(gulp.dest(paths.build))
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(minifyCss({ compatibility: 'ie8' }))
     .pipe(rename(`css/${pkg.name}.min.css`))
     .pipe(gulp.dest(paths.build))
 );
