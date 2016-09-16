@@ -18,53 +18,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Jumbotron(props) {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row _full-width-row_gray header' },
+    { className: '_full-width-row _full-width-row_gray jumbotron' },
     _react2.default.createElement(
       'div',
       { className: '_container' },
       _react2.default.createElement(
         'div',
-        { className: 'header--heading-section' },
+        { className: 'jumbotron--heading-section' },
         _react2.default.createElement(
           'h2',
-          { className: 'base--h2 header--header' },
+          { className: 'base--h2 jumbotron--header' },
           props.serviceName
         ),
         _react2.default.createElement(
           'p',
-          { className: 'base--p header--description description' },
+          { className: 'base--p jumbotron--description description' },
           props.description
         )
       ),
       props.version !== 'GA' ? _react2.default.createElement(
         'div',
-        { className: 'header--version-tag' },
+        { className: 'jumbotron--version-tag' },
         props.version
       ) : null,
       _react2.default.createElement(
         'nav',
-        { className: 'header--nav' },
+        { className: 'jumbotron--nav' },
         _react2.default.createElement(
           'h5',
-          { className: 'base--h5 header--get-started' },
-          _react2.default.createElement(_Icon2.default, { className: 'header--get-started-icon icon', type: 'link', size: 'small' }),
+          { className: 'base--h5 jumbotron--get-started' },
+          _react2.default.createElement(_Icon2.default, { className: 'jumbotron--get-started-icon icon', type: 'link', size: 'small' }),
           _react2.default.createElement(
             'span',
-            { className: 'header--get-started-span' },
+            { className: 'jumbotron--get-started-span' },
             'Get Started'
           )
         ),
         _react2.default.createElement(
           'ul',
-          { className: 'header--nav-ul base--ul base--ul_inline base--ul_no-bullets' },
+          { className: 'jumbotron--nav-ul base--ul base--ul_inline base--ul_no-bullets' },
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.apiReference,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
@@ -73,12 +73,12 @@ function Jumbotron(props) {
           ),
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.documentation,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
@@ -87,12 +87,12 @@ function Jumbotron(props) {
           ),
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.repository,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
