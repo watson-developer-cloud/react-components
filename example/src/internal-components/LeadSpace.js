@@ -22,7 +22,7 @@ export default function LeadSpace() {
               The Watson Platform Component React Component Library translates
               Watson design language into React components to help develop web UI.
             </p>
-            <div className="header--version-tag">v0.0.1</div>
+            <div className="header--version-tag">v0.0.5</div>
           </div>
         </div>
 
