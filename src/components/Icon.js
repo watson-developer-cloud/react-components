@@ -22,6 +22,7 @@ export default class Icon extends React.Component {
       'close',
       'loader',
       'link',
+      'right',
     ]).isRequired,
     fill: PropTypes.string,
     className: PropTypes.string,
@@ -250,6 +251,20 @@ export default class Icon extends React.Component {
       >
         <path
           d="M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z"
+        />
+      </svg>,
+    right:
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 21.6 37.8"
+        fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
+        {...this.props}
+        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+      >
+        <path
+          d="M21.6,19.1L2.9,37.8L0,34.9l15.8-15.8L0,2.9L2.9,0L21.6,19.1z"
         />
       </svg>,
   }

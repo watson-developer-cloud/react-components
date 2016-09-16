@@ -3,3 +3,5 @@ node_modules
 bower_components
 dist
 example/build
+gh-pages
+.publish

@@ -87,7 +87,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function CodeExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Code' },
+    { className: '_full-width-row', id: 'Code' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -147,7 +147,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function FooterExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Footer' },
+    { className: '_full-width-row', id: 'Footer' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -203,7 +203,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function HeaderExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Header' },
+    { className: '_full-width-row', id: 'Header' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -218,7 +218,7 @@ function HeaderExamples() {
         _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement(_Header2.default, null)
+          _react2.default.createElement(_Header2.default, { linkText: 'Demo Link' })
         ),
         _react2.default.createElement(
           'div',
@@ -259,7 +259,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function IconExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Icons' },
+    { className: '_full-width-row', id: 'Icons' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -361,6 +361,12 @@ function IconExamples() {
               { className: 'base--p icon-example', style: { display: 'inline-block' } },
               '- loader'
             )
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'base--p icon-example' },
+            _react2.default.createElement(_Icon2.default, { type: 'right' }),
+            '- link'
           )
         ),
         _react2.default.createElement(
@@ -369,7 +375,7 @@ function IconExamples() {
           _react2.default.createElement(
             _Code2.default,
             { type: 'jsx' },
-            '<Icon type="plus" />\n<Icon type="back" />\n<Icon type="close" />\n<Icon type="check" />\n<Icon type="success" />\n<Icon type="success-o" />\n<Icon type="error" />\n<Icon type="error-o" />\n<Icon type="warning" />\n<Icon type="info" />\n<Icon type="reset" />\n<Icon type="up" />\n<Icon type="link" />\n<Icon type="loader" />\n'
+            '<Icon type="plus" />\n<Icon type="back" />\n<Icon type="close" />\n<Icon type="check" />\n<Icon type="success" />\n<Icon type="success-o" />\n<Icon type="error" />\n<Icon type="error-o" />\n<Icon type="warning" />\n<Icon type="info" />\n<Icon type="reset" />\n<Icon type="up" />\n<Icon type="link" />\n<Icon type="loader" />\n<Icon type="right" />\n'
           )
         )
       ),
@@ -449,7 +455,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function HeaderExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Jumbotron' },
+    { className: '_full-width-row', id: 'Jumbotron' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -519,7 +525,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function TabsExamples() {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row header', id: 'Tabs' },
+    { className: '_full-width-row', id: 'Tabs' },
     _react2.default.createElement(
       'div',
       { className: '_container _container_large' },
@@ -686,7 +692,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function LeadSpace() {
   return _react2.default.createElement(
     "section",
-    { className: "_full-width-row _full-width-row_gray header" },
+    { className: "_full-width-row _full-width-row_gray jumbotron" },
     _react2.default.createElement(
       "div",
       { className: "_container _container_large" },
@@ -722,7 +728,7 @@ function LeadSpace() {
           _react2.default.createElement(
             "div",
             { className: "header--version-tag" },
-            "v0.0.1"
+            "v0.0.6"
           )
         )
       )
@@ -22764,565 +22770,50 @@ function Footer() {
 }
 
 },{"react":189}],193:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Header;
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Icon = require('./Icon');
+
+var _Icon2 = _interopRequireDefault(_Icon);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Header() {
+function Header(prop) {
   return _react2.default.createElement(
-    "header",
-    null,
+    'header',
+    { className: 'header' },
     _react2.default.createElement(
-      "div",
-      { className: "wrapper" },
-      _react2.default.createElement(
-        "h1",
-        { className: "base--h1" },
-        _react2.default.createElement(
-          "a",
-          { href: "http://www.ibm.com/watson/developercloud/" },
-          "Watson Developer Cloud"
-        )
-      ),
-      _react2.default.createElement("div", { className: "top-bar--spacer" }),
-      _react2.default.createElement(
-        "nav",
-        { className: "top-bar homepage", role: "navigation" },
-        _react2.default.createElement(
-          "div",
-          { className: "top-bar-menu" },
-          _react2.default.createElement(
-            "ul",
-            { className: "main-nav" },
-            _react2.default.createElement(
-              "li",
-              { className: "has-dropdown" },
-              _react2.default.createElement(
-                "a",
-                {
-                  href: "#services",
-                  className: "active",
-                  "data-dropdown": "drop",
-                  "aria-controls": "drop",
-                  "aria-expanded": "false"
-                },
-                _react2.default.createElement(
-                  "span",
-                  { className: "arrow-bg" },
-                  "Services"
-                )
-              ),
-              _react2.default.createElement(
-                "ul",
-                { className: "full-dropdown-cont" },
-                _react2.default.createElement(
-                  "li",
-                  {
-                    id: "drop",
-                    "data-dropdown-content": "",
-                    className: "full-dropdown",
-                    "aria-hidden": "true",
-                    tabIndex: "-1"
-                  },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "full-dropdown-cat language-category" },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title language-title" },
-                      "Language"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/alchemy-language.html" },
-                          "AlchemyLanguage"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/conversation.html" },
-                          "Conversation"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/dialog.html" },
-                          "Dialog"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/document-conversion.html" },
-                          "Document Conversion"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/language-translation.html" },
-                          "Language Translation"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/nl-classifier.html" },
-                          "Natural Language Classifier "
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/personality-insights.html" },
-                          "Personality Insights"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/retrieve-rank.html" },
-                          "Retrieve and Rank"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/tone-analyzer.html" },
-                          "Tone Analyzer"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "full-dropdown-cat " },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title speech-title" },
-                      "Speech"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/speech-to-text.html" },
-                          "Speech to Text"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/text-to-speech.html" },
-                          "Text to Speech"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "full-dropdown-cat " },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title vision-title" },
-                      "Vision"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/visual-recognition.html" },
-                          "Visual Recognition"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "full-dropdown-cat " },
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title data-insights-title" },
-                      "Data Insights"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/alchemy-data-news.html" },
-                          "AlchemyData News"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/tradeoff-analytics.html" },
-                          "Tradeoff Analytics"
-                        )
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  "li",
-                  { className: "all-services" },
-                  _react2.default.createElement(
-                    "a",
-                    { href: "services-catalog.html" },
-                    "View Services Catalog"
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "http://www.ibm.com/watson/developercloud/doc/" },
-                "Docs"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "http://www.ibm.com/watson/developercloud/starter-kits.html" },
-                "Starter Kits"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "http://developer.ibm.com/watson/" },
-                "Community"
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "ul",
-            { className: "mobile-nav" },
-            _react2.default.createElement(
-              "li",
-              { className: "nav-drawer-toggler" },
-              "Menu"
-            )
-          )
-        )
-      ),
-      _react2.default.createElement(
-        "div",
-        { className: "drawer", tabIndex: "0" },
-        _react2.default.createElement(
-          "div",
-          { className: "drawer-container" },
-          _react2.default.createElement(
-            "div",
-            { className: "drawer-title" },
-            _react2.default.createElement(
-              "h3",
-              null,
-              "Menu"
-            ),
-            _react2.default.createElement(
-              "a",
-              { className: "close-drawer" },
-              _react2.default.createElement("img", { src: "images/icons/x.svg", alt: "close menu" })
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            null,
-            _react2.default.createElement(
-              "ul",
-              { className: "mobile-main-nav" },
-              _react2.default.createElement(
-                "li",
-                { className: "has-dropdown" },
-                _react2.default.createElement(
-                  "a",
-                  { href: "services-catalog.html" },
-                  "Services"
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "services-mobile-nav" },
-                  _react2.default.createElement(
-                    "div",
-                    null,
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title language-title" },
-                      "Language"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/alchemy-language.html" },
-                          "AlchemyLanguage"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/conversation.html" },
-                          "Conversation"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/dialog.html" },
-                          "Dialog"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/document-conversion.html" },
-                          "Document Conversion"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/language-translation.html" },
-                          "Language Translation"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    null,
-                    _react2.default.createElement(
-                      "ul",
-                      { className: "no-title" },
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/nl-classifier.html" },
-                          "Natural Language Classifier "
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/personality-insights.html" },
-                          "Personality Insights"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/retrieve-rank.html" },
-                          "Retrieve and Rank"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/tone-analyzer.html" },
-                          "Tone Analyzer"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    null,
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title speech-title" },
-                      "Speech"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/speech-to-text.html" },
-                          "Speech to Text"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/text-to-speech.html" },
-                          "Text to Speech"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    null,
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title vision-title" },
-                      "Vision"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/visual-recognition.html" },
-                          "Visual Recognition"
-                        )
-                      )
-                    )
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    null,
-                    _react2.default.createElement(
-                      "span",
-                      { className: "nav-title data-insights-title" },
-                      "Data Insights"
-                    ),
-                    _react2.default.createElement(
-                      "ul",
-                      null,
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/alchemy-data-news.html" },
-                          "AlchemyData News"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "li",
-                        null,
-                        _react2.default.createElement(
-                          "a",
-                          { href: "http://www.ibm.com/watson/developercloud/tradeoff-analytics.html" },
-                          "Tradeoff Analytics"
-                        )
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                  "a",
-                  { href: "http://www.ibm.com/watson/developercloud/doc/" },
-                  "Docs"
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                  "a",
-                  { href: "http://www.ibm.com/watson/developercloud/starter-kits.html" },
-                  "Starter Kits"
-                )
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                _react2.default.createElement(
-                  "a",
-                  { href: "http://developer.ibm.com/watson/" },
-                  "Community"
-                )
-              )
-            )
-          )
-        )
-      )
-    )
+      'h3',
+      { className: 'header--wordmark' },
+      prop.wordmark || 'Watson'
+    ),
+    _react2.default.createElement('div', { className: 'header--spacer' }),
+    prop.linkUrl || prop.linkText ? _react2.default.createElement(
+      'a',
+      { href: prop.linkUrl || '#', className: 'header--link base--a' },
+      prop.linkText || 'link text',
+      ' ',
+      _react2.default.createElement(_Icon2.default, { type: 'right', size: 'small' })
+    ) : null
   );
 }
 
-},{"react":189}],194:[function(require,module,exports){
+Header.propTypes = {
+  wordmark: _react2.default.PropTypes.string,
+  linkUrl: _react2.default.PropTypes.string,
+  linkText: _react2.default.PropTypes.string
+};
+
+},{"./Icon":194,"react":189}],194:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23598,6 +23089,21 @@ var Icon = function (_React$Component) {
         _react2.default.createElement('path', {
           d: 'M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z'
         })
+      ),
+      right: _react2.default.createElement(
+        'svg',
+        _extends({
+          xmlns: 'http://www.w3.org/2000/svg',
+          viewBox: '0 0 21.6 37.8',
+          fill: _Colors2.default.gray_100,
+          width: '1rem',
+          height: '1rem'
+        }, _this.props, {
+          className: _this.props.className + ' ' + (_this.props.size === 'large' ? 'icon_large' : '') + ' ' + (_this.props.size === 'small' ? 'icon_small' : '') + ' '
+        }),
+        _react2.default.createElement('path', {
+          d: 'M21.6,19.1L2.9,37.8L0,34.9l15.8-15.8L0,2.9L2.9,0L21.6,19.1z'
+        })
       )
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
@@ -23617,7 +23123,7 @@ var Icon = function (_React$Component) {
 }(_react2.default.Component);
 
 Icon.propTypes = {
-  type: _react.PropTypes.oneOf(['plus', 'back', 'check', 'error', 'error-o', 'success', 'success-o', 'warning', 'info', 'reset', 'up', 'close', 'loader', 'link']).isRequired,
+  type: _react.PropTypes.oneOf(['plus', 'back', 'check', 'error', 'error-o', 'success', 'success-o', 'warning', 'info', 'reset', 'up', 'close', 'loader', 'link', 'right']).isRequired,
   fill: _react.PropTypes.string,
   className: _react.PropTypes.string,
   style: _react.PropTypes.object,
@@ -23650,53 +23156,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Jumbotron(props) {
   return _react2.default.createElement(
     'section',
-    { className: '_full-width-row _full-width-row_gray header' },
+    { className: '_full-width-row _full-width-row_gray jumbotron' },
     _react2.default.createElement(
       'div',
       { className: '_container' },
       _react2.default.createElement(
         'div',
-        { className: 'header--heading-section' },
+        { className: 'jumbotron--heading-section' },
         _react2.default.createElement(
           'h2',
-          { className: 'base--h2 header--header' },
+          { className: 'base--h2 jumbotron--header' },
           props.serviceName
         ),
         _react2.default.createElement(
           'p',
-          { className: 'base--p header--description description' },
+          { className: 'base--p jumbotron--description description' },
           props.description
         )
       ),
       props.version !== 'GA' ? _react2.default.createElement(
         'div',
-        { className: 'header--version-tag' },
+        { className: 'jumbotron--version-tag' },
         props.version
       ) : null,
       _react2.default.createElement(
         'nav',
-        { className: 'header--nav' },
+        { className: 'jumbotron--nav' },
         _react2.default.createElement(
           'h5',
-          { className: 'base--h5 header--get-started' },
-          _react2.default.createElement(_Icon2.default, { className: 'header--get-started-icon icon', type: 'link', size: 'small' }),
+          { className: 'base--h5 jumbotron--get-started' },
+          _react2.default.createElement(_Icon2.default, { className: 'jumbotron--get-started-icon icon', type: 'link', size: 'small' }),
           _react2.default.createElement(
             'span',
-            { className: 'header--get-started-span' },
+            { className: 'jumbotron--get-started-span' },
             'Get Started'
           )
         ),
         _react2.default.createElement(
           'ul',
-          { className: 'header--nav-ul base--ul base--ul_inline base--ul_no-bullets' },
+          { className: 'jumbotron--nav-ul base--ul base--ul_inline base--ul_no-bullets' },
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.apiReference,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
@@ -23705,12 +23211,12 @@ function Jumbotron(props) {
           ),
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.documentation,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
@@ -23719,12 +23225,12 @@ function Jumbotron(props) {
           ),
           _react2.default.createElement(
             'li',
-            { className: 'header--nav-li base--li' },
+            { className: 'jumbotron--nav-li base--li' },
             _react2.default.createElement(
               'a',
               {
                 href: props.repository,
-                className: 'base--a header--nav-link',
+                className: 'base--a jumbotron--nav-link',
                 target: '_blank',
                 rel: 'noopener noreferrer'
               },
@@ -23742,7 +23248,6 @@ Jumbotron.propTypes = {
   version: _react2.default.PropTypes.string,
   description: _react2.default.PropTypes.string.isRequired,
   serviceName: _react2.default.PropTypes.string.isRequired,
-  serviceIcon: _react2.default.PropTypes.string.isRequired,
   apiReference: _react2.default.PropTypes.string.isRequired,
   repository: _react2.default.PropTypes.string.isRequired
 };

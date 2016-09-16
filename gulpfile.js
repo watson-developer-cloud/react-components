@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const ghPages = require('gulp-gh-pages');
 const autoprefixer = require('gulp-autoprefixer');
-const minifyCss = require('gulp-minify-css');
+const minifyCss = require('gulp-clean-css');
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
@@ -48,7 +48,7 @@ gulp.task('css', () =>
     }))
     .pipe(rename(`css/${pkg.name}.css`))
     .pipe(gulp.dest(paths.build))
-    .pipe(minifyCss())
+    .pipe(minifyCss({ compatibility: 'ie8' }))
     .pipe(rename(`css/${pkg.name}.min.css`))
     .pipe(gulp.dest(paths.build))
 );

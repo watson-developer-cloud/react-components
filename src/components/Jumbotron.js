@@ -4,49 +4,49 @@ import Icon from './Icon';
 
 export default function Jumbotron(props) {
   return (
-    <section className="_full-width-row _full-width-row_gray header">
+    <section className="_full-width-row _full-width-row_gray jumbotron">
       <div className="_container">
-        <div className="header--heading-section">
-          <h2 className="base--h2 header--header">
+        <div className="jumbotron--heading-section">
+          <h2 className="base--h2 jumbotron--header">
             {props.serviceName}
           </h2>
-          <p className="base--p header--description description">
+          <p className="base--p jumbotron--description description">
             {props.description}
           </p>
         </div>
         {props.version !== 'GA' ?
-          (<div className="header--version-tag">{props.version}</div>) : null
+          (<div className="jumbotron--version-tag">{props.version}</div>) : null
         }
-        <nav className="header--nav">
-          <h5 className="base--h5 header--get-started">
-            <Icon className="header--get-started-icon icon" type="link" size="small" />
-            <span className="header--get-started-span">Get Started</span>
+        <nav className="jumbotron--nav">
+          <h5 className="base--h5 jumbotron--get-started">
+            <Icon className="jumbotron--get-started-icon icon" type="link" size="small" />
+            <span className="jumbotron--get-started-span">Get Started</span>
           </h5>
-          <ul className="header--nav-ul base--ul base--ul_inline base--ul_no-bullets">
-            <li className="header--nav-li base--li">
+          <ul className="jumbotron--nav-ul base--ul base--ul_inline base--ul_no-bullets">
+            <li className="jumbotron--nav-li base--li">
               <a
                 href={props.apiReference}
-                className="base--a header--nav-link"
+                className="base--a jumbotron--nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 API Reference
               </a>
             </li>
-            <li className="header--nav-li base--li">
+            <li className="jumbotron--nav-li base--li">
               <a
                 href={props.documentation}
-                className="base--a header--nav-link"
+                className="base--a jumbotron--nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Documentation
               </a>
             </li>
-            <li className="header--nav-li base--li">
+            <li className="jumbotron--nav-li base--li">
               <a
                 href={props.repository}
-                className="base--a header--nav-link"
+                className="base--a jumbotron--nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -65,7 +65,6 @@ Jumbotron.propTypes = {
   version: React.PropTypes.string,
   description: React.PropTypes.string.isRequired,
   serviceName: React.PropTypes.string.isRequired,
-  serviceIcon: React.PropTypes.string.isRequired,
   apiReference: React.PropTypes.string.isRequired,
   repository: React.PropTypes.string.isRequired,
 };

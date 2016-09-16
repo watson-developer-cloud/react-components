@@ -5,7 +5,7 @@ import Code from '../../../src/components/Code';
 
 export default function CodeExamples() {
   return (
-    <section className="_full-width-row header" id="Code">
+    <section className="_full-width-row" id="Code">
       <div className="_container _container_large">
         <h2 className="base--h2">Code</h2>
         <div className="row">

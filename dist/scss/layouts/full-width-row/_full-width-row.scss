@@ -1,9 +1,0 @@
-@import 'mixins';
-
-._full-width-row {
-  @include full-width-row;
-
-  &_gray {
-    background-color: color('white', 40);
-  }
-}

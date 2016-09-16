@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LeadSpace() {
   return (
-    <section className="_full-width-row _full-width-row_gray header">
+    <section className="_full-width-row _full-width-row_gray jumbotron">
       <div className="_container _container_large">
         <div className="_full-width-row--aside">
           <div className="header--icon react-icon">
@@ -22,7 +22,7 @@ export default function LeadSpace() {
               The Watson Platform Component React Component Library translates
               Watson design language into React components to help develop web UI.
             </p>
-            <div className="header--version-tag">v0.0.1</div>
+            <div className="header--version-tag">v0.0.6</div>
           </div>
         </div>
 

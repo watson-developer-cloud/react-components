@@ -4,7 +4,7 @@ import Icon from '../../../src/components/Icon';
 
 export default function IconExamples() {
   return (
-    <section className="_full-width-row header" id="Icons">
+    <section className="_full-width-row" id="Icons">
       <div className="_container _container_large">
         <h2 className="base--h2">Icons</h2>
         <div className="row">
@@ -67,6 +67,10 @@ export default function IconExamples() {
                 - loader
               </p>
             </div>
+            <p className="base--p icon-example">
+              <Icon type="right" />
+              - link
+            </p>
           </div>
           <div className="block-code">
             <Code type="jsx">
@@ -84,6 +88,7 @@ export default function IconExamples() {
 <Icon type="up" />
 <Icon type="link" />
 <Icon type="loader" />
+<Icon type="right" />
 `}
             </Code>
           </div>

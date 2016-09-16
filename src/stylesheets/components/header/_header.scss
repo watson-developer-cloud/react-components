@@ -1,66 +1,35 @@
 .header {
-  margin-top: 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4rem;
+  background-color: white;
+  padding: 0rem get('rhythm');
 
-  &--icon {
-    width: 8rem;
-
-    @include breakpoint(get('large')) {
-      min-width: 6rem;
-      width: 80%;
-    }
-  }
-
-  &--icon-image {
-    width: 100%;
-  }
-
-  &--header {
-    line-height: 1;
-  }
-
-  &--description {
-    font-weight: 300;
-  }
-
-  &--get-started {
+  &--wordmark {
     display: inline-block;
-    margin-right: get('rhythm') / 2;
-  }
-
-  &--get-started-span {
-    margin-left: get('rhythm') / 4;
+    font-size: 1.1rem;
     font-weight: bold;
   }
 
-  &--version-tag {
-    display: inline-block;
-    padding: 0.25em 1em;
-    background-color: color('white', 30);
-    color: color('blue', 80);
-    border-left: 8px solid color('purple', 30);
-    text-transform: uppercase;
-    font-size: 0.8em;
-    font-weight: bold;
-  }
-
-  &--nav {
-    font-size: 0.9rem;
-  }
-
-  &--nav-ul {
-    display: inline-block;
-    width: auto;
+  &--spacer {
+    flex-grow: 1;
     margin-top: 0rem;
   }
 
-  &--nav-ul.base--ul_inline .header--nav-li {
-    display: block;
-    margin-bottom: get('rhythm') / 8;
+  &--link {
+    margin-top: 0rem;
+    border-bottom: none;
+    font-size: 0.9rem;
 
-    @include breakpoint($breakpoint-nav-items) {
-      margin-right: get('rhythm') / 2;
-      margin-bottom: 0rem;
-      display: inline-block;
+    &:hover,
+    &:focus {
+      border-bottom: none;
+    }
+
+    .icon {
+      height: 0.75rem;
+      width: 0.75rem;
     }
   }
 }
