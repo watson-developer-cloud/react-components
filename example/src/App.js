@@ -10,6 +10,7 @@ import FooterExamples from './components/FooterExamples';
 import JumbotronExamples from './components/JumbotronExamples';
 import TabsExamples from './components/TabsExamples';
 import CodeExamples from './components/CodeExamples';
+
 export default function App() {
   return (
     <div>

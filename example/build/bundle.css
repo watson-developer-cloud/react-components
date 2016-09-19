@@ -1047,24 +1047,56 @@ code[class*="language-"] ::selection {
   align-items: center;
   height: 4rem;
   background-color: white;
-  padding: 0rem 2rem; }
+  padding: 0rem;
+  position: relative; }
+  @media (min-width: 768px) {
+    .header {
+      padding: 0rem 1.6rem; } }
   .header--wordmark {
-    display: inline-block;
     font-size: 1.1rem;
-    font-weight: bold; }
-  .header--spacer {
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    font-weight: bold;
+    position: absolute;
+    display: none; }
+    @media (min-width: 1024px) {
+      .header--wordmark {
+        display: inline-block; } }
+  .header--wordmark-svg {
+    height: 20px;
+    width: 100px; }
+  .header--wordmark-2 {
+    display: none;
+    margin-right: 1rem; }
+    @media (min-width: 640px) {
+      .header--wordmark-2 {
+        display: inline-block; } }
+    @media (min-width: 1024px) {
+      .header--wordmark-2 {
+        display: none; } }
+  .header--breadcrumbs {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.6875rem; }
+  .header--breadcrumbs-main {
+    font-weight: bold;
+    color: #562f72;
+    display: inline-block;
     margin-top: 0rem; }
-  .header--link {
-    margin-top: 0rem;
-    border-bottom: none;
-    font-size: 0.9rem; }
-    .header--link:hover, .header--link:focus {
+  .header--breadcrumbs-slash {
+    color: #562f72;
+    display: inline-block;
+    margin: 0rem 0.5rem; }
+  .header--breadcrumbs-sub {
+    color: #777677;
+    display: inline-block;
+    margin-top: 0rem; }
+  .header--breadcrumbs-link {
+    border-bottom: none; }
+    .header--breadcrumbs-link:hover, .header--breadcrumbs-link:focus {
       border-bottom: none; }
-    .header--link .icon {
-      height: 0.75rem;
-      width: 0.75rem; }
 
 .jumbotron {
   margin-top: 0rem; }
