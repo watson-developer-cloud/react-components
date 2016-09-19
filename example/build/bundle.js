@@ -218,7 +218,12 @@ function HeaderExamples() {
         _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement(_Header2.default, { linkText: 'Demo Link' })
+          _react2.default.createElement(_Header2.default, {
+            mainBreadcrumbs: 'Service Name',
+            mainBreadcrumbsUrl: 'someUrl',
+            subBreadcrumbs: 'Demo Name',
+            subBreadcrumbsUrl: 'someUrl'
+          })
         ),
         _react2.default.createElement(
           'div',
@@ -226,7 +231,7 @@ function HeaderExamples() {
           _react2.default.createElement(
             _Code2.default,
             { type: 'jsx' },
-            '<Header />\n'
+            '<Header\n  mainBreadcrumbs="Service Name"\n  mainBreadcrumbsUrl="someUrl"\n  subBreadcrumbs="Demo Name"\n  subBreadcrumbsUrl="someUrl"\n/>'
           )
         )
       )
