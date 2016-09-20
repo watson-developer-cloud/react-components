@@ -1056,6 +1056,8 @@ code[class*="language-"] ::selection {
     font-size: 1.1rem;
     font-weight: bold;
     position: absolute;
+    top: calc(50% - 10px);
+    left: 0%;
     display: none; }
     @media (min-width: 1024px) {
       .header--wordmark {
