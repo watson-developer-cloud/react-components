@@ -4,32 +4,74 @@
   align-items: center;
   height: 4rem;
   background-color: white;
-  padding: 0rem get('rhythm');
+  padding: 0rem;
+  position: relative;
+
+  @include breakpoint(get('medium')) {
+    padding: 0rem 1.6rem;
+  }
 
   &--wordmark {
-    display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0%;
+    display: none;
+
+    @include breakpoint(get('large')) {
+      display: inline-block;
+    }
   }
 
-  &--spacer {
-    flex-grow: 1;
+  &--wordmark-svg {
+    height: 20px;
+    width: 100px;
+  }
+
+  &--wordmark-2 {
+    display: none;
+    margin-right: 1rem;
+    @include breakpoint(get('small')) {
+      display: inline-block;
+    }
+    @include breakpoint(get('large')) {
+      display: none;
+    }
+  }
+
+  &--breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.6875rem;
+  }
+
+  &--breadcrumbs-main {
+    font-weight: bold;
+    color: color('purple', 70);
+    display: inline-block;
     margin-top: 0rem;
   }
 
-  &--link {
+  &--breadcrumbs-slash {
+    color: color('purple', 70);
+    display: inline-block;
+    margin: 0rem get('rhythm') / 4;
+  }
+
+  &--breadcrumbs-sub {
+    color: color('gray', 50);
+    display: inline-block;
     margin-top: 0rem;
+  }
+
+  &--breadcrumbs-link {
     border-bottom: none;
-    font-size: 0.9rem;
 
     &:hover,
     &:focus {
       border-bottom: none;
-    }
-
-    .icon {
-      height: 0.75rem;
-      width: 0.75rem;
     }
   }
 }

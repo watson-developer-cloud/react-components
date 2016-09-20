@@ -9,12 +9,21 @@ export default function HeaderExamples() {
         <h2 className="base--h2">Header</h2>
         <div className="row">
           <div>
-            <Header linkText="Demo Link" />
+            <Header
+              mainBreadcrumbs="Service Name"
+              mainBreadcrumbsUrl="someUrl"
+              subBreadcrumbs="Demo Name"
+              subBreadcrumbsUrl="someUrl"
+            />
           </div>
           <div>
             <Code type="jsx">
-{`<Header />
-`}</Code>
+{`<Header
+  mainBreadcrumbs="Service Name"
+  mainBreadcrumbsUrl="someUrl"
+  subBreadcrumbs="Demo Name"
+  subBreadcrumbsUrl="someUrl"
+/>`}</Code>
           </div>
         </div>
       </div>
