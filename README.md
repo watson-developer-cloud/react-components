@@ -62,27 +62,28 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 ```
 .
 ├── README.md
-├── gulpfile.js
-├── package.json
 ├── dist
-│   ├── components             // ES5 react components
+│   ├── components      // ES5 react components
 │   ├── css
 │   ├── images
-│   ├── watson-react-components.js
-│   ├── watson-react-components.min.js
-│   └── watson-react-components.min.js.map
-├── example                    // Example to be use in gh-pages
+│   ├── js
+│   └── scss
+├── example
 │   ├── build
-│   │   ├── bundle.css
-│   │   └── bundle.js
 │   ├── index.html
 │   └── src
+├── gh-pages
+│   ├── build
+│   ├── images
+│   ├── index.html
+│   └── src
+├── gulpfile.js
+├── package.json
 ├── src
-│   ├── components             // React components
-│   └── stylesheets            // Sass files
-└── static                     // static files
-    └── images                 // images
-
+│   ├── components      // React components
+│   └── stylesheets     // Sass files
+└── static              // static files
+    └── images          // images
 ```
 ## License
 
