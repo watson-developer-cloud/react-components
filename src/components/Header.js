@@ -1,3 +1,4 @@
+/* eslint max-len:off */
 import React from 'react';
 
 export default function Header(prop) {
@@ -43,12 +44,6 @@ export default function Header(prop) {
             </div>
           ) : null }
         </div>
-        {/* { prop.linkUrl || prop.linkText ? (
-          <a href={prop.linkUrl || '#'} className="header--link base--a">
-            {prop.linkText || 'link text'}&nbsp;
-            <Icon type="right" size="small" />
-          </a>
-        ) : null } */}
       </div>
     </header>
   );

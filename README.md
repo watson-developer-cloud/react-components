@@ -8,20 +8,20 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 1. Install the library
 
     ```
-    npm install watson-developer-cloud-react-components
+    npm install watson-react-components
     ```
 
 2. Add components to your React file where needed:
 
     Example:
     ```js
-    import { Header, Footer, /*...*/} from 'watson-developer-cloud-react-components';
+    import { Header, Footer, /*...*/} from 'watson-react-components';
     ```
 
 3. Make the assets public. For a Node.js/Express server, the following code should work:
 
    ```js
-   app.use(express.static('./node_modules/watson-developer-cloud-react-components/dist/'));
+   app.use(express.static('./node_modules/watson-react-components/dist/'));
    ```
 
    For other environments, copy the contents of the `dist/` into your static folder.
@@ -29,7 +29,7 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 4. Add a reference to the stylesheet.
 
    ```html
-   <link rel="stylesheet" type="text/css" href="/css/watson-developer-cloud-react-components.min.css">
+   <link rel="stylesheet" type="text/css" href="/css/watson-react-components.min.css">
    ```
 
    Adjust the `href` as necessary if a different location was chosen in step 3
@@ -68,9 +68,9 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 │   ├── components             // ES5 react components
 │   ├── css
 │   ├── images
-│   ├── watson-developer-cloud-react-components.js
-│   ├── watson-developer-cloud-react-components.min.js
-│   └── watson-developer-cloud-react-components.min.js.map
+│   ├── watson-react-components.js
+│   ├── watson-react-components.min.js
+│   └── watson-react-components.min.js.map
 ├── example                    // Example to be use in gh-pages
 │   ├── build
 │   │   ├── bundle.css

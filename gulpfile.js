@@ -36,7 +36,7 @@ gulp.task('css', () =>
       sass({
         errLogToConsole: true,
         includePaths: [
-          './node_modules/watson-developer-cloud-ui-components/node_modules/',
+          './node_modules/watson-ui-components/node_modules/',
           './node_modules/',
         ],
         outputStyle: 'nested',

@@ -1,5 +1,5 @@
 {
-  "name": "watson-developer-cloud-react-components",
+  "name": "watson-react-components",
   "version": "0.0.6",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",

@@ -9,14 +9,14 @@ export default function GettingStrted() {
 
         <h2 className="base--h2">npm</h2>
         <Code type="bash">
-          npm install watson-developer-cloud-react-components --save
+          npm install watson-react-components --save
         </Code>
         <p className="base--p">
           Add components to your React file where needed:
         </p>
         <Code type="jsx">
 {`import { Header, Jumbotron, Code, Tabs } from
-'./node_modules/watson-developer-cloud-react-components/dist/components';`}
+'./node_modules/watson-react-components/dist/components';`}
         </Code>
         <p className="base--p">
           Add a reference to the stylesheet:
@@ -26,15 +26,15 @@ export default function GettingStrted() {
 <link
   rel="stylesheet"
   type="text/css"
-  href="./node_modules/watson-developer-cloud-react-components/dist/css/
-  watson-developer-cloud-react-components.min.css"
+  href="./node_modules/watson-react-components/dist/css/
+  watson-react-components.min.css"
 >`}
         </Code>
 
         <h2 className="base--h2">Browser</h2>
         <Code type="markup">
-{`<script src="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/js/watson-developer-cloud-react-components.min.js"></script>
-<link href="https://unpkg.com/watson-developer-cloud-react-components@0.0.1/dist/css/watson-developer-cloud-react-components.min.css" rel="stylesheet" type="text/css" />
+{`<script src="https://unpkg.com/watson-react-components@0.0.1/dist/js/watson-react-components.min.js"></script>
+<link href="https://unpkg.com/watson-react-components@0.0.1/dist/css/watson-react-components.min.css" rel="stylesheet" type="text/css" />
 `}
         </Code>
         <p className="base--p">
