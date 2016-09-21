@@ -1,6 +1,6 @@
 {
   "name": "watson-react-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",
   "repository": {
@@ -85,8 +85,7 @@
     "vinyl-source-stream": "^1.1.0",
     "watson-ui-components": "^0.5.3"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "breakpoint-sass": "^2.7.0",
     "modular-scale": "^4.4.1",
