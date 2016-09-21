@@ -1,6 +1,7 @@
 import React from 'react';
 import Code from '../../../src/components/Code';
 
+/* eslint-disable react/jsx-indent */
 export default function GettingStrted() {
   return (
     <div className="_container _container_large">

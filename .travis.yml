@@ -1,8 +1,8 @@
 language: node_js
 sudo: true
-node_js: 4
+node_js: 6
 script:
-- npm run lint
+- npm test
 - npm run build
 deploy:
   provider: npm

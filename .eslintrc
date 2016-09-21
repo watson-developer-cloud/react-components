@@ -1,10 +1,12 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
   "parser": "babel-eslint",
   "rules": {
-    "react/require-extension": ["warn", {
-      "extensions": [".js", ".jsx"]
-    }],
+    "react/require-extension": "off", // deprecated and prints a warning unless explicitly disabled
     "react/jsx-filename-extension": ["warn", {
       "extensions": [".js", ".jsx"]
     }],
