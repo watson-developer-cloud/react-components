@@ -13,7 +13,7 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
 1. Install the library
 
     ```
-    npm install watson-react-components
+    npm install --save watson-react-components
     ```
 
 2. Add components to your React file where needed:
