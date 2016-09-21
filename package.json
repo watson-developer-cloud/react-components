@@ -16,6 +16,11 @@
     {
       "name": "German Attanasio Ruiz",
       "email": "germanatt@us.ibm.com"
+    },
+    {
+      "name": "Nathan Friedly",
+      "email": "nfriedly@us.ibm.com",
+      "url": "http://www.nfriedly.com/"
     }
   ],
   "license": "Apache-2.0",
