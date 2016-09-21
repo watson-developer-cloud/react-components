@@ -5,10 +5,19 @@ script:
 - npm test
 - npm run build
 deploy:
-  provider: npm
+- provider: npm
   email: nathan@nfriedly.com
   api_key:
     secure: I674Sseu3U7cJSIqEDIhiQUQy16CvOdQNc7hJVVb07GVzlGk7J8dTDroT+5MoWsepVZK2qBfW+whEyVSzwefCOyQca6aGvhcBpAWmyAY68YsGasCZL573XAL/rXAVT1mcFTz1vk2KUilNqDaP5ADV1tisH0xzTUXW4JMEWYOZ2h1IlLuPCFtv83m9mErzYHLsvxO5Qd043C2qG92zqAAZ4ek88SLzXC6fXl2Behk6PzS/Fc3ZiPp0n35CE0RW0XTmJqXnDSV6aXAYhxGdM+vVoAVZv5noOG301YM/FX89RvpAfR0gTSMno6cANgAkPDGoCP5HZk4q076YE7o3go+0XrIBDK599W3sN1LxomM5NFst6q+8syz59pvGaKbLFZpbfFEqhXF38F7HKqDtMQQetDgJ2MEZHRDZFjL8Sz2E83KxpcWyWW3rgtYszilmaxXTO/Lv4blhQqVeXS30Jsyx1q9eF1SyWw73RiZ2HNRw3PWo6LL4gDntmmgGE7Vq3sOsLohFm9B8hg5Gixs9sLH2SPqDJZl1iMx59Ly5uChLN+0bgrLZq3eTJzbVmA27nQZh5G9aWvEGPB583x5i75JWIZFyrz5nLR+oqUOaghPXV50FDsZf5P7wE1X3DGYUcUQ+0ayAL+3BPQShDHxbxQwIdLR2yqTSb8LaUlFxNmSD80=
   on:
     tags: true
     repo: watson-developer-cloud/react-components
+- provider: script
+  script: sh scripts/deploy-gh-pages.sh
+  on:
+    branch: master
+    repo: watson-developer-cloud/react-components
+  skip_cleanup: true
+env:
+  global:
+    secure: MBSrEaZhMrJPvxgzFv2tYWBEimAjwKRpwRfYEh6TtqE09xPqBgYQhOV6aRMRjHbL2QFdIgCcFJpJ9lYHS9qiyfaGOz+z+s/MtcMcuSx+7j4k7aO+UXrReT2hoGxC/N9IwT1ulE36LNff4Oh10LMYioGPClEsthzGh/jqEdguhzPsQNYEIpmUaPaxqY1y8ykDKohZ4mkruBwq0E9FJA0Dy0COtcmp+SmKS07tCQBcLdrgUdgg1e24+G6l2C5JuXDHEyIp23sJKIogjhtH2H1vPDqLOljMpKhDnQDSEsdEjW3fRLTgef7T4RxZCy1c2ZT18zUFpk6M+azro3D1QScyJo4dgPs0WzlNsja8HZZIlvyuVYhNn2ABmd3+r4rS9Rj+sM0oK7Ih79VuxqVsi3YA0TWW1rmlax3Szrh8Xk69OVsgQYiPn3za7Am4bsNEJmxGMUtlaQ+E/ySQMl5fx0R1dcmC3XjEUHPRLMdfARzNaz372CgjXzx2OihIRwGJlSgvfDs0zqpIg0VzEd0TgKv4wgq4A1kroA5rglPoiOysYTVZoG3SOEzKlXraeCC4FI0CullyGlnd1WUGm3r0hhJ5hbZyX4m/CTYoajPHaUk/nO6sNXcHu9koTO3iZI4BTt4j5hYuJ8PWD8dRVGzXTaQd6GCIwIKDB5nCpfPsYrOicZY=
