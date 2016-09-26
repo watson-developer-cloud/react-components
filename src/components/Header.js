@@ -58,7 +58,7 @@ Header.propTypes = {
   mainBreadcrumbsUrl: React.PropTypes.string,
   subBreadcrumbs: React.PropTypes.string,
   subBreadcrumbsLink: React.PropTypes.string,
-  hasWordmark: React.PropTypes.boolean,
+  hasWordmark: React.PropTypes.bool,
 };
 
 Header.defaultProps = {
