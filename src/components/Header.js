@@ -1,5 +1,6 @@
 /* eslint max-len:off */
 import React from 'react';
+import sizes from './Sizes';
 
 export default function Header(prop) {
   return (
@@ -15,7 +16,9 @@ export default function Header(prop) {
           </a>
         </h3>
       ) : null}
-      <div className="_container">
+      <div
+        className={prop.size === 'medium' ? '_container' : `_container _container_${prop.size}`}
+      >
         <div className="header--breadcrumbs">
           {prop.propTypes ? (
             <h3 className="header--wordmark-2">
@@ -59,8 +62,10 @@ Header.propTypes = {
   subBreadcrumbs: React.PropTypes.string,
   subBreadcrumbsLink: React.PropTypes.string,
   hasWordmark: React.PropTypes.bool,
+  size: React.PropTypes.oneOf(sizes),
 };
 
 Header.defaultProps = {
   hasWordmark: false,
+  size: 'large',
 };
