@@ -1,6 +1,11 @@
 .jumbotron {
   margin-top: 0rem;
 
+  &,
+  &._full-width-row {
+    padding: 3rem 0rem;
+  }
+
   &--icon {
     width: 8rem;
 
@@ -22,6 +27,7 @@
     @include grid(11);
     font-weight: 300;
     display: block;
+    max-width: 43.75rem;
   }
 
   &--get-started {
