@@ -14,6 +14,7 @@ export default function HeaderExamples() {
               mainBreadcrumbsUrl="someUrl"
               subBreadcrumbs="Demo Name"
               subBreadcrumbsUrl="someUrl"
+              hasWordmark={false}
             />
           </div>
           <div>
@@ -23,6 +24,7 @@ export default function HeaderExamples() {
   mainBreadcrumbsUrl="someUrl"
   subBreadcrumbs="Demo Name"
   subBreadcrumbsUrl="someUrl"
+  hasWordmark={false}
 />`}</Code>
           </div>
         </div>
