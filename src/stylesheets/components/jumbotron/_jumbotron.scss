@@ -52,7 +52,7 @@
   }
 
   &--nav {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
   }
 
   &--nav-ul {
@@ -69,6 +69,17 @@
       margin-right: get('rhythm') / 2;
       margin-bottom: 0rem;
       display: inline-block;
+    }
+  }
+
+  &--nav-link {
+
+    &,
+    &:hover,
+    &:focus,
+    &:visited {
+      color: color('gray', 90);
+      border-bottom: 1px solid color('gray', 90);
     }
   }
 }
