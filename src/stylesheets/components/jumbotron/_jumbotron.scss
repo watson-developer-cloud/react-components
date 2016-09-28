@@ -35,6 +35,11 @@
     margin-right: get('rhythm') / 2;
   }
 
+  &--get-started .icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
   &--get-started-span {
     margin-left: get('rhythm') / 4;
     font-weight: bold;
