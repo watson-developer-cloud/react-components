@@ -5,7 +5,7 @@ import sizes from './Sizes';
 export default function Header(prop) {
   return (
     <header className="header">
-      {prop.propTypes ? (
+      {prop.hasWordmark ? (
         <h3 className="header--wordmark">
           <a href="/" className="header--wordmark-link">
             <svg className="header--wordmark-svg" xmlns="http://www.w3.org/2000/svg" width="365.7" height="73.4" viewBox="0 0 365.7 73.4">
@@ -20,7 +20,7 @@ export default function Header(prop) {
         className={prop.size === 'medium' ? '_container' : `_container _container_${prop.size}`}
       >
         <div className="header--breadcrumbs">
-          {prop.propTypes ? (
+          {prop.hasWordmark ? (
             <h3 className="header--wordmark-2">
               <a href="http://www.ibm.com/watson/developercloud/" className="header--wordmark-2-link">
                 <svg className="header--wordmark-svg" xmlns="http://www.w3.org/2000/svg" width="365.7" height="73.4" viewBox="0 0 365.7 73.4">
@@ -60,12 +60,12 @@ Header.propTypes = {
   mainBreadcrumbs: React.PropTypes.string,
   mainBreadcrumbsUrl: React.PropTypes.string,
   subBreadcrumbs: React.PropTypes.string,
-  subBreadcrumbsLink: React.PropTypes.string,
+  subBreadcrumbsUrl: React.PropTypes.string,
   hasWordmark: React.PropTypes.bool,
   size: React.PropTypes.oneOf(sizes),
 };
 
 Header.defaultProps = {
-  hasWordmark: false,
+  hasWordmark: true,
   size: 'large',
 };
