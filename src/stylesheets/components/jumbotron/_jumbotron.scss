@@ -1,6 +1,11 @@
 .jumbotron {
   margin-top: 0rem;
 
+  &,
+  &._full-width-row {
+    padding: 3rem 0rem;
+  }
+
   &--icon {
     width: 8rem;
 
@@ -22,6 +27,7 @@
     @include grid(11);
     font-weight: 300;
     display: block;
+    max-width: 43.75rem;
   }
 
   &--get-started {
@@ -29,9 +35,15 @@
     margin-right: get('rhythm') / 2;
   }
 
+  &--get-started .icon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
   &--get-started-span {
     margin-left: get('rhythm') / 4;
     font-weight: bold;
+    vertical-align: middle;
   }
 
   &--version-tag {
@@ -43,10 +55,12 @@
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: bold;
+    margin-top: 1.5rem;
   }
 
   &--nav {
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
+    margin-top: 1.5rem;
   }
 
   &--nav-ul {
@@ -63,6 +77,17 @@
       margin-right: get('rhythm') / 2;
       margin-bottom: 0rem;
       display: inline-block;
+    }
+  }
+
+  &--nav-link {
+
+    &,
+    &:hover,
+    &:focus,
+    &:visited {
+      color: color('gray', 90);
+      border-bottom: 1px solid color('gray', 90);
     }
   }
 }

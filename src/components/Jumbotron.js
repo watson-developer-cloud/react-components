@@ -1,11 +1,13 @@
 import React from 'react';
-
 import Icon from './Icon';
+import sizes from './Sizes';
 
 export default function Jumbotron(props) {
   return (
     <section className="_full-width-row _full-width-row_gray jumbotron">
-      <div className="_container">
+      <div
+        className={props.size === 'medium' ? '_container' : `_container _container_${props.size}`}
+      >
         <div className="jumbotron--heading-section">
           <h2 className="base--h2 jumbotron--header">
             {props.serviceName}
@@ -67,4 +69,9 @@ Jumbotron.propTypes = {
   serviceName: React.PropTypes.string.isRequired,
   apiReference: React.PropTypes.string.isRequired,
   repository: React.PropTypes.string.isRequired,
+  size: React.PropTypes.oneOf(sizes),
+};
+
+Jumbotron.defaultProps = {
+  size: 'large',
 };

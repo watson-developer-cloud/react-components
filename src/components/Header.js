@@ -1,11 +1,12 @@
 /* eslint max-len:off */
 import React from 'react';
+import sizes from './Sizes';
 
 export default function Header(prop) {
   return (
     <header className="header">
-      {prop.propTypes ? (
-        <h3 className="header--wordmark">
+      {prop.hasWordmark ? (
+        <div className="header--wordmark">
           <a href="/" className="header--wordmark-link">
             <svg className="header--wordmark-svg" xmlns="http://www.w3.org/2000/svg" width="365.7" height="73.4" viewBox="0 0 365.7 73.4">
               <path
@@ -13,12 +14,14 @@ export default function Header(prop) {
               />
             </svg>
           </a>
-        </h3>
+        </div>
       ) : null}
-      <div className="_container">
+      <div
+        className={prop.size === 'medium' ? '_container' : `_container _container_${prop.size}`}
+      >
         <div className="header--breadcrumbs">
-          {prop.propTypes ? (
-            <h3 className="header--wordmark-2">
+          {prop.hasWordmark ? (
+            <div className="header--wordmark-2">
               <a href="http://www.ibm.com/watson/developercloud/" className="header--wordmark-2-link">
                 <svg className="header--wordmark-svg" xmlns="http://www.w3.org/2000/svg" width="365.7" height="73.4" viewBox="0 0 365.7 73.4">
                   <path
@@ -26,7 +29,7 @@ export default function Header(prop) {
                   />
                 </svg>
               </a>
-            </h3>
+            </div>
           ) : null}
           { prop.mainBreadcrumbs ? (
             <a
@@ -37,7 +40,7 @@ export default function Header(prop) {
             </a>
           ) : null }
           { prop.subBreadcrumbs ? (
-            <div style={{ marginTop: '0rem' }}>
+            <div style={{ marginTop: '0rem', display: 'inline-block' }}>
               <span className="header--breadcrumbs-slash"> / </span>
               <a
                 href={prop.subBreadcrumbsUrl}
@@ -57,10 +60,12 @@ Header.propTypes = {
   mainBreadcrumbs: React.PropTypes.string,
   mainBreadcrumbsUrl: React.PropTypes.string,
   subBreadcrumbs: React.PropTypes.string,
-  subBreadcrumbsLink: React.PropTypes.string,
+  subBreadcrumbsUrl: React.PropTypes.string,
   hasWordmark: React.PropTypes.bool,
+  size: React.PropTypes.oneOf(sizes),
 };
 
 Header.defaultProps = {
-  hasWordmark: false,
+  hasWordmark: true,
+  size: 'large',
 };

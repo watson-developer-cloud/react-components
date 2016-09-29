@@ -1,4 +1,5 @@
 .header {
+  $wordmark-breakpoint: 1262px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -7,7 +8,7 @@
   padding: 0rem;
   position: relative;
 
-  @include breakpoint(get('medium')) {
+  @include breakpoint(get('large')) {
     padding: 0rem 1.6rem;
   }
 
@@ -15,10 +16,10 @@
     font-size: 1.1rem;
     font-weight: bold;
     top: calc(50% - 10px);
-    left: 0%;
+    position: absolute;
     display: none;
 
-    @include breakpoint(get('large')) {
+    @include breakpoint($wordmark-breakpoint) {
       display: inline-block;
     }
   }
@@ -34,7 +35,7 @@
     @include breakpoint(get('small')) {
       display: inline-block;
     }
-    @include breakpoint(get('large')) {
+    @include breakpoint($wordmark-breakpoint) {
       display: none;
     }
   }
@@ -47,22 +48,32 @@
   }
 
   &--breadcrumbs-main {
-    font-weight: bold;
-    color: color('purple', 70);
-    display: inline-block;
-    margin-top: 0rem;
+    &,
+    &:hover,
+    &:focus,
+    &:visited {
+      font-weight: bold;
+      color: color('purple', 50);
+      display: inline-block;
+      margin-top: 0rem;
+    }
   }
 
   &--breadcrumbs-slash {
-    color: color('purple', 70);
+    color: color('purple', 50);
     display: inline-block;
     margin: 0rem get('rhythm') / 4;
   }
 
   &--breadcrumbs-sub {
-    color: color('gray', 50);
-    display: inline-block;
-    margin-top: 0rem;
+    &,
+    &:hover,
+    &:focus,
+    &:visited {
+      color: color('gray', 50);
+      display: inline-block;
+      margin-top: 0rem;
+    }
   }
 
   &--breadcrumbs-link {
