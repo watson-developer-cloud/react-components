@@ -16,8 +16,7 @@ export default function GettingStrted() {
           Add components to your React file where needed:
         </p>
         <Code type="jsx">
-{`import { Header, Jumbotron, Code, Tabs } from
-'./node_modules/watson-react-components/dist/components';`}
+{'import { Header, Jumbotron, Code, Tabs } from \'watson-react-components/dist/components\';'}
         </Code>
         <p className="base--p">
           Add a reference to the stylesheet:

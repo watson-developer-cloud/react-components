@@ -9,3 +9,5 @@ export TabsPane from './Tabs/Pane';
 export Code from './Code';
 
 export Icon from './Icon';
+
+export { RadioGroup, Radio } from './RadioGroup.jsx';

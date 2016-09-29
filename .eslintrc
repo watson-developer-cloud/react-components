@@ -17,6 +17,7 @@
       "optionalDependencies": true,
       "peerDependencies": true
     }],
+    "max-len": ["error", 160],
     "new-cap": "off"
   },
   "env": {

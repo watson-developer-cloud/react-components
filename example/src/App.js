@@ -10,6 +10,7 @@ import FooterExamples from './components/FooterExamples';
 import JumbotronExamples from './components/JumbotronExamples';
 import TabsExamples from './components/TabsExamples';
 import CodeExamples from './components/CodeExamples';
+import RadioGroupExamples from './components/RadioGroupExamples';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
       <FooterExamples />
       <JumbotronExamples />
       <TabsExamples />
+      <RadioGroupExamples />
       <CodeExamples />
     </div>
   );
