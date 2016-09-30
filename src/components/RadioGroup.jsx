@@ -29,7 +29,7 @@ export class Radio extends ChengLouRadio {
     );
   }
 }
-Radio.defaultProps = {Component: 'span'}; // this is the poorly-document equivalent to getDefaultProps for ES6 classes - https://facebook.github.io/react/docs/reusable-components.html#es6-classes
+Radio.defaultProps = {Component: 'div'}; // this is the poorly-document equivalent to getDefaultProps for ES6 classes - https://facebook.github.io/react/docs/reusable-components.html#es6-classes
 
 export class RadioGroup extends ChengLouRadioGroup  {
   render() {
