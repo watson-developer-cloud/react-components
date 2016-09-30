@@ -86,7 +86,9 @@
     "vinyl-source-stream": "^1.1.0",
     "watson-ui-components": "^0.5.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-radio-group": "^3.0.1"
+  },
   "peerDependencies": {
     "breakpoint-sass": "^2.7.0",
     "modular-scale": "^4.4.1",

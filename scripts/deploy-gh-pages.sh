@@ -4,8 +4,8 @@
 # requires an access token - get it from https://github.com/settings/tokens and then add it to .travis.yml with the
 # command `travis encrypt "GH_TOKEN=[access token]" --add`
 
-GH_REPO="@github.com/watson-developer-cloud/react-components.git"
-FULL_REPO="https://$GH_TOKEN$GH_REPO"
+GH_REPO="github.com/watson-developer-cloud/react-components.git"
+FULL_REPO="https://$GH_TOKEN@$GH_REPO"
 
 gulp build
 cd example

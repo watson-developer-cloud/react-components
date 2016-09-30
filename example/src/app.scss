@@ -514,7 +514,7 @@ code[class*="language-"], pre[class*="language-"] {
 .block-example {
   display: block;
   padding: get('rhythm') / 2;
-  color: get('white');
+  //color: get('white');
 
   @include breakpoint(get('large')) {
     @include grid(6);
