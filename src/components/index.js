@@ -10,4 +10,4 @@ export Code from './Code';
 
 export Icon from './Icon';
 
-export { RadioGroup, Radio } from './RadioGroup.jsx';
+export { RadioGroup, Radio } from './RadioGroup.js';
