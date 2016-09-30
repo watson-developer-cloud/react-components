@@ -51,7 +51,7 @@ export default function RadioGroupExample() {
             <p>React prevents side-effects, so radio buttons will not act "clickable" without something
               to handle the <code>onChange</code> event and set the <code>selectedValue</code>.</p>
             <p>The example code to the left wraps the RadioGroup and Radio buttons in a class that
-              handles state andlogs clicks to the console</p>
+              handles state and logs clicks to the console.</p>
           </div>
           <div className="block-code">
             <Code type="jsx">
