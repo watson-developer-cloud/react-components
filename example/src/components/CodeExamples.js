@@ -40,7 +40,7 @@ import 'prismjs/components/prism-sql.js';
 import { Code } from 'watson-react-components';
 `}
             </Code>
-            <p>See the PrismJS website for a list of <a href="http://prismjs.com/#languages-list">available languages</a>.</p>
+            <p>See the PrismJS website for a list of <a className="base--a" href="http://prismjs.com/#languages-list">available languages</a>.</p>
 
           </div>
         </div>
