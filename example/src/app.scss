@@ -524,7 +524,7 @@ code[class*="language-"], pre[class*="language-"] {
 .block-code {
   display: block;
   padding: get('rhythm') / 2;
-  color: get('white');
+  //color: get('white');
   margin-top: 0;
 
   @include breakpoint(get('large')) {

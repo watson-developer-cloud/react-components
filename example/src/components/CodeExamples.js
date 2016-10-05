@@ -10,7 +10,7 @@ export default function CodeExamples() {
         <h2 className="base--h2">Code</h2>
         <div className="row">
           <div className="block-example">
-            <Code type="markup">
+            <Code language="html">
 {`<div>
   <ul>
     <li> foo </li>
@@ -18,10 +18,11 @@ export default function CodeExamples() {
   </ul>
 </div>`}
             </Code>
+
           </div>
           <div className="block-code">
-            <Code type="jsx">
-{`<Code type="json">
+            <Code language="jsx">
+{`<Code language="html">
 {\`<div>
   <ul>
     <li> foo </li>
@@ -30,6 +31,17 @@ export default function CodeExamples() {
 </div>\`}
 </Code>
 `}</Code>
+            <p>The following languages are automatically included:</p>
+            <code>{Code.languages.join(', ')}</code>
+            <p>To include an additional language, import it <b>before</b> importing <code>watson-react-components</code>:</p>
+            <Code language="js">
+{`import 'prismjs';
+import 'prismjs/components/prism-sql.js';
+import { Code } from 'watson-react-components';
+`}
+            </Code>
+            <p>See the PrismJS website for a list of <a className="base--a" href="http://prismjs.com/#languages-list">available languages</a>.</p>
+
           </div>
         </div>
       </div>
