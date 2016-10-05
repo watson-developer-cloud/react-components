@@ -33,8 +33,8 @@ export default class CodeBlock extends React.Component {
 
     return (
       <div className="code-block--code">
-        <pre>
-          <PrismCode className={`base--pre prism language-${lang}`}>
+        <pre className="base--pre">
+          <PrismCode className={`prism language-${lang}`}>
             {this.props.children}
           </PrismCode>
         </pre>
