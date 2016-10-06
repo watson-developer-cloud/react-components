@@ -5,7 +5,8 @@ export Jumbotron from './Jumbotron';
 
 // Elements
 export Tabs from './Tabs';
-export TabsPane from './Tabs/Pane';
+export Pane from './Tabs/Pane';
+export TabsPane from './Tabs/Pane'; // for backwards compatibility
 export Code from './Code';
 
 export Icon from './Icon';
