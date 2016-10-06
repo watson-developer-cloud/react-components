@@ -11,6 +11,7 @@ import JumbotronExamples from './components/JumbotronExamples';
 import TabsExamples from './components/TabsExamples';
 import CodeExamples from './components/CodeExamples';
 import RadioGroupExamples from './components/RadioGroupExamples';
+import ImagePickerExamples from './components/ImagePickerExamples';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <TabsExamples />
       <RadioGroupExamples />
       <CodeExamples />
+      <ImagePickerExamples />
     </div>
   );
 }
