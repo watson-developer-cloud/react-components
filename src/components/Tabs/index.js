@@ -5,12 +5,12 @@ export default class Tabs extends React.Component {
   static propTypes = {
     selected: PropTypes.number,
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]).isRequired,
-  }
+  };
 
   static defaultProps = {
     selected: 0,
     children: [],
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -23,6 +23,13 @@ export default class Tabs extends React.Component {
   handleClick(index, event) {
     event.preventDefault();
     this.setState({ selected: index });
+  }
+
+  // if there is exactly one child, props.children is an object not an array
+  // this getter always returns an array
+  get children() {
+    const children = this.props.children;
+    return Array.isArray(children) ? children : [children];
   }
 
   renderTitles() {
@@ -44,7 +51,7 @@ export default class Tabs extends React.Component {
     }
     return (
       <ul className="tab-panels--tab-list" role="tablist">
-        {this.props.children.map(labels.bind(this))}
+        {this.children.map(labels.bind(this))}
       </ul>
     );
   }
@@ -52,7 +59,7 @@ export default class Tabs extends React.Component {
   renderContent() {
     return (
       <div className="tab-panels--tab-content">
-        {this.props.children[this.state.selected]}
+        {this.children[this.state.selected]}
       </div>
     );
   }
