@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 export default function Pane(props) {
   return (
@@ -9,6 +9,6 @@ export default function Pane(props) {
 }
 
 Pane.propTypes = {
-  label: React.PropTypes.string.isRequired,
-  children: React.PropTypes.element.isRequired,
+  label: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]).isRequired,
 };
