@@ -1,141 +1,181 @@
-const React = require('react');
+import React from 'react';
+import classNames from 'classnames';
+import Icon from '../Icon';
 const Dropzone = require('react-dropzone');
-const $ = require('jquery');
 
 const Tile = require('./Tile');
 const InputImageUrl = require('./Url');
 
-const Icon = require('../Icon');
-
-const Input = React.createClass({
+export default React.createClass({
   propTypes: {
+    error: React.PropTypes.string,
+
+    // tile props
     images: React.PropTypes.arrayOf(React.PropTypes.shape({
       url: React.PropTypes.string,
       alt: React.PropTypes.string,
     })),
-    onClassify: React.PropTypes.func,
-    onError: React.PropTypes.func,
-    selectedImage: React.PropTypes.object,
-    preview: React.PropTypes.bool,
+    onClickTile: React.PropTypes.func, // args: image obj this.props.images, index
+
+    // preview tile props
+    initialPreviewImage: React.PropTypes.shape({
+      url: React.PropTypes.string.isRequired,
+      alt: React.PropTypes.string,
+    }), // have component display a preview image by default
+
+    // file input props
+    // detailed documentation on dropzone properties can be found at
+    // https://github.com/okonet/react-dropzone
+    onDrop: React.PropTypes.func, // args: File image
+    onDropAccepted: React.PropTypes.func, // args: File image
+    onDropRejected: React.PropTypes.func, // args: File image
+    accept: React.PropTypes.string,
+    disableClick: React.PropTypes.bool,
+    inputProps: React.PropTypes.object,
+    maxSize: React.PropTypes.number,
+    minSize: React.PropTypes.number,
+    multiple: React.PropTypes.bool,
+    name: React.PropTypes.string,
+    fileError: React.PropTypes.string, // error message on file input
+
+    // url input props
+    onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
+    onUrlInputChange: React.PropTypes.func, // event when url input changes
+    urlPlaceholder: React.PropTypes.string, // placeholder text for url input
+    urlError: React.PropTypes.string, // error message on url input
   },
 
   getDefaultProps: () => ({
     // eslint-disable-next-line
     images: [0, 1, 2, 3].map((_, i) => {
       return {
-        url: `/images/samples/${i}.png`,
-        alt: `Sample-${i}`,
+        url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97150&w=200&h=150',
+        alt: `Sample ${i}`,
       };
     }),
+    initialPreviewImage: null,
+
+    accept: 'image/*',
+    disableClick: false,
+    inputProps: {},
+    maxSize: Infinity,
+    minSize: 0,
+    multiple: false,
+    name: 'file-chooser',
+
+    urlPlaceholder: 'Paste an image URL',
   }),
 
   getInitialState() {
-    // no image selected
-    if (!this.props.selectedImage || this.props.selectedImage === null) {
-      return { selectedTile: -1, userImage: null };
-    }
-    const index = this.props.images.map((e) => e.url).indexOf(this.props.selectedImage.url);
-
-    if (index !== -1) {
-      // sample image selected
-      return { selectedTile: index };
-    }
-    // url image selected
-    if (this.props.selectedImage.url) {
-      return {
-        userImage: {
-          preview: this.props.selectedImage.url,
-          name: 'User supplied url',
-        },
-      };
-    }
-
-    if (!{}.hasOwnProperty.call(this.props.selectedImage, 'get')) {
-      // safari doesn't support FormData.get so we will skip saving the image
-      return { name: 'User uploaded' };
-    }
-    // upload image selected
-    return {
-      userImage: this.props.selectedImage.get('image'),
+    let state = {
+      previewImage: null,  // { url: string, alt: string }
+      selectedTile: -1,
+      isDragging: false,
     };
+
+    // no image selected
+    if (!this.props.initialPreviewImage || this.props.initialPreviewImage === null) {
+      return state;
+    }
+
+    // image tile is already selected
+    const index = this.props.images.map((e) => e.url).indexOf(this.props.initialPreviewImage.url);
+    if (index !== -1) {
+      state.selectedTile = index;
+      return state;
+    }
+
+    // url image selected
+    if (this.props.initialPreviewImage.url) {
+      state.previewImage = {
+        url: this.props.initialPreviewImage.url,
+        alt: this.props.initialPreviewImage.alt || 'User supplied url',
+      };
+      return state;
+    }
+
+    return state;
   },
 
   componentDidMount() {
-    $(document).on('dragover', () => {
-      $('.dropzone').addClass('dropzone_on-drag');
-    });
-
-    $(document).on('dragleave', () => {
-      $('.dropzone').removeClass('dropzone_on-drag');
-    });
+    document.addEventListener('dragover', this.onDragOver, false);
+    document.addEventListener('dragleave', this.onDragLeave, false);
   },
 
   componentWillUnmount() {
-    $(document).off('dragover');
-    $(document).off('dragleave');
+    document.removeEventListener('dragover', this.onDragOver);
+    document.removeEventListener('dragover', this.onDragLeave);
   },
 
-  onImageUrl(url) {
-    // if (this.props.selectedImage && this.props.selectedImage.url) {
+  onDragOver() {
+    this.setState({ isDragging: true });
+  },
+
+  onDragLeave() {
+    this.setState({ isDragging: false });
+  },
+
+  onUrlSubmit(event, url) {
     this.setState({
-      userImage: {
-        preview: url,
-        name: 'User supplied url',
+      previewImage: {
+        url,
+        alt: 'User supplied url',
       },
       selectedTile: -1,
     });
-    this.props.onClassify({ url });
-    // }
+    if (this.props.onUrlSubmit) {
+      this.props.onUrlSubmit.call(this, { url });
+    }
   },
 
-  onImageDrop(files) {
+  onDrop(files) {
     const image = files[0];
-    this.setState({
-      userImage: image,
-      selectedTile: -1,
-    });
-    const formData = new FormData();
-    formData.append('image', image);
-    this.props.onClassify(formData);
-    $('.dropzone').removeClass('dropzone_on-drag');
+    if (this.props.onDrop) {
+      this.props.onDrop.call(this, image);
+    }
   },
 
-  onImageDropRejected(files) {
+  onDropAccepted(files) {
     const image = files[0];
-    if (image.type !== 'image/png' &&
-        image.type !== 'image/x-png' &&
-        image.type !== 'image/jpeg' &&
-        image.type !== 'image/jpg' &&
-        image.type !== 'image/gif') {
-      this.props.onError('Only JPGs, PNGs, and GIFs are supported');
-    }
-    if (image.size > 2000000) {
-      this.props.onError('Ensure the image is under 2mb');
-    }
     this.setState({
-      userImage: null,
+      previewImage: { url: image.preview, alt: 'preview image' },
       selectedTile: -1,
+      isDragging: false,
     });
-    $('.dropzone').removeClass('dropzone_on-drag');
+    if (this.props.onDropAccepted) {
+      this.props.onDropAccepted.call(this, image);
+    }
+  },
+
+  onDropRejected(files) {
+    const image = files[0];
+    this.setState({
+      previewImage: null,
+      selectedTile: -1,
+      isDragging: false,
+    });
+    if (this.props.onDropRejected) {
+      this.props.onDropRejected.call(this, image);
+    }
   },
 
   onClickTile(index) {
     this.setState({
       selectedTile: index,
-      userImage: null,
+      previewImage: null,
     });
-
-    this.props.onClassify(this.props.images[index]);
+    if (this.props.onClickTile) {
+      this.props.onClickTile.call(this, this.props.images[index], index);
+    }
   },
 
   render() {
     return (
       <div className="input--section">
-        <h3 className="base--h3 input--title">Let's go shopping</h3>
         {this.props.images.map((image, index) => (
           <Tile
             grayout={(
-              (this.state.userImage != null) ||
+              (this.state.previewImage != null) ||
               (this.state.selectedTile > -1 && index !== this.state.selectedTile)
             )}
             image={image.url}
@@ -146,23 +186,31 @@ const Input = React.createClass({
             dataId={index}
           />)
         )}
-        {this.state.userImage && this.props.preview ? (
+        {this.state.previewImage ? (
           <Tile
             grayout={false}
-            image={this.state.userImage.preview}
-            alt={this.state.userImage.name}
+            image={this.state.previewImage.url}
+            alt={this.state.previewImage.alt}
           />
         ) : null}
         <div className="input--tile">
           <label className="input--tile-input-container" htmlFor="input--file-input">
             <Dropzone
-              multiple={false}
-              className="content dropzone"
-              // onDrop={this.onImageDrop}
-              // onDropRejected={this.onImageDropRejected}
-              maxSize={2000000}
-              accept=".png, .gif, .jpg, .jpeg,
-                image/png, image/x-png, image/gif, image/jpeg, image/jpg"
+              accept={this.props.accept}
+              className={classNames(
+                  'content',
+                  'dropzone',
+                  { 'dropzone_on-drag': this.state.isDragging }
+              )}
+              disableClick={this.props.disableClick}
+              inputProps={this.props.inputProps}
+              maxSize={this.props.maxSize}
+              minSize={this.props.minSize}
+              multiple={this.props.multiple}
+              name={this.props.name}
+              onDrop={this.onDrop}
+              onDropAccepted={this.onDropAccepted}
+              onDropRejected={this.onDropRejected}
             >
               <div className="input--tile-input-description">
                 Select or drag an image relative to the shopping category
@@ -172,11 +220,13 @@ const Input = React.createClass({
               </div>
             </Dropzone>
           </label>
-          <InputImageUrl onImageUrl={this.onImageUrl} />
+          <InputImageUrl
+            onInputChange={this.props.onUrlInputChange}
+            onSubmit={this.onUrlSubmit}
+            placeholder={this.props.urlPlaceholder}
+          />
         </div>
       </div>
     );
   },
 });
-
-export default Input;

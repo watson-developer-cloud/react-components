@@ -2,10 +2,15 @@ const React = require('react');
 
 const InputImageUrl = React.createClass({
   propTypes: {
-    onImageUrl: React.PropTypes.func.isRequired,
+    onSubmit: React.PropTypes.func,
+    onInputChange: React.PropTypes.func,
+    placeholder: React.PropTypes.string,
   },
   getDefaultProps() {
-    return { url: '' };
+    return {
+      url: '',
+      placeholder: 'Sample Placeholder',
+    };
   },
   getInitialState() {
     return { url: '' };
@@ -15,24 +20,29 @@ const InputImageUrl = React.createClass({
    */
   handleInputChange(e) {
     this.setState({ url: e.target.value });
+    if (this.props.onInputChange) {
+      this.props.onInputChange.call(this, e);
+    }
   },
   /**
    * On Input url key press
    */
   handleKeyPress(e) {
     if (e.key === 'Enter' && this.state.url !== '') {
-      this.props.onImageUrl(this.state.url);
+      if (this.props.onSubmit) {
+        this.props.onSubmit.call(this, e, this.state.url);
+      }
     }
   },
   render() {
     return (
       <input
-        type=""
-        value={this.state.url}
+        className="input--url-input base--input"
         onChange={this.handleInputChange}
         onKeyPress={this.handleKeyPress}
-        placeholder="Parse an image URL"
-        className="input--url-input base--input"
+        placeholder={this.props.placeholder}
+        type="text"
+        value={this.state.url}
       />
     );
   },
