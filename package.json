@@ -87,6 +87,8 @@
     "watson-ui-components": "^0.5.3"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "react-dropzone": "^3.6.0",
     "react-radio-group": "^3.0.1"
   },
   "peerDependencies": {
