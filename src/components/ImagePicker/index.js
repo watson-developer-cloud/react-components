@@ -10,14 +10,22 @@ export default React.createClass({
   propTypes: {
     error: React.PropTypes.string,
 
+    // Event Handlers
+    onClickTile: React.PropTypes.func, // args: image obj this.props.images, index; when file is clicked
+    onDrop: React.PropTypes.func, // args: File image; when file is chosen or dragged and dropped
+    onDropAccepted: React.PropTypes.func, // args: File image; when file is chosen successfully
+    onDropRejected: React.PropTypes.func, // args: File image; when file is chosen unsuccessfully
+    onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
+    onUrlInputChange: React.PropTypes.func, // event when url input changes
+
     // tile props
     images: React.PropTypes.arrayOf(React.PropTypes.shape({
       url: React.PropTypes.string,
       alt: React.PropTypes.string,
     })),
-    onClickTile: React.PropTypes.func, // args: image obj this.props.images, index
 
     // preview tile props
+    disablePreviewImage: React.PropTypes.bool,
     initialPreviewImage: React.PropTypes.shape({
       url: React.PropTypes.string.isRequired,
       alt: React.PropTypes.string,
@@ -26,21 +34,18 @@ export default React.createClass({
     // file input props
     // detailed documentation on dropzone properties can be found at
     // https://github.com/okonet/react-dropzone
-    onDrop: React.PropTypes.func, // args: File image
-    onDropAccepted: React.PropTypes.func, // args: File image
-    onDropRejected: React.PropTypes.func, // args: File image
-    accept: React.PropTypes.string,
-    disableClick: React.PropTypes.bool,
-    inputProps: React.PropTypes.object,
-    maxSize: React.PropTypes.number,
-    minSize: React.PropTypes.number,
-    multiple: React.PropTypes.bool,
+    disableFileInput: React.PropTypes.bool, // option to remove File Input / Dropzone component
+    accept: React.PropTypes.string, // accepted filetypes
+    disableClick: React.PropTypes.bool, // option to make dropzone clickable or not
+    inputProps: React.PropTypes.object, // file chooser input properties
+    maxSize: React.PropTypes.number,  // max file size
+    minSize: React.PropTypes.number,  // min file size
+    multiple: React.PropTypes.bool, // option for multiple files
     name: React.PropTypes.string,
     fileError: React.PropTypes.string, // error message on file input
 
     // url input props
-    onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
-    onUrlInputChange: React.PropTypes.func, // event when url input changes
+    disableUrlInput: React.PropTypes.bool,  // option to remove url input component
     urlPlaceholder: React.PropTypes.string, // placeholder text for url input
     urlError: React.PropTypes.string, // error message on url input
   },
@@ -53,8 +58,10 @@ export default React.createClass({
         alt: `Sample ${i}`,
       };
     }),
+    disablePreviewImage: false,
     initialPreviewImage: null,
 
+    disableFileInput: false,
     accept: 'image/*',
     disableClick: false,
     inputProps: {},
@@ -63,11 +70,12 @@ export default React.createClass({
     multiple: false,
     name: 'file-chooser',
 
+    disableUrlInput: false,
     urlPlaceholder: 'Paste an image URL',
   }),
 
   getInitialState() {
-    let state = {
+    const state = {
       previewImage: null,  // { url: string, alt: string }
       selectedTile: -1,
       isDragging: false,
@@ -186,46 +194,52 @@ export default React.createClass({
             dataId={index}
           />)
         )}
-        {this.state.previewImage ? (
+        {!this.props.disablePreviewImage &&
+          this.state.previewImage &&
+          !(this.props.fileError || this.props.urlError || this.props.error) ? (
           <Tile
             grayout={false}
             image={this.state.previewImage.url}
             alt={this.state.previewImage.alt}
           />
         ) : null}
-        <div className="input--tile">
-          <label className="input--tile-input-container" htmlFor="input--file-input">
-            <Dropzone
-              accept={this.props.accept}
-              className={classNames(
-                  'content',
-                  'dropzone',
-                  { 'dropzone_on-drag': this.state.isDragging }
-              )}
-              disableClick={this.props.disableClick}
-              inputProps={this.props.inputProps}
-              maxSize={this.props.maxSize}
-              minSize={this.props.minSize}
-              multiple={this.props.multiple}
-              name={this.props.name}
-              onDrop={this.onDrop}
-              onDropAccepted={this.onDropAccepted}
-              onDropRejected={this.onDropRejected}
-            >
-              <div className="input--tile-input-description">
-                Select or drag an image relative to the shopping category
-              </div>
-              <div className="input--tile-input-icon">
-                <Icon type="plus" size="regular" />
-              </div>
-            </Dropzone>
-          </label>
-          <InputImageUrl
-            onInputChange={this.props.onUrlInputChange}
-            onSubmit={this.onUrlSubmit}
-            placeholder={this.props.urlPlaceholder}
-          />
-        </div>
+        {!this.props.disableFileInput ? (
+          <div className="input--tile">
+            <label className="input--tile-input-container" htmlFor="input--file-input">
+              <Dropzone
+                accept={this.props.accept}
+                className={classNames(
+                    'content',
+                    'dropzone',
+                    { 'dropzone_on-drag': this.state.isDragging }
+                )}
+                disableClick={this.props.disableClick}
+                inputProps={this.props.inputProps}
+                maxSize={this.props.maxSize}
+                minSize={this.props.minSize}
+                multiple={this.props.multiple}
+                name={this.props.name}
+                onDrop={this.onDrop}
+                onDropAccepted={this.onDropAccepted}
+                onDropRejected={this.onDropRejected}
+              >
+                <div className="input--tile-input-description">
+                  Select or drag an image relative to the shopping category
+                </div>
+                <div className="input--tile-input-icon">
+                  <Icon type="plus" size="regular" />
+                </div>
+              </Dropzone>
+            </label>
+            {!this.props.disableUrlInput ? (
+              <InputImageUrl
+                onInputChange={this.props.onUrlInputChange}
+                onSubmit={this.onUrlSubmit}
+                placeholder={this.props.urlPlaceholder}
+              />
+            ) : null}
+          </div>
+        ) : null}
       </div>
     );
   },
