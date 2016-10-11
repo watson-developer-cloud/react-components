@@ -197,6 +197,7 @@ export default React.createClass({
         {!this.props.disablePreviewImage &&
           this.state.previewImage &&
           !(this.props.fileError || this.props.urlError || this.props.error) ? (
+          // eslint-disable-next-line
           <Tile
             grayout={false}
             image={this.state.previewImage.url}
