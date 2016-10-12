@@ -2,4 +2,13 @@
 
 .base--input {
   @extend %fixed-width-input;
+
+  border-width: 1px;
+  border-color: color('gray', 50);
+
+  &:hover,
+  &:focus {
+    border-width: 1px;
+    outline-width: 1px;
+  }
 }
