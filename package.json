@@ -78,8 +78,6 @@
     "modular-scale": "^4.4.1",
     "modularscale-sass": "^2.1.1",
     "prismjs": "^1.5.1",
-    "react": "^15.3.1",
-    "react-addons-pure-render-mixin": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-prism": "^3.2.1",
     "uglifyify": "^3.0.2",
@@ -89,7 +87,9 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "react-dropzone": "^3.6.0",
-    "react-radio-group": "^3.0.1"
+    "react-radio-group": "^3.0.1",
+    "react": "^15.3.1",
+    "react-addons-pure-render-mixin": "^15.3.1"
   },
   "peerDependencies": {
     "breakpoint-sass": "^2.7.0",
