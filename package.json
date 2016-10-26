@@ -1,6 +1,6 @@
 {
   "name": "watson-react-components",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",
   "repository": {
@@ -21,6 +21,10 @@
       "name": "Nathan Friedly",
       "email": "nfriedly@us.ibm.com",
       "url": "http://www.nfriedly.com/"
+    },
+    {
+      "name": "Joshua B. Smith",
+      "email": "joshua.b.smith@us.ibm.com"
     }
   ],
   "license": "Apache-2.0",
