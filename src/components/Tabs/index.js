@@ -5,6 +5,7 @@ export default class Tabs extends React.Component {
   static propTypes = {
     selected: PropTypes.number,
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]).isRequired,
+    onChange: PropTypes.func
   };
 
   static defaultProps = {
@@ -23,6 +24,7 @@ export default class Tabs extends React.Component {
   handleClick(index, event) {
     event.preventDefault();
     this.setState({ selected: index });
+    typeof(this.props.onChange) === 'function' && this.props.onChange(index)
   }
 
   // if there is exactly one child, props.children is an object not an array
