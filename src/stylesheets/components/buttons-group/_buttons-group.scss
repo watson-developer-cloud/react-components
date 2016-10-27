@@ -5,8 +5,9 @@
     border-color: color('gray', 50);
     color: color('gray', 50);
     font-weight: 300;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    padding: 0.25rem 0rem;
     overflow: hidden;
     border-radius: 0rem 0rem 0rem 0rem;
     border-left-width: 0rem;
@@ -19,7 +20,8 @@
     }
 
     &:hover {
-      border-color: color('purple', 50);
+      border-color: color('purple', 80);
+      color: color('purple', 80);
     }
 
     &_first {

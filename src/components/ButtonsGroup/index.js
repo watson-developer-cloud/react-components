@@ -57,6 +57,7 @@ export default class ButtonsGroup extends React.Component {
                 width: '100%',
               }}
               htmlFor={button.id}
+              title={button.text}
             >
               {button.text}
             </label>
