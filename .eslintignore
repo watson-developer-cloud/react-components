@@ -6,3 +6,4 @@ dist
 example/build
 gh-pages
 .publish
+_site/
