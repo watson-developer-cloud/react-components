@@ -13,6 +13,8 @@ export default class ButtonsGroup extends React.Component {
       id: PropTypes.string.isRequired,
       text: PropTypes.string.isrequired,
     })),
+    onClick: PropTypes.func,
+    onChange: PropTypes.func,
   };
 
   static defaultProps = {
@@ -26,8 +28,24 @@ export default class ButtonsGroup extends React.Component {
     return (
       <div className="buttons-group">
         {this.props.buttons.map((button, index) => (
-          this.props.type === 'button' ?
-            <button
+          <div
+            style={{
+              display: 'inline-block',
+              marginTop: '0rem',
+              width: `${this.props.isExpanded ? expandedWidths : this.props.minWidth}`,
+            }}
+            key={index}
+          >
+            <input
+              className="base--radio buttons-group--radio"
+              type={this.props.type}
+              id={button.id}
+              name={this.props.name}
+              value={button.value}
+              onClick={this.props.onClick}
+              onChange={this.props.onChange}
+            />
+            <label
               className={classNames(
                 'base--inline-label',
                 'base--button',
@@ -35,43 +53,14 @@ export default class ButtonsGroup extends React.Component {
                 { 'buttons-group--button_first': index === 0 },
                 { 'buttons-group--button_last': index === this.props.buttons.length - 1 }
               )}
-              style={{ width: `${this.props.isExpanded ? expandedWidths : this.props.minWidth}` }}
+              style={{
+                width: '100%',
+              }}
               htmlFor={button.id}
-              key={index}
             >
               {button.text}
-            </button> :
-              <div
-                style={{
-                  display: 'inline-block',
-                  marginTop: '0rem',
-                  width: `${this.props.isExpanded ? expandedWidths : this.props.minWidth}`,
-                }}
-                key={index}
-              >
-                <input
-                  className="base--radio buttons-group--radio"
-                  type={this.props.type}
-                  id={button.id}
-                  name={this.props.name}
-                  value={button.value}
-                />
-                <label
-                  className={classNames(
-                    'base--inline-label',
-                    'base--button',
-                    'buttons-group--button',
-                    { 'buttons-group--button_first': index === 0 },
-                    { 'buttons-group--button_last': index === this.props.buttons.length - 1 }
-                  )}
-                  style={{
-                    width: '100%',
-                  }}
-                  htmlFor={button.id}
-                >
-                  {button.text}
-                </label>
-              </div>
+            </label>
+          </div>
         ))}
       </div>
     );
