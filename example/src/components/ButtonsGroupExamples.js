@@ -6,7 +6,7 @@ export default function ButtonsGroupExamples() {
   return (
     <section className="_full-width-row" id="Footer">
       <div className="_container _container_large">
-        <h2 className="base--h2">Footer</h2>
+        <h2 className="base--h2">Buttons Group</h2>
         <div className="row">
           <h5 className="base--h5">Normal Buttons</h5>
           <ButtonsGroup
