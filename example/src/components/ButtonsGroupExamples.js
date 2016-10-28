@@ -77,7 +77,7 @@ export default function ButtonsGroupExamples() {
   name="radio-buttons"
   buttons={[{
     value: 1,
-    id: 'radio-buttons-1',  // id's need to be unique
+    id: 'radio-buttons-1',  // id's must be unique across the entire page. Default value is groupName-buttonValue
     text: 'hello',
   }, {
     value: 2,

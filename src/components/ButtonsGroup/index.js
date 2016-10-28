@@ -10,8 +10,8 @@ export default class ButtonsGroup extends React.Component {
     name: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
       value: PropTypes.number.isRequired,
-      id: PropTypes.string.isRequired,
-      text: PropTypes.string.isrequired,
+      id: PropTypes.string,
+      text: PropTypes.string.isRequired,
     })),
     onClick: PropTypes.func,
     onChange: PropTypes.func,
@@ -39,7 +39,7 @@ export default class ButtonsGroup extends React.Component {
             <input
               className="base--radio buttons-group--radio"
               type={this.props.type}
-              id={button.id}
+              id={button.id || `${this.props.name}-${button.value}`}
               name={this.props.name}
               value={button.value}
               onClick={this.props.onClick}
