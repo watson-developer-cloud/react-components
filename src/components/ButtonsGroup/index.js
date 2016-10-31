@@ -9,7 +9,7 @@ export default class ButtonsGroup extends React.Component {
     minWidth: PropTypes.string, // will be overrided if isExpanded is true
     name: PropTypes.string.isRequired,
     buttons: PropTypes.arrayOf(PropTypes.shape({
-      value: PropTypes.number.isRequired,
+      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       id: PropTypes.string,
       text: PropTypes.string.isRequired,
     })),
