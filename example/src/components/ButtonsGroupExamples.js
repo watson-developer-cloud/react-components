@@ -12,7 +12,9 @@ export default function ButtonsGroupExamples() {
           <ButtonsGroup
             type="button"
             name="button"
+            // eslint-disable-next-line no-console
             onClick={e => console.log('button clicked', e)}
+            // eslint-disable-next-line no-console
             onChange={e => console.log('button changed', e)}
             buttons={[{
               value: 1,
@@ -32,7 +34,9 @@ export default function ButtonsGroupExamples() {
           <ButtonsGroup
             type="radio"
             name="radio-buttons"
+            // eslint-disable-next-line no-console
             onClick={e => console.log('radio clicked', e)}
+            // eslint-disable-next-line no-console
             onChange={e => console.log('radio changed', e)}
             buttons={[{
               value: 1,
@@ -52,7 +56,9 @@ export default function ButtonsGroupExamples() {
           <ButtonsGroup
             type="checkbox"
             name="check-buttons"
+            // eslint-disable-next-line no-console
             onClick={e => console.log('checkbox clicked', e)}
+            // eslint-disable-next-line no-console
             onChange={e => console.log('checkbox changed', e)}
             buttons={[{
               value: 1,
