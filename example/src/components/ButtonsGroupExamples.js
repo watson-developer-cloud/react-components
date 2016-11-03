@@ -6,12 +6,14 @@ export default function ButtonsGroupExamples() {
   return (
     <section className="_full-width-row" id="Footer">
       <div className="_container _container_large">
-        <h2 className="base--h2">Footer</h2>
+        <h2 className="base--h2">Buttons Group</h2>
         <div className="row">
           <h5 className="base--h5">Normal Buttons</h5>
           <ButtonsGroup
             type="button"
             name="button"
+            onClick={e => console.log('button clicked', e)}
+            onChange={e => console.log('button changed', e)}
             buttons={[{
               value: 1,
               id: 'button-1',
@@ -30,6 +32,8 @@ export default function ButtonsGroupExamples() {
           <ButtonsGroup
             type="radio"
             name="radio-buttons"
+            onClick={e => console.log('radio clicked', e)}
+            onChange={e => console.log('radio changed', e)}
             buttons={[{
               value: 1,
               id: 'radio-buttons-1',
@@ -48,6 +52,8 @@ export default function ButtonsGroupExamples() {
           <ButtonsGroup
             type="checkbox"
             name="check-buttons"
+            onClick={e => console.log('checkbox clicked', e)}
+            onChange={e => console.log('checkbox changed', e)}
             buttons={[{
               value: 1,
               id: 'check-buttons-1',
@@ -75,9 +81,11 @@ export default function ButtonsGroupExamples() {
 {`<ButtonsGroup
   type="radio"  // radio, button, or checkbox
   name="radio-buttons"
+  onClick={e => console.log('clicked', e)}
+  onChange={e => console.log('changed', e)}
   buttons={[{
     value: 1,
-    id: 'radio-buttons-1',  // id's need to be unique
+    id: 'radio-buttons-1',  // id's must be unique across the entire page. Default value is name-value
     text: 'hello',
   }, {
     value: 2,
