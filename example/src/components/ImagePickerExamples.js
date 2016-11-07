@@ -6,7 +6,7 @@ import Code from '../../../src/components/Code';
 
 export default function ImagePickerExamples() {
   return (
-    <section className="_full-width-row">
+    <section className="_full-width-row" id="ImagePicker">
       <div className="_container _container_large">
         <h2 className="base--h2">ImagePicker</h2>
         <ImagePicker />
