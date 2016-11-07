@@ -1,6 +1,7 @@
 import React from 'react';
 import Alert from '../../../src/components/Alert';
 import Code from '../../../src/components/Code';
+import Icon from '../../../src/components/Icon';
 
 export default function AlertExamples() {
   const colors = ['green', 'yellow', 'blue', 'red', 'red'];
@@ -24,6 +25,12 @@ export default function AlertExamples() {
                 This is a message box with more content.<br />
                 This is a message box with more content.<br />
                 This is a message box with more content.<br />
+              </p>
+            </Alert>
+            <Alert icon={<Icon type="link" />}>
+              <p className="base--p">
+                This alert uses a custom icon.  Custom icons will override &nbsp;
+                <code className="base--code">type</code> and <code className="base--code">color</code> properties.
               </p>
             </Alert>
           </div>
@@ -57,6 +64,13 @@ export default function AlertExamples() {
     This is a message box with more content.<br />
     This is a message box with more content.<br />
     This is a message box with more content.<br />
+  </p>
+</Alert>
+
+<Alert icon={<Icon type="link" />}>
+  <p className="base--p">
+    This alert uses a custom icon.  Custom icons will override &nbsp;
+    <code className="base--code">type</code> and <code className="base--code">color</code> properties.
   </p>
 </Alert>`}
             </Code>
