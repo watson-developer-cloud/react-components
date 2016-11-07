@@ -13,6 +13,7 @@ import CodeExamples from './components/CodeExamples';
 import RadioGroupExamples from './components/RadioGroupExamples';
 import ImagePickerExamples from './components/ImagePickerExamples';
 import ButtonsGroupExamples from './components/ButtonsGroupExamples';
+import AlertExamples from './components/AlertExamples';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
       <ButtonsGroupExamples />
       <CodeExamples />
       <ImagePickerExamples />
+      <AlertExamples />
     </div>
   );
 }

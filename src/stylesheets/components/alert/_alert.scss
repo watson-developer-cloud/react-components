@@ -1,0 +1,20 @@
+.alert {
+  background-color: color('gray', 10);
+  border-radius: 5px;
+  padding: 0.75rem;
+  display: table;
+  width: 100%;
+
+  &--icon-container {
+    margin-right: 1rem;
+    display: table-cell;
+    vertical-align: middle;
+    width: 2rem;
+  }
+
+  &--content-container {
+    display: table-cell;
+    padding-left: 1rem;
+    vertical-align: middle;
+  }
+}
