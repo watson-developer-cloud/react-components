@@ -14,3 +14,4 @@ export Alert from './Alert';
 export Icon from './Icon';
 
 export { RadioGroup, Radio } from './RadioGroup.js';
+export ButtonsGroup from './ButtonsGroup';

@@ -27,6 +27,7 @@ export default function App() {
       <JumbotronExamples />
       <TabsExamples />
       <RadioGroupExamples />
+      <ButtonsGroupExamples />
       <CodeExamples />
       <ImagePickerExamples />
       <ButtonsGroupExamples />
