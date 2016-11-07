@@ -9,6 +9,7 @@ export Pane from './Tabs/Pane';
 export TabsPane from './Tabs/Pane';
 export ImagePicker from './ImagePicker';
 export Code from './Code';
+export Alert from './Alert';
 
 export Icon from './Icon';
 
