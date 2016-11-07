@@ -30,7 +30,6 @@ export default function App() {
       <ButtonsGroupExamples />
       <CodeExamples />
       <ImagePickerExamples />
-      <ButtonsGroupExamples />
       <AlertExamples />
     </div>
   );
