@@ -9,6 +9,7 @@
   visibility: hidden;
   opacity: 0;
   margin-top: 0rem;
+  z-index: 10000;
 
   &.show {
     visibility: visible;
