@@ -15,6 +15,13 @@
     visibility: visible;
     opacity: 1;
   }
+
+  // to make sure modal doesn't appear on brief initial loading
+  &.hidden {
+    display: none;
+    transition: none;
+    z-index: -1;
+  }
 }
 
 .modal {
