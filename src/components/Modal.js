@@ -9,19 +9,42 @@ import Colors from './Colors';
 export default React.createClass({
   propTypes: {
     isOpen: React.PropTypes.bool,
-    onExit: React.PropTypes.func,
     style: React.PropTypes.object,
+    onExit: React.PropTypes.func,
+    onEnter: React.PropTypes.func,
   },
 
   defaultProps: {
     isOpen: false,
   },
 
+  getInitialState() {
+    return {
+      initialHide: true,
+    };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isOpen && !this.props.isOpen) {
+      nextProps.onEnter.call(this);
+    }
+  },
+
+  initialHide() {
+    setTimeout(() => {
+      this.setState({
+        initialHide: false,
+      });
+    }, 2000);
+  },
+
   render() {
+    this.initialHide();
     return (
       <div
         className={classNames(
           'overlay',
+          { hide: this.state.initialHide },
           { show: this.props.isOpen },
         )}
       >
