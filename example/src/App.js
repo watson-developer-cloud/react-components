@@ -14,6 +14,7 @@ import RadioGroupExamples from './components/RadioGroupExamples';
 import ImagePickerExamples from './components/ImagePickerExamples';
 import ButtonsGroupExamples from './components/ButtonsGroupExamples';
 import AlertExamples from './components/AlertExamples';
+import ModalExamples from './components/ModalExamples';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
       <CodeExamples />
       <ImagePickerExamples />
       <AlertExamples />
+      <ModalExamples />
     </div>
   );
 }

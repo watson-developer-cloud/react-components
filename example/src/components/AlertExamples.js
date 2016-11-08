@@ -7,7 +7,7 @@ export default function AlertExamples() {
   const colors = ['green', 'yellow', 'blue', 'red', 'red'];
   const types = ['success', 'warning', 'info', 'error', 'error-o'];
   return (
-    <section className="_full-width-row" id="Footer">
+    <section className="_full-width-row" id="Alert">
       <div className="_container _container_large">
         <h2 className="base--h2">Alert</h2>
         <div className="row">
