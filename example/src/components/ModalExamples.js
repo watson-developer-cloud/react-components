@@ -29,9 +29,15 @@ export default React.createClass({
             <Modal
               isOpen={this.state.toggleModal}
               onExit={() => {
+                // eslint-disable-next-line
+                console.log('on exit');
                 this.setState({
                   toggleModal: false,
                 });
+              }}
+              onEnter={() => {
+                // eslint-disable-next-line
+                console.log('on enter');
               }}
             >
               <h2 className="base--h2" style={{ textAlign: 'center' }}>Hello World</h2>
@@ -47,7 +53,8 @@ export default React.createClass({
           </div>
           <Code language="js">
 {`
-let onExit = () => {
+const onExit = () => {
+  console.log('on exit');
   this.setState({
     toggleModal: false,
   });
@@ -55,9 +62,16 @@ let onExit = () => {
 
 ...
 
+const onEnter = () => {
+  console.log('on enter');
+}
+
+...
+
 <Modal
   isOpen={this.state.toggleModal} // boolean
   onExit={onExit}
+  onEnter={onEnter}
 >
   <h2 className="base--h2" style={{ textAlign: 'center' }}>Hello World</h2>
   <Alert type="error" color="red">This is an <b>error</b> message!</Alert>
