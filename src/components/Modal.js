@@ -14,8 +14,10 @@ export default React.createClass({
     onEnter: React.PropTypes.func,
   },
 
-  defaultProps: {
-    isOpen: false,
+  getDefaultProps() {
+    return {
+      isOpen: false,
+    };
   },
 
   getInitialState() {
