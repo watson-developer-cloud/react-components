@@ -3,22 +3,47 @@ import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 // import Icon from '../../../src/components/Icon';
 
-export default function TextInputExamples() {
-  return (
-    <section className="_full-width-row" id="TextInput">
-      <div className="_container _container_large">
-        <h2 className="base--h2">Text Input</h2>
-        <div className="row">
-          <div className="block-example">
-            <TextInput />
-          </div>
-          <div className="block-code">
-            <Code type="jsx">
-{}
-            </Code>
+export default React.createClass({
+
+  getInitialState() {
+    return {
+      text: '',
+    };
+  },
+
+  render() {
+    return (
+      <section className="_full-width-row" id="TextInput">
+        <div className="_container _container_large">
+          <h2 className="base--h2">Text Input</h2>
+          <div className="row">
+            <div className="block-example">
+              <TextInput
+                id="text-input-1"
+                placeholder="Try typing something here"
+                onInput={(e) => {
+                  this.setState({ text: e.target.value });
+                }}
+              />
+              <p className="base--p">Showing event handling with the TextInput component:</p>
+              <p className="base--p">{this.state.text}</p>
+              <p className="base--p"><b>Notes:</b></p>
+              <p className="base--p">Any dom property can be passed in as properties for this component.</p>
+            </div>
+            <div className="block-code">
+              <Code type="jsx">
+{`<TextInput
+  id="text-input-1"
+  placeholder="Try typing something here"
+  onInput={(e) => {
+    this.setState({ text: e.target.value });
+  }}
+/>`}
+              </Code>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
+      </section>
+    );
+  }
+});
