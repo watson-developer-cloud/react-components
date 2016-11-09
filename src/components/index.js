@@ -14,4 +14,5 @@ export Alert from './Alert';
 export Icon from './Icon';
 
 export { RadioGroup, Radio } from './RadioGroup.js';
+export TextInput from './TextInput.js';
 export ButtonsGroup from './ButtonsGroup';
