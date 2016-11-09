@@ -9,21 +9,21 @@ import classNames from 'classnames';
 const padding = 2;
 
 export default React.createClass({
+  // all html input[type="text"] properties are valid
   propTypes: {
-    placeholder: React.PropTypes.string,
-    isOpen: React.PropTypes.bool,
+    onInput: React.PropTypes.func,
   },
 
   getDefaultProps() {
     return {
+      id: `textinput-${Math.round(Math.random() * 1000)}`,
       placeholder: 'Type Something',
-      isOpen: false,
     };
   },
 
   getInitialState() {
     return {
-      inputWidth: 0,
+      inputWidth: padding,
     };
   },
 
@@ -38,16 +38,21 @@ export default React.createClass({
     this.setState({
       inputWidth: dummy.offsetWidth + padding,
     });
+
+    if (this.props.onInput) {
+      this.props.onInput.call(this, e);
+    }
   },
 
   render() {
     return (
       <label
-        htmlFor="textInput"
+        // eslint-disable-next-line react/prop-types
+        htmlFor={this.props.id}
         className="text-input"
       >
         <input
-          id="textInput"
+          type="text"
           className={classNames(
             'text-input--input',
             'base--input',
@@ -58,8 +63,7 @@ export default React.createClass({
               `${this.state.inputWidth}px` :
               '100%'),
           }}
-          placeholder={this.props.placeholder}
-          type="text"
+          {...this.props}
           onInput={this.onInput}
         />
         <span className="text-input--dummy" />
