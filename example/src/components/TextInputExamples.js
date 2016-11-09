@@ -3,7 +3,7 @@ import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 // import Icon from '../../../src/components/Icon';
 
-export default function AlertExamples() {
+export default function TextInputExamples() {
   return (
     <section className="_full-width-row" id="TextInput">
       <div className="_container _container_large">
