@@ -1,7 +1,6 @@
 import React from 'react';
 import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
-// import Icon from '../../../src/components/Icon';
 
 export default React.createClass({
 
