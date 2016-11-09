@@ -15,6 +15,7 @@ import ImagePickerExamples from './components/ImagePickerExamples';
 import ButtonsGroupExamples from './components/ButtonsGroupExamples';
 import AlertExamples from './components/AlertExamples';
 import ModalExamples from './components/ModalExamples';
+import TextInputExamples from './components/TextInputExamples';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       <FooterExamples />
       <JumbotronExamples />
       <TabsExamples />
+      <TextInputExamples />
       <RadioGroupExamples />
       <ButtonsGroupExamples />
       <CodeExamples />
