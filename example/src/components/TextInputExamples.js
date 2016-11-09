@@ -45,5 +45,5 @@ export default React.createClass({
         </div>
       </section>
     );
-  }
+  },
 });
