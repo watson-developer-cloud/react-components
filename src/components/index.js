@@ -13,7 +13,7 @@ export Alert from './Alert';
 export Modal from './Modal';
 export ArrowBox from './ArrowBox';
 
-export Icon from './Icon';
+export { Icon } from './Icon';
 
 export { RadioGroup, Radio } from './RadioGroup.js';
 export TextInput from './TextInput.js';
