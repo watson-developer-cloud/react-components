@@ -4,27 +4,29 @@ import React, { PropTypes } from 'react';
 
 import colors from './Colors';
 
-export default class Icon extends React.Component {
+export const IconTypes = [
+  'plus',
+  'back',
+  'check',
+  'error',
+  'error-o',
+  'success',
+  'success-o',
+  'warning',
+  'info',
+  'reset',
+  'up',
+  'close',
+  'loader',
+  'link',
+  'right',
+  'ibm',
+];
+
+export class Icon extends React.Component {
 
   static propTypes = {
-    type: PropTypes.oneOf([
-      'plus',
-      'back',
-      'check',
-      'error',
-      'error-o',
-      'success',
-      'success-o',
-      'warning',
-      'info',
-      'reset',
-      'up',
-      'close',
-      'loader',
-      'link',
-      'right',
-      'ibm',
-    ]).isRequired,
+    type: PropTypes.oneOf(IconTypes).isRequired,
     fill: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.object,
