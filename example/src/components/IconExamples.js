@@ -1,6 +1,6 @@
 import React from 'react';
 import Code from '../../../src/components/Code';
-import Icon from '../../../src/components/Icon';
+import { Icon } from '../../../src/components/Icon';
 
 export default function IconExamples() {
   return (
