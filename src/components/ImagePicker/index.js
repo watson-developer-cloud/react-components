@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 const Dropzone = require('react-dropzone');
 
 const Tile = require('./Tile');

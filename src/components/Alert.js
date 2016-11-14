@@ -1,6 +1,6 @@
 /* eslint max-len:off */
 import React from 'react';
-import Icon from './Icon';
+import { Icon, IconTypes } from './Icon';
 import Colors from './Colors';
 
 // error, alert, warning,
@@ -20,7 +20,7 @@ export default function Alert(props) {
 }
 
 Alert.propTypes = {
-  type: React.PropTypes.oneOf(['success', 'warning', 'info', 'error', 'error-o']),
+  type: React.PropTypes.oneOf(IconTypes),
   color: React.PropTypes.oneOf(['red', 'yellow', 'green', 'blue', 'gray']),
   icon: React.PropTypes.element,
 };
