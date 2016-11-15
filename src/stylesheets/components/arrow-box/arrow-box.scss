@@ -1,53 +1,3 @@
-// @mixin tooltip(
-//     $box-color: setting-get('primary color'),
-//     $box-width: 20rem,
-//     $box-offset: 0rem,
-//     $arrow-size: 1rem,
-//     $arrow-color: $box-color,
-//     $positioning: 'top'
-//   ) {
-//   position: absolute;
-//   background-color: $box-color;
-//   padding: setting-get('rhythm') / 2;
-//   width: $box-width;
-//   left: - $box-width / 2 + $box-offset;
-//   color: white;
-//   font-size: 1rem;
-//   font-weight: 400;
-//   line-height: 1.2;
-//   visibility: hidden;
-//   opacity: 0;
-//   bottom: calc(100% + #{($arrow-size + 0.5rem)});
-//
-//   @if $positioning == 'bottom' {
-//     bottom: auto;
-//     top: calc(100% + #{($arrow-size + 0.5rem)});
-//   }
-//
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     left: $box-width / 2 - $arrow-size;
-//     border: $arrow-size solid transparent;
-//     top: 100%;
-//     border-top-color: $arrow-color;
-//
-//     @if $positioning == 'bottom' {
-//       top: auto;
-//       bottom: 100%;
-//       border-top-color: transparent;
-//       border-bottom-color: $arrow-color;
-//     }
-//   }
-//
-//   .base--a {
-//     color: white;
-//     &:hover {
-//       color: color('gray', 10);
-//     }
-//   }
-// }
-
 .arrow-box {
   background-color: color('gray', 40);
   padding: 1rem;
@@ -55,6 +5,7 @@
   visibility: visible;
   opacity: 1;
   transition: 0.2s opacity, 0.2s transform;
+  margin-top: 0rem;
 
   &_hidden {
     visibility: hidden;
@@ -72,6 +23,12 @@
     position: absolute;
     right: calc(100% + 1rem);
     top: calc(50% - 1rem);
+  }
+
+  &_no-arrow {
+    .arrow-box--arrow {
+      display: none;
+    }
   }
 
   &_top {
