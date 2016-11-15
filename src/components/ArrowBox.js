@@ -20,9 +20,9 @@ const halfUnit = (str) => (getValue(str) / 2) + getUnit(str);
 
 export default React.createClass({
   propTypes: {
-    direction: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+    direction: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'none']),
     show: React.PropTypes.bool,
-    icon: React.PropTypes.oneOf(IconTypes.push(null)),
+    icon: React.PropTypes.oneOf([].concat(IconTypes, null)),
     color: React.PropTypes.string,
     width: React.PropTypes.string,
     height: React.PropTypes.string,
@@ -33,6 +33,7 @@ export default React.createClass({
     manualPositioning: React.PropTypes.string,
     style: React.PropTypes.object,
     arrowStyle: React.PropTypes.object,
+    className: React.PropTypes.string,
   },
 
   getDefaultProps() {
@@ -87,9 +88,12 @@ export default React.createClass({
         right: 'calc(100% + 1rem)',
         top: `calc(${this.props.relativeOffset} - ${posHeight})`,
       },
+      none: {},
     };
     const borderStyle = {};
-    borderStyle[`border${capitalize(this.props.direction)}Color`] = this.props.color;
+    if (this.props.direction !== 'none') {
+      borderStyle[`border${capitalize(this.props.direction)}Color`] = this.props.color;
+    }
 
     return (
       <div
@@ -99,7 +103,9 @@ export default React.createClass({
           { 'arrow-box_right': this.props.direction === 'right' },
           { 'arrow-box_bottom': this.props.direction === 'bottom' },
           { 'arrow-box_left': this.props.direction === 'left' },
+          { 'arrow-box_no-arrow': this.props.direction === 'none' },
           { 'arrow-box_hidden': !this.props.show },
+          this.props.className,
         )}
         style={Object.assign(
           directions[this.props.direction],
