@@ -179,6 +179,12 @@ export default React.createClass({
     }
   },
 
+  onClosePreview() {
+    this.setState({
+      previewImage: null,
+    });
+  },
+
   render() {
     return (
       <div className="image-picker--section">
@@ -197,16 +203,6 @@ export default React.createClass({
               dataId={index}
             />)
           )}
-          {!this.props.disablePreviewImage &&
-            this.state.previewImage &&
-            !(this.props.fileError || this.props.urlError || this.props.error) ? (
-            // eslint-disable-next-line
-            <Tile
-              grayout={false}
-              image={this.state.previewImage.url}
-              alt={this.state.previewImage.alt}
-            />
-          ) : null}
           {!this.props.disableFileInput ? (
             <div className="image-picker--tile">
               <ArrowBox
@@ -219,6 +215,16 @@ export default React.createClass({
               >
                 <p className="base--p image-picker--error-message">{this.props.fileError}</p>
               </ArrowBox>
+              {!this.props.disablePreviewImage &&
+                this.state.previewImage &&
+                !(this.props.fileError || this.props.urlError || this.props.error) ? (
+                  <Icon
+                    className="image-picker--preview-x"
+                    type="close"
+                    size="small"
+                    onClick={this.onClosePreview}
+                  />
+              ) : null}
               <label
                 className={classNames(
                   'image-picker--tile-input-container',
@@ -226,6 +232,22 @@ export default React.createClass({
                 )}
                 htmlFor="image-picker--file-input"
               >
+                {!this.props.disablePreviewImage &&
+                  this.state.previewImage &&
+                  !(this.props.fileError || this.props.urlError || this.props.error) ? (
+                    // eslint-disable-next-line
+                    <div className="image-picker--preview-image-container">
+                      <img
+                        className="image-picker--preview-image"
+                        src={this.state.previewImage.url}
+                        alt={this.state.previewImage.alt}
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                      />
+                    </div>
+                  ) : null}
                 <Dropzone
                   accept={this.props.accept}
                   className={classNames(
@@ -251,14 +273,21 @@ export default React.createClass({
                   </div>
                 </Dropzone>
               </label>
-              {!this.props.disableUrlInput ? (
-                <InputImageUrl
-                  onInputChange={this.props.onUrlInputChange}
-                  onSubmit={this.onUrlSubmit}
-                  placeholder={this.props.urlPlaceholder}
-                  error={this.props.urlError}
-                />
+
+              {(((!this.state.previewImage ||
+                (this.state.previewImage && this.disablePreviewImage)) &&
+                !this.props.disableUrlInput) ||
+                this.props.fileError ||
+                this.props.urlError ||
+                this.props.error) ? (
+                  <InputImageUrl
+                    onInputChange={this.props.onUrlInputChange}
+                    onSubmit={this.onUrlSubmit}
+                    placeholder={this.props.urlPlaceholder}
+                    error={this.props.urlError}
+                  />
               ) : null}
+
             </div>
           ) : null}
         </div>
