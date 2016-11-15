@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Icon } from '../Icon';
+import Colors from '../Colors';
+import ArrowBox from '../ArrowBox';
 const Dropzone = require('react-dropzone');
 
 const Tile = require('./Tile');
@@ -179,67 +181,103 @@ export default React.createClass({
 
   render() {
     return (
-      <div className="input--section">
-        {this.props.images.map((image, index) => (
-          <Tile
-            grayout={(
-              (this.state.previewImage != null) ||
-              (this.state.selectedTile > -1 && index !== this.state.selectedTile)
-            )}
-            image={image.url}
-            alt={image.alt}
-            key={index}
+      <div className="image-picker--section">
+        <div>
+          {this.props.images.map((image, index) => (
+            <Tile
+              grayout={(
+                (this.state.previewImage != null) ||
+                (this.state.selectedTile > -1 && index !== this.state.selectedTile)
+              )}
+              image={image.url}
+              alt={image.alt}
+              key={index}
+              // eslint-disable-next-line
+              onClick={this.onClickTile.bind(null, index)}
+              dataId={index}
+            />)
+          )}
+          {!this.props.disablePreviewImage &&
+            this.state.previewImage &&
+            !(this.props.fileError || this.props.urlError || this.props.error) ? (
             // eslint-disable-next-line
-            onClick={this.onClickTile.bind(null, index)}
-            dataId={index}
-          />)
-        )}
-        {!this.props.disablePreviewImage &&
-          this.state.previewImage &&
-          !(this.props.fileError || this.props.urlError || this.props.error) ? (
-          // eslint-disable-next-line
-          <Tile
-            grayout={false}
-            image={this.state.previewImage.url}
-            alt={this.state.previewImage.alt}
-          />
-        ) : null}
-        {!this.props.disableFileInput ? (
-          <div className="input--tile">
-            <label className="input--tile-input-container" htmlFor="input--file-input">
-              <Dropzone
-                accept={this.props.accept}
-                className={classNames(
-                    'content',
-                    'dropzone',
-                    { 'dropzone_on-drag': this.state.isDragging }
-                )}
-                disableClick={this.props.disableClick}
-                inputProps={this.props.inputProps}
-                maxSize={this.props.maxSize}
-                minSize={this.props.minSize}
-                multiple={this.props.multiple}
-                name={this.props.name}
-                onDrop={this.onDrop}
-                onDropAccepted={this.onDropAccepted}
-                onDropRejected={this.onDropRejected}
+            <Tile
+              grayout={false}
+              image={this.state.previewImage.url}
+              alt={this.state.previewImage.alt}
+            />
+          ) : null}
+          {!this.props.disableFileInput ? (
+            <div className="image-picker--tile">
+              <ArrowBox
+                className="image-picker--arrow-box"
+                direction="top"
+                icon="error"
+                color={Colors.red_50}
+                width="100%"
+                show={Boolean(this.props.fileError)}
               >
-                <div className="input--tile-input-description">
-                  Select or drag an image relative to the shopping category
-                </div>
-                <div className="input--tile-input-icon">
-                  <Icon type="plus" size="regular" />
-                </div>
-              </Dropzone>
-            </label>
-            {!this.props.disableUrlInput ? (
-              <InputImageUrl
-                onInputChange={this.props.onUrlInputChange}
-                onSubmit={this.onUrlSubmit}
-                placeholder={this.props.urlPlaceholder}
-              />
-            ) : null}
-          </div>
+                <p className="base--p image-picker--error-message">{this.props.fileError}</p>
+              </ArrowBox>
+              <label
+                className={classNames(
+                  'image-picker--tile-input-container',
+                  { 'image-picker--tile-input-container_error': this.props.fileError },
+                )}
+                htmlFor="image-picker--file-input"
+              >
+                <Dropzone
+                  accept={this.props.accept}
+                  className={classNames(
+                      'content',
+                      'dropzone',
+                      { 'dropzone_on-drag': this.state.isDragging },
+                  )}
+                  disableClick={this.props.disableClick}
+                  inputProps={this.props.inputProps}
+                  maxSize={this.props.maxSize}
+                  minSize={this.props.minSize}
+                  multiple={this.props.multiple}
+                  name={this.props.name}
+                  onDrop={this.onDrop}
+                  onDropAccepted={this.onDropAccepted}
+                  onDropRejected={this.onDropRejected}
+                >
+                  <div className="image-picker--tile-input-description">
+                    Select or drag an image relative to the shopping category
+                  </div>
+                  <div className="image-picker--tile-input-icon">
+                    <Icon type="plus" size="regular" />
+                  </div>
+                </Dropzone>
+              </label>
+              {!this.props.disableUrlInput ? (
+                <InputImageUrl
+                  onInputChange={this.props.onUrlInputChange}
+                  onSubmit={this.onUrlSubmit}
+                  placeholder={this.props.urlPlaceholder}
+                  error={this.props.urlError}
+                />
+              ) : null}
+            </div>
+          ) : null}
+        </div>
+        {this.props.error ? (
+          <ArrowBox
+            className="image-picker--arrow-box"
+            direction="none"
+            icon="error"
+            color={Colors.red_50}
+            style={{
+              display: 'block',
+              position: 'relative',
+              visibility: 'visible',
+              opacity: '1',
+              margin: 'auto',
+            }}
+          >
+            <p className="base--p image-picker--error-message">{this.props.error}</p>
+          </ArrowBox>
         ) : null}
       </div>
     );

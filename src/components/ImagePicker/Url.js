@@ -1,10 +1,14 @@
+import ArrowBox from '../ArrowBox';
+import Colors from '../Colors';
 const React = require('react');
+const classNames = require('classnames');
 
 const InputImageUrl = React.createClass({
   propTypes: {
     onSubmit: React.PropTypes.func,
     onInputChange: React.PropTypes.func,
     placeholder: React.PropTypes.string,
+    error: React.PropTypes.string,
   },
   getDefaultProps() {
     return {
@@ -36,14 +40,30 @@ const InputImageUrl = React.createClass({
   },
   render() {
     return (
-      <input
-        className="input--url-input base--input"
-        onChange={this.handleInputChange}
-        onKeyPress={this.handleKeyPress}
-        placeholder={this.props.placeholder}
-        type="text"
-        value={this.state.url}
-      />
+      <div style={{ position: 'relative' }}>
+        <input
+          className={classNames(
+            'image-picker--url-input',
+            'base--input',
+            { 'image-picker--url-input_error': this.props.error },
+          )}
+          onChange={this.handleInputChange}
+          onKeyPress={this.handleKeyPress}
+          placeholder={this.props.placeholder}
+          type="text"
+          value={this.state.url}
+        />
+        <ArrowBox
+          className="image-picker--arrow-box"
+          direction="bottom"
+          icon="error"
+          color={Colors.red_50}
+          width="100%"
+          show={Boolean(this.props.error)}
+        >
+          <p className="base--p image-picker--error-message">{this.props.error}</p>
+        </ArrowBox>
+      </div>
     );
   },
 });
