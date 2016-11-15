@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from '../../../src/components/Alert';
 import Code from '../../../src/components/Code';
-import Icon from '../../../src/components/Icon';
+import { Icon } from '../../../src/components/Icon';
 
 export default function AlertExamples() {
   const colors = ['green', 'yellow', 'blue', 'red', 'red'];
