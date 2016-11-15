@@ -49,45 +49,65 @@
 // }
 
 .arrow-box {
-  background-color: color('teal', 50);
+  background-color: color('gray', 40);
   padding: 1rem;
-  position: relative;
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.2s opacity, 0.2s transform;
 
-  &:after {
+  &_hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &--arrow {
     content: '';
     position: absolute;
     border: 0.5rem solid transparent;
+    margin: 0rem;
+  }
+
+  &--icon {
+    position: absolute;
+    right: calc(100% + 1rem);
+    top: calc(50% - 1rem);
   }
 
   &_top {
-    &:after {
-      bottom: 100%;
+    .arrow-box--arrow {
+      top: 100%;
       left: calc(50% - 0.5rem);
-      border-bottom-color: color('teal', 50);
+      border-top-color: color('gray', 40);
     }
   }
 
   &_bottom {
-    &:after {
-      top: 100%;
+    .arrow-box--arrow {
+      bottom: 100%;
       left: calc(50% - 0.5rem);
-      border-top-color: color('teal', 50);
+      border-bottom-color: color('gray', 40);
     }
   }
 
   &_left {
-    &:after {
-      right: 100%;
+    .arrow-box--arrow {
+      left: 100%;
       top: calc(50% - 0.5rem);
-      border-right-color: color('teal', 50);
+      border-left-color: color('gray', 40);
     }
   }
 
   &_right {
-    &:after {
-      left: 100%;
+    .arrow-box--arrow {
+      right: 100%;
       top: calc(50% - 0.5rem);
-      border-left-color: color('teal', 50);
+      border-right-color: color('gray', 40);
+    }
+    .arrow-box--icon {
+      top: auto;
+      bottom: calc(100% + 1rem);
+      right: calc(50% - 1rem);
     }
   }
 }

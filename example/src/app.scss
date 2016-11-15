@@ -531,3 +531,10 @@ code[class*="language-"], pre[class*="language-"] {
     @include grid(6, $has-right-gutter: false);
   }
 }
+
+.arrow-box-button {
+  position: relative;
+  outline: none;
+  margin: auto;
+  display: block;
+}
