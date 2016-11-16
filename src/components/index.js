@@ -10,6 +10,7 @@ export TabsPane from './Tabs/Pane';
 export ImagePicker from './ImagePicker';
 export Code from './Code';
 export Alert from './Alert';
+export JsonLink from './JsonLink';
 
 export { Icon } from './Icon';
 
