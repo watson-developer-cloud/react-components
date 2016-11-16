@@ -23,21 +23,25 @@ export default function App() {
     <div>
       <Nav />
       <LeadSpace />
-      <ToC>
-        <GettingStarted />
-        <IconExamples />
-        <HeaderExamples />
-        <FooterExamples />
-        <JumbotronExamples />
-        <TabsExamples />
-        <TextInputExamples />
-        <RadioGroupExamples />
-        <ButtonsGroupExamples />
-        <CodeExamples />
-        <ImagePickerExamples />
-        <AlertExamples />
-        <ModalExamples />
-      </ToC>
+      <div className="_container _container_large">
+        <div className="content--session-container">
+          <ToC>
+            <GettingStarted />
+            <IconExamples />
+            <HeaderExamples />
+            <FooterExamples />
+            <JumbotronExamples />
+            <TabsExamples />
+            <TextInputExamples />
+            <RadioGroupExamples />
+            <ButtonsGroupExamples />
+            <CodeExamples />
+            <ImagePickerExamples />
+            <AlertExamples />
+            <ModalExamples />
+          </ToC>
+        </div>
+      </div>
     </div>
   );
 }

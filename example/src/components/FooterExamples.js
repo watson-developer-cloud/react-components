@@ -4,8 +4,7 @@ import Code from '../../../src/components/Code';
 
 export default function FooterExamples() {
   return (
-    <section className="_full-width-row" id="Footer">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Footer</h2>
         <div className="row">
           <div>
@@ -17,7 +16,6 @@ export default function FooterExamples() {
 `}</Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

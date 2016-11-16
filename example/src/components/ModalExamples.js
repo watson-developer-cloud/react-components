@@ -12,8 +12,7 @@ export default React.createClass({
 
   render() {
     return (
-      <section className="_full-width-row" id="Modal">
-        <div className="_container _container_large">
+      <section>
           <h2 className="base--h2">Modal</h2>
           <div className="row">
             <button
@@ -85,8 +84,7 @@ const onEnter = () => {
 </Modal>
 `}
           </Code>
-        </div>
-      </section>
+        </section>
     );
   },
 });

@@ -4,8 +4,7 @@ import { Icon } from '../../../src/components/Icon';
 
 export default function IconExamples() {
   return (
-    <section className="_full-width-row" id="Icons">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Icons</h2>
         <div className="row">
           <div className="block-example">
@@ -128,7 +127,6 @@ export default function IconExamples() {
             </Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

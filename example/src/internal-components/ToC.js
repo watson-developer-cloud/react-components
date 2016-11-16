@@ -25,26 +25,20 @@ export default function ToC(props) {
     return (
       <div id={id} key={`${id}-anchor`}>
         {c}
-        <div className="_full-width-row">
-          <div className="_container _container_large">
-            <a href="#ToC" style={{ float: 'right' }}>
-              <Icon type="up" size="small" />
-            </a>
-          </div>
-        </div>
+        <a href="#ToC" style={{ float: 'right' }}>
+          <Icon type="up" size="small" />
+        </a>
       </div>
     );
   });
 
   return (
-    <section className="_full-width-row" id="ToC">
-      <div className="_container _container_large">
-        <h2 className="base--h2">Table of Contents</h2>
-        <ul className="base--ul" style={{ paddingLeft: '1em' }}>
-          {tocElements}
-        </ul>
-        {children}
-      </div>
+    <section id="ToC">
+      <h2 className="base--h2">Table of Contents</h2>
+      <ul className="base--ul" style={{ paddingLeft: '1em' }}>
+        {tocElements}
+      </ul>
+      {children}
     </section>
   );
 }
