@@ -1,30 +1,33 @@
 /* eslint max-len: 0 */
 
 import React, { PropTypes } from 'react';
+import classNames from 'classnames';
 
 import colors from './Colors';
 
-export default class Icon extends React.Component {
+export const IconTypes = [
+  'plus',
+  'back',
+  'check',
+  'error',
+  'error-o',
+  'success',
+  'success-o',
+  'warning',
+  'info',
+  'reset',
+  'up',
+  'close',
+  'loader',
+  'link',
+  'right',
+  'ibm',
+];
+
+export class Icon extends React.Component {
 
   static propTypes = {
-    type: PropTypes.oneOf([
-      'plus',
-      'back',
-      'check',
-      'error',
-      'error-o',
-      'success',
-      'success-o',
-      'warning',
-      'info',
-      'reset',
-      'up',
-      'close',
-      'loader',
-      'link',
-      'right',
-      'ibm',
-    ]).isRequired,
+    type: PropTypes.oneOf(IconTypes).isRequired,
     fill: PropTypes.string,
     className: PropTypes.string,
     style: PropTypes.object,
@@ -40,6 +43,20 @@ export default class Icon extends React.Component {
     size: 'regular',
   }
 
+  constructor(props) {
+    super(props);
+    this.createClassNames = this.createClassNames.bind(this);
+  }
+
+  createClassNames() {
+    return classNames(
+      'icon',
+      this.props.className,
+      { icon_large: this.props.size === 'large' },
+      { icon_small: this.props.size === 'small' },
+    );
+  }
+
   types = {
     plus:
       <svg
@@ -49,7 +66,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <g>
           <polygon
@@ -68,7 +85,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M7.1,9.1c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S13.7,9.1,7.1,9.1z M7.1,31.4 c-5.7,0-10.3-4.6-10.3-10.3S1.4,10.8,7.1,10.8s10.3,4.6,10.3,10.3S12.8,31.4,7.1,31.4z"
@@ -86,7 +103,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <polygon className="checkbox" points="4.2,6.5 1.3,3.6 0,4.8 4.2,9.1 12,1.3 10.7,0 " />
       </svg>,
@@ -98,7 +115,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           className="path1"
@@ -121,7 +138,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path className="path1" d="M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM554.667 725.333h-85.333v-85.333h85.333v85.333zM554.667 426.667l-25.6 153.6h-34.133l-25.6-153.6v-170.667h85.333v170.667z" />
       </svg>,
@@ -133,7 +150,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <g>
           <path d="M42.667 938.667l469.333-810.667 469.333 810.667z" />
@@ -149,7 +166,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <g>
           <path className="path1" d="M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM482.133 311.467c8.533-8.533 17.067-12.8 29.867-12.8s21.333 4.267 29.867 12.8 12.8 17.067 12.8 29.867-4.267 21.333-12.8 29.867-17.067 12.8-29.867 12.8-21.333-4.267-29.867-12.8-12.8-17.067-12.8-29.867 4.267-21.333 12.8-29.867zM597.333 725.333h-170.667v-42.667h42.667v-170.667h-42.667v-42.667h128v213.333h42.667v42.667z" />
@@ -163,7 +180,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <circle fill="none" className="st0" cx="11.9" cy="12" r="10" />
         <polygon points="15.2,7.6 11.9,10.9 8.5,7.6 7.4,8.7 10.8,12 7.4,15.4 8.5,16.5 11.9,13.1 15.2,16.5 16.3,15.4 13,12 16.3,8.7 " />
@@ -177,7 +194,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path d="M512 42.667c-260.267 0-469.333 209.067-469.333 469.333s209.067 469.333 469.333 469.333 469.333-209.067 469.333-469.333-209.067-469.333-469.333-469.333zM426.667 699.733l-157.867-157.867 59.733-59.733 98.133 98.133 268.8-238.933 55.467 64-324.267 294.4z" />
       </svg>,
@@ -189,7 +206,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M512 69.818c242.036 0 442.182 200.145 442.182 442.182s-200.145 442.182-442.182 442.182-442.182-200.145-442.182-442.182 200.145-442.182 442.182-442.182zM512 0c-283.927 0-512 228.073-512 512s228.073 512 512 512 512-228.073 512-512-228.073-512-512-512z"
@@ -206,7 +223,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M4,1h16v3H4V1z M4.5,13.5L6,15l5-5v13h2V10l5,5l1.5-1.5L12,6L4.5,13.5z"
@@ -248,7 +265,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M19,5C12.4,5,7,10.4,7,17v6.6l-4.3-4.3l-1.4,1.4L8,27.4l6.7-6.7l-1.4-1.4L9,23.6V17c0-5.5,4.5-10,10-10s10,4.5,10,10 c0,2.7-1,5.2-2.9,7.1l1.4,1.4c2.3-2.3,3.5-5.3,3.5-8.5C31,10.4,25.6,5,19,5z"
@@ -262,7 +279,7 @@ export default class Icon extends React.Component {
         width="1rem"
         height="1rem"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M21.6,19.1L2.9,37.8L0,34.9l15.8-15.8L0,2.9L2.9,0L21.6,19.1z"
@@ -276,7 +293,7 @@ export default class Icon extends React.Component {
         width="69.9"
         height="28.4"
         {...this.props}
-        className={`${this.props.className} ${this.props.size === 'large' ? 'icon_large' : ''} ${this.props.size === 'small' ? 'icon_small' : ''} `}
+        className={this.createClassNames()}
       >
         <path
           d="M43.4 7.6v1.9h10.1c-.2-.7-.3-1.1-.6-1.9M66.1 9.5V7.6h-9.5L56 9.5M54.1 11.4h-5s.5 1.5.6 1.9h5c.1-.1-.5-1.6-.6-1.9M59.8 13.2l.6-1.8h-5l-.6 1.8M51 17h7.5l.6-1.9h-8.8c.3.7.4 1.1.7 1.9M43.4 18.9h5.7v1.9h-5.7zM60.4 18.9h5.7v1.9h-5.7zM43.4 15.1h5.7V17h-5.7zM60.4 15.1h5.7V17h-5.7zM43.4 11.4h5.7v1.9h-5.7zM60.4 11.4h5.7v1.9h-5.7zM39.7 22.7h9.4v1.9h-9.4zM39.7 26.5h9.4v1.9h-9.4zM18.9 18.9h5.7v1.9h-5.7zM18.9 7.6h5.7v1.9h-5.7zM3.8 18.9h5.7v1.9H3.8zM3.8 15.1h5.7V17H3.8zM3.8 11.4h5.7v1.9H3.8zM3.8 7.6h5.7v1.9H3.8zM0 22.7h13.2v1.9H0zM0 26.5h13.2v1.9H0zM0 0h13.2v1.9H0zM0 3.8h13.2v1.9H0zM39.7 0v1.9H51c-.3-.8-.4-1.2-.6-1.9M39.7 3.8v1.9h12.6c-.3-.9-.3-1-.6-1.9M69.9 0H59.2l-.7 1.9h11.4M69.9 5.7V3.8h-12l-.6 1.9M60.4 22.7h9.4v1.9h-9.4zM60.4 26.5h9.4v1.9h-9.4zM54.8 28.4l.6-1.9h-1.3c.1.4.7 1.9.7 1.9M53.5 24.6H56l.6-1.9h-3.8c.3.9.5 1.3.7 1.9M52.2 20.8h5l.6-1.9h-6.3c.4 1 .4 1 .7 1.9M35.2 15.1H18.9V17h17.9c-.5-.7-1-1.3-1.6-1.9M30.2 20.8h7.5c0-.7-.1-1.3-.2-1.9h-7.3M15.1 24.6h21.6c.3-.6.6-1.2.8-1.9H15.1M15.1 28.4h15.1c1.9 0 3.7-.7 5-1.9H15.1M18.9 13.2h16.3c.6-.5 1.1-1.2 1.5-1.9H18.9M30.2 9.5h7.3c.2-.6.2-1.2.2-1.9h-7.5M15.1 0v1.9h20.1C33.9.7 32.1 0 30.2 0M15.1 5.7h22.4c-.2-.7-.4-1.3-.8-1.9H15.1"

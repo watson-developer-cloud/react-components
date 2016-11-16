@@ -11,7 +11,7 @@ export ImagePicker from './ImagePicker';
 export Code from './Code';
 export Alert from './Alert';
 
-export Icon from './Icon';
+export { Icon } from './Icon';
 
 export { RadioGroup, Radio } from './RadioGroup.js';
 export TextInput from './TextInput.js';

@@ -1,7 +1,7 @@
 /* eslint max-len:off */
 import React from 'react';
 import classNames from 'classnames';
-import Icon from './Icon';
+import { Icon } from './Icon';
 import Colors from './Colors';
 
 // error, alert, warning,
