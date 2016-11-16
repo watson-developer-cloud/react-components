@@ -47,6 +47,7 @@
   },
   "scripts": {
     "dev": "gulp serve",
+    "start": "gulp serve",
     "build": "gulp build",
     "prepublish": "npm run build",
     "gh-pages": "gulp gh-pages",
