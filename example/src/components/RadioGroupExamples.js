@@ -38,22 +38,22 @@ const FooBarBazRadio = React.createClass({
 
 export default function RadioGroupExample() {
   return (
-    <section>
-        <h2 className="base--h2">Radio Buttons</h2>
-        <div className="row">
-          <div className="block-example">
-            <h3>Radio Style:</h3>
-            <FooBarBazRadio name="without-tabs" tabStyle={false} />
-            <h3>Tab Style:</h3>
-            <FooBarBazRadio name="with-tabs" tabStyle />
-            <h3>Notes:</h3>
-            <p>React prevents side-effects, so radio buttons will not act "clickable" without something
-              to handle the <code>onChange</code> event and set the <code>selectedValue</code>.</p>
-            <p>The example code to the left wraps the RadioGroup and Radio buttons in a class that
-              handles state and logs clicks to the console.</p>
-          </div>
-          <div className="block-code">
-            <Code type="jsx">
+    <section id="RadioGroup">
+      <h2 className="base--h2">Radio Buttons</h2>
+      <div className="row">
+        <div className="block-example">
+          <h3>Radio Style:</h3>
+          <FooBarBazRadio name="without-tabs" tabStyle={false} />
+          <h3>Tab Style:</h3>
+          <FooBarBazRadio name="with-tabs" tabStyle />
+          <h3>Notes:</h3>
+          <p>React prevents side-effects, so radio buttons will not act "clickable" without something
+            to handle the <code>onChange</code> event and set the <code>selectedValue</code>.</p>
+          <p>The example code to the left wraps the RadioGroup and Radio buttons in a class that
+            handles state and logs clicks to the console.</p>
+        </div>
+        <div className="block-code">
+          <Code type="jsx">
                 {`const FooBarBazRadio = React.createClass({
   getInitialState() {
     return {selectedValue: 'foo'};
@@ -77,9 +77,9 @@ export default function RadioGroupExample() {
     );
   }
 });`}
-            </Code>
-          </div>
+          </Code>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }

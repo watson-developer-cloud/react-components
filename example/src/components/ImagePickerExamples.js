@@ -16,52 +16,52 @@ export default React.createClass({
 
   render() {
     return (
-      <section>
+      <section id="ImagePicker">
         <h2 className="base--h2">ImagePicker</h2>
         <ImagePicker />
         <Code language="html">
 {'<ImagePicker />'}
-          </Code>
+        </Code>
 
-          <h3 className="base--h3">ImagePicker with errors</h3>
-          <ImagePicker
-            urlError={this.state.urlError}
-            fileError={this.state.fileError}
-            error={this.state.error}
-          />
+        <h3 className="base--h3">ImagePicker with errors</h3>
+        <ImagePicker
+          urlError={this.state.urlError}
+          fileError={this.state.fileError}
+          error={this.state.error}
+        />
 
-          <p className="base--p">Regular Error</p>
-          <TextInput
-            onInput={(e) => {
-              this.setState({ error: e.target.value });
-            }}
-            placeholder="Type a message for a regular error"
-          />
-          <p className="base--p">File Error</p>
-          <TextInput
-            onInput={(e) => {
-              this.setState({ fileError: e.target.value });
-            }}
-            placeholder="Type a message for a file error"
-          />
-          <p className="base--p">Url Error</p>
-          <TextInput
-            onInput={(e) => {
-              this.setState({ urlError: e.target.value });
-            }}
-            placeholder="Type a message for a url error"
-          />
+        <p className="base--p">Regular Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ error: e.target.value });
+          }}
+          placeholder="Type a message for a regular error"
+        />
+        <p className="base--p">File Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ fileError: e.target.value });
+          }}
+          placeholder="Type a message for a file error"
+        />
+        <p className="base--p">Url Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ urlError: e.target.value });
+          }}
+          placeholder="Type a message for a url error"
+        />
 
-          <Code language="html">
+        <Code language="html">
 {`<ImagePicker
   urlError={this.state.urlError}
   fileError={this.state.fileError}
   error={this.state.error}
 />`}
-          </Code>
+        </Code>
 
-          <p className="base--p">Properties</p>
-          <Code language="js">
+        <p className="base--p">Properties</p>
+        <Code language="js">
 {`{
   // Event Handlers
   onClickTile: React.PropTypes.func, // args: image obj this.props.images, index; when file is clicked
