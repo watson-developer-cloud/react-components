@@ -6,7 +6,6 @@ import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 
 export default React.createClass({
-
   getInitialState() {
     return {
       urlError: null,
@@ -17,11 +16,10 @@ export default React.createClass({
 
   render() {
     return (
-      <section className="_full-width-row" id="ImagePicker">
-        <div className="_container _container_large">
-          <h2 className="base--h2">ImagePicker</h2>
-          <ImagePicker />
-          <Code language="html">
+      <section>
+        <h2 className="base--h2">ImagePicker</h2>
+        <ImagePicker />
+        <Code language="html">
 {'<ImagePicker />'}
           </Code>
 
@@ -104,8 +102,7 @@ export default React.createClass({
   urlPlaceholder: React.PropTypes.string, // placeholder text for url input
   urlError: React.PropTypes.string, // error message on url input
 }`}
-          </Code>
-        </div>
+        </Code>
       </section>
     );
   },

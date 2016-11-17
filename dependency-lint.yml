@@ -5,6 +5,7 @@ executedModules:
   npmScripts:
     dev:
       - dev
+      - start
       - build
       - prepublish
       - gh-pages
