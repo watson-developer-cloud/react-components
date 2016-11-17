@@ -28,7 +28,7 @@ const initialJson = {
 export default React.createClass({
   getInitialState() {
     return {
-      rawjson: initialJson,
+      json: initialJson,
     };
   },
 
@@ -40,7 +40,7 @@ export default React.createClass({
           <div className="row">
             <div className="block-example">
               <JsonLink
-                rawjson={this.state.rawjson}
+                json={this.state.json}
               />
               <p className="base--p">You can edit the JSON below. When you click on the JSON link, this JSON code below will be displayed in a new tab.</p>
               <pre
@@ -49,7 +49,7 @@ export default React.createClass({
                 contentEditable
                 onInput={(e) => {
                   this.setState({
-                    rawjson: JSON.parse(e.target.textContent),
+                    json: JSON.parse(e.target.textContent),
                   });
                 }}
               >
@@ -58,7 +58,7 @@ export default React.createClass({
             </div>
             <div className="block-code">
               <Code type="jsx">
-{'<JsonLink rawjson={{ a JSON object }} />'}
+{'<JsonLink json={{ a JSON object }} />'}
               </Code>
             </div>
           </div>

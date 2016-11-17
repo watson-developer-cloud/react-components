@@ -5,7 +5,7 @@ import Colors from './Colors.js';
 export default function JsonLink(props) {
   const handleClick = (e) => {
     e.preventDefault();
-    window.open(`data:application/json, ${encodeURIComponent(JSON.stringify(props.rawjson, null, 1))}`, '_blank');
+    window.open(`data:application/json, ${encodeURIComponent(JSON.stringify(props.json, null, 1))}`, '_blank');
   };
 
   return (
@@ -24,5 +24,5 @@ export default function JsonLink(props) {
 }
 
 JsonLink.propTypes = {
-  rawjson: React.PropTypes.string.isRequired,
+  json: React.PropTypes.string.isRequired,
 };
