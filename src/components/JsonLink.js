@@ -3,16 +3,18 @@ import { Icon } from './Icon.js';
 import Colors from './Colors.js';
 
 export default function JsonLink(props) {
+  // return a js object
+  const normalizeJson = (json) => (typeof json === 'string' ? JSON.parse(json) : json);
+
   const handleClick = (e) => {
     e.preventDefault();
-    window.open(`data:application/json, ${encodeURIComponent(JSON.stringify(props.json, null, 1))}`, '_blank');
+    window.open(`data:application/json, ${encodeURIComponent(JSON.stringify(normalizeJson(props.json), null, 1))}`, '_blank');
   };
 
   return (
     <div className="results--json">
       <a
         onClick={handleClick}
-        target="_blank"
         className="json-link base--a"
         rel="noopener noreferrer"
         href
@@ -24,5 +26,8 @@ export default function JsonLink(props) {
 }
 
 JsonLink.propTypes = {
-  json: React.PropTypes.string.isRequired,
+  json: React.PropTypes.oneOfType([
+    React.PropTypes.string,
+    React.PropTypes.object,
+  ]).isRequired,
 };

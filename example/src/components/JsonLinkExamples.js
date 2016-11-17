@@ -49,7 +49,7 @@ export default React.createClass({
                 contentEditable
                 onInput={(e) => {
                   this.setState({
-                    json: JSON.parse(e.target.textContent),
+                    json: e.target.textContent,
                   });
                 }}
               >
@@ -58,7 +58,7 @@ export default React.createClass({
             </div>
             <div className="block-code">
               <Code type="jsx">
-{'<JsonLink json={{ a JSON object }} />'}
+{'<JsonLink json={{ a JSON object or string }} />'}
               </Code>
             </div>
           </div>
