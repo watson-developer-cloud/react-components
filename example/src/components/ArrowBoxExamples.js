@@ -22,7 +22,8 @@ export default function ArrowBoxExamples() {
             This is the element that the ArrowBox is anchored to.
             <ArrowBox
               direction="top"
-              show
+              // eslint-disable-next-line
+              show={true}
               color={Colors.red_50}
               icon="error"
             >
@@ -38,7 +39,7 @@ export default function ArrowBoxExamples() {
 This is the element that the ArrowBox is anchored to.
 <ArrowBox
   direction="top"
-  show
+  show={true}
   color={Colors.red_50}
   icon="error"
 >
