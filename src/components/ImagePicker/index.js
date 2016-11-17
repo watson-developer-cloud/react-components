@@ -185,6 +185,27 @@ export default React.createClass({
     });
   },
 
+  renderUrlInput() {
+    let output = null;
+    // if there is no previewImage, or the previewImage is disabled,
+    // and urlInput is not disabled, and there are any error messages,
+    // then show the url input
+    if ((((!this.state.previewImage ||
+      (this.state.previewImage && this.disablePreviewImage)) &&
+      !this.props.disableUrlInput) ||
+      this.props.fileError ||
+      this.props.urlError ||
+      this.props.error)) {
+      output = (<InputImageUrl
+        onInputChange={this.props.onUrlInputChange}
+        onSubmit={this.onUrlSubmit}
+        placeholder={this.props.urlPlaceholder}
+        error={this.props.urlError}
+      />);
+    }
+    return output;
+  },
+
   render() {
     return (
       <div className="image-picker--section">
@@ -274,19 +295,7 @@ export default React.createClass({
                 </Dropzone>
               </label>
 
-              {(((!this.state.previewImage ||
-                (this.state.previewImage && this.disablePreviewImage)) &&
-                !this.props.disableUrlInput) ||
-                this.props.fileError ||
-                this.props.urlError ||
-                this.props.error) ? (
-                  <InputImageUrl
-                    onInputChange={this.props.onUrlInputChange}
-                    onSubmit={this.onUrlSubmit}
-                    placeholder={this.props.urlPlaceholder}
-                    error={this.props.urlError}
-                  />
-              ) : null}
+              {this.renderUrlInput()}
 
             </div>
           ) : null}
