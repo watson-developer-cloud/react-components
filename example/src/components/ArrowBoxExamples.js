@@ -27,7 +27,7 @@ export default function ArrowBoxExamples() {
               color={Colors.red_50}
               icon="error"
             >
-              <p className="base--p" style={{ color: '#fff', textAlign: 'left' }}>
+              <p className="base--p">
                 This arrow box is now oriented to the <b>top</b>.
               </p>
             </ArrowBox>

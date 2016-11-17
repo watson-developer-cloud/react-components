@@ -532,9 +532,6 @@ code[class*="language-"], pre[class*="language-"] {
   }
 }
 
-.arrow-box-button {
-  position: relative;
-  outline: none;
-  margin: auto;
-  display: block;
+#ArrowBox .arrow-box .base--p {
+  color: white;
 }
