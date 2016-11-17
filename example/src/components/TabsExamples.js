@@ -7,8 +7,7 @@ import Code from '../../../src/components/Code';
 
 export default function TabsExamples() {
   return (
-    <section className="_full-width-row" id="Tabs">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Tabs</h2>
         <div className="row">
           <div className="block-example">
@@ -41,7 +40,6 @@ export default function TabsExamples() {
 </Tabs>`}</Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

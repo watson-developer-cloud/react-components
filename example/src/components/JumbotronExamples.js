@@ -4,10 +4,9 @@ import React from 'react';
 import Jumbotron from '../../../src/components/Jumbotron';
 import Code from '../../../src/components/Code';
 
-export default function HeaderExamples() {
+export default function JumbotronExamples() {
   return (
-    <section className="_full-width-row" id="Jumbotron">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Jumbotron</h2>
         <div className="row">
           <div>
@@ -34,7 +33,6 @@ export default function HeaderExamples() {
 />`}</Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

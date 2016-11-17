@@ -12,8 +12,7 @@ export default React.createClass({
 
   render() {
     return (
-      <section className="_full-width-row" id="TextInput">
-        <div className="_container _container_large">
+      <section>
           <h2 className="base--h2">Text Input</h2>
           <div className="row">
             <div className="block-example">
@@ -41,8 +40,7 @@ export default React.createClass({
               </Code>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     );
   },
 });

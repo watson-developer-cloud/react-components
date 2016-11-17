@@ -38,8 +38,7 @@ const FooBarBazRadio = React.createClass({
 
 export default function RadioGroupExample() {
   return (
-    <section className="_full-width-row" id="RadioButtons">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Radio Buttons</h2>
         <div className="row">
           <div className="block-example">
@@ -81,7 +80,6 @@ export default function RadioGroupExample() {
             </Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }

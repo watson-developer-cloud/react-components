@@ -7,13 +7,12 @@ export default function AlertExamples() {
   const colors = ['green', 'yellow', 'blue', 'red', 'red'];
   const types = ['success', 'warning', 'info', 'error', 'error-o'];
   return (
-    <section className="_full-width-row" id="Alert">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Alert</h2>
         <div className="row">
           <div className="block-example">
             {types.map((type, index) => (
-              <Alert type={type} color={colors[index]}>
+              <Alert type={type} color={colors[index]} key={`alert-${type}-${index}`}>
                 <p className="base--p">This is <b>{type}</b> box.</p>
               </Alert>
             ))}
@@ -76,7 +75,6 @@ export default function AlertExamples() {
             </Code>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }
