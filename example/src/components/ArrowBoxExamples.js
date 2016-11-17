@@ -32,7 +32,7 @@ export default function ArrowBoxExamples() {
               </p>
             </ArrowBox>
           </div>
-          <p className="base--p">The container that the ArrowBox is anchored must have its position set to <code className="base--code">relative</code>.</p>
+          <p className="base--p">The container that the ArrowBox is anchored to must have its position set to <code className="base--code">relative</code>.</p>
           <Code type="jsx">
 {`
 <div style={{ position: 'relative' }}>
