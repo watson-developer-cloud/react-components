@@ -535,3 +535,11 @@ code[class*="language-"], pre[class*="language-"] {
 #ArrowBox .arrow-box .base--p {
   color: white;
 }
+
+.arrow-box-container {
+  width: 10rem;
+  margin: auto;
+  background-color: color('gray', 10);
+  display: block;
+  padding: 1rem;
+}
