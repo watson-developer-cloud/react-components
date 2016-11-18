@@ -15,6 +15,7 @@ import RadioGroupExamples from './components/RadioGroupExamples';
 import ImagePickerExamples from './components/ImagePickerExamples';
 import ButtonsGroupExamples from './components/ButtonsGroupExamples';
 import AlertExamples from './components/AlertExamples';
+import ArrowBoxExamples from './components/ArrowBoxExamples';
 import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
 
@@ -39,6 +40,7 @@ export default function App() {
             <ImagePickerExamples />
             <AlertExamples />
             <ModalExamples />
+            <ArrowBoxExamples />
           </ToC>
         </div>
       </div>

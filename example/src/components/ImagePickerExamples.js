@@ -2,15 +2,62 @@
 
 import React from 'react';
 import ImagePicker from '../../../src/components/ImagePicker';
+import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 
-export default function ImagePickerExamples() {
-  return (
-    <section>
+export default React.createClass({
+  getInitialState() {
+    return {
+      urlError: null,
+      fileError: null,
+      error: null,
+    };
+  },
+
+  render() {
+    return (
+      <section id="ImagePicker">
         <h2 className="base--h2">ImagePicker</h2>
         <ImagePicker />
         <Code language="html">
 {'<ImagePicker />'}
+        </Code>
+
+        <h3 className="base--h3">ImagePicker with errors</h3>
+        <ImagePicker
+          urlError={this.state.urlError}
+          fileError={this.state.fileError}
+          error={this.state.error}
+        />
+
+        <p className="base--p">Regular Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ error: e.target.value });
+          }}
+          placeholder="Type a message for a regular error"
+        />
+        <p className="base--p">File Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ fileError: e.target.value });
+          }}
+          placeholder="Type a message for a file error"
+        />
+        <p className="base--p">Url Error</p>
+        <TextInput
+          onInput={(e) => {
+            this.setState({ urlError: e.target.value });
+          }}
+          placeholder="Type a message for a url error"
+        />
+
+        <Code language="html">
+{`<ImagePicker
+  urlError={this.state.urlError}
+  fileError={this.state.fileError}
+  error={this.state.error}
+/>`}
         </Code>
 
         <p className="base--p">Properties</p>
@@ -57,5 +104,6 @@ export default function ImagePickerExamples() {
 }`}
         </Code>
       </section>
-  );
-}
+    );
+  },
+});

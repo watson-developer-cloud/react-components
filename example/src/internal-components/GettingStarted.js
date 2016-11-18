@@ -2,7 +2,7 @@ import React from 'react';
 import Code from '../../../src/components/Code';
 
 /* eslint-disable react/jsx-indent */
-export default function GettingStrted() {
+export default function GettingStarted() {
   return (
     <div>
         <h1 id="#getting-started" className="base--h1">Installation</h1>
