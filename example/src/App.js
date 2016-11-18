@@ -18,6 +18,7 @@ import AlertExamples from './components/AlertExamples';
 import ArrowBoxExamples from './components/ArrowBoxExamples';
 import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
+import JsonLinkExamples from './components/JsonLinkExamples';
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
             <AlertExamples />
             <ModalExamples />
             <ArrowBoxExamples />
+            <JsonLinkExamples />
           </ToC>
         </div>
       </div>

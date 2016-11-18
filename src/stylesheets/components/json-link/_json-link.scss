@@ -1,0 +1,26 @@
+.json-link {
+  border-bottom: none;
+
+  &:hover,
+  &:focus {
+    border-bottom: none;
+    cursor: pointer;
+  }
+
+  &--span {
+    border-bottom: 1px solid color('blue', 50);
+    color: color('blue', 50);
+    transition: 0.2s;
+
+    .json-link:hover &,
+    .json-link:focus & {
+      border-bottom: 1px solid color('blue', 30);
+      color: color('blue', 30);
+    }
+  }
+
+  .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+}

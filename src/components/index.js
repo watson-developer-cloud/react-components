@@ -12,6 +12,7 @@ export Code from './Code';
 export Alert from './Alert';
 export Modal from './Modal';
 export ArrowBox from './ArrowBox';
+export JsonLink from './JsonLink';
 
 export { Icon } from './Icon';
 
