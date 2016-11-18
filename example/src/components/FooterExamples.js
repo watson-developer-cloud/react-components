@@ -12,7 +12,7 @@ export default function FooterExamples() {
         </div>
         <div>
           <Code type="jsx">
-{`<Footer />`}
+{'<Footer />'}
           </Code>
         </div>
       </div>
