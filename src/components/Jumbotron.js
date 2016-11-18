@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from './Icon';
+import Icon from './Icon';
 import sizes from './Sizes';
 
 export default function Jumbotron(props) {

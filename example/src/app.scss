@@ -531,15 +531,3 @@ code[class*="language-"], pre[class*="language-"] {
     @include grid(6, $has-right-gutter: false);
   }
 }
-
-#ArrowBox .arrow-box .base--p {
-  color: white;
-}
-
-.arrow-box-container {
-  width: 10rem;
-  margin: auto;
-  background-color: color('gray', 10);
-  display: block;
-  padding: 1rem;
-}
