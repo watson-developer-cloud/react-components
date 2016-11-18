@@ -4,8 +4,7 @@ import Code from '../../../src/components/Code';
 
 export default function ButtonsGroupExamples() {
   return (
-    <section className="_full-width-row" id="ButtonsGroup">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">Buttons Group</h2>
         <div className="row">
           <h5 className="base--h5">Normal Buttons</h5>
@@ -104,7 +103,6 @@ export default function ButtonsGroupExamples() {
   }]}
 />`}
         </Code>
-      </div>
-    </section>
+      </section>
   );
 }

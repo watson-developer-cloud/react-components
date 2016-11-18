@@ -2,10 +2,9 @@ import React from 'react';
 import Code from '../../../src/components/Code';
 
 /* eslint-disable react/jsx-indent */
-export default function GettingStrted() {
+export default function GettingStarted() {
   return (
-    <div className="_container _container_large">
-      <div className="content--session-container">
+    <div>
         <h1 id="#getting-started" className="base--h1">Installation</h1>
 
         <h2 className="base--h2">npm</h2>
@@ -41,7 +40,6 @@ export default function GettingStrted() {
           To use components that use images, make sure that the image files are
           correctly referenced in your project relative to the CSS output file.
         </p>
-      </div>
     </div>
   );
 }

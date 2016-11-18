@@ -6,8 +6,7 @@ import Code from '../../../src/components/Code';
 
 export default function ImagePickerExamples() {
   return (
-    <section className="_full-width-row" id="ImagePicker">
-      <div className="_container _container_large">
+    <section>
         <h2 className="base--h2">ImagePicker</h2>
         <ImagePicker />
         <Code language="html">
@@ -57,7 +56,6 @@ export default function ImagePickerExamples() {
   urlError: React.PropTypes.string, // error message on url input
 }`}
         </Code>
-      </div>
-    </section>
+      </section>
   );
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import GettingStarted from './internal-components/GettingStarted';
 import LeadSpace from './internal-components/LeadSpace';
 import Nav from './internal-components/Nav';
+import ToC from './internal-components/ToC';
 
 import IconExamples from './components/IconExamples';
 import HeaderExamples from './components/HeaderExamples';
@@ -23,20 +24,26 @@ export default function App() {
     <div>
       <Nav />
       <LeadSpace />
-      <GettingStarted />
-      <IconExamples />
-      <HeaderExamples />
-      <FooterExamples />
-      <JumbotronExamples />
-      <TabsExamples />
-      <TextInputExamples />
-      <RadioGroupExamples />
-      <ButtonsGroupExamples />
-      <CodeExamples />
-      <ImagePickerExamples />
-      <AlertExamples />
-      <ModalExamples />
-      <JsonLinkExamples />
+      <div className="_container _container_large">
+        <div className="content--session-container">
+          <ToC>
+            <GettingStarted />
+            <IconExamples />
+            <HeaderExamples />
+            <FooterExamples />
+            <JumbotronExamples />
+            <TabsExamples />
+            <TextInputExamples />
+            <RadioGroupExamples />
+            <ButtonsGroupExamples />
+            <CodeExamples />
+            <ImagePickerExamples />
+            <AlertExamples />
+            <ModalExamples />
+            <JsonLinkExamples />
+          </ToC>
+        </div>
+      </div>
     </div>
   );
 }
