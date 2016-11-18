@@ -1,0 +1,43 @@
+.buttons-group {
+  &--button {
+    text-align: center;
+    border-width: 1px;
+    border-color: color('gray', 50);
+    color: color('gray', 50);
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: auto;
+    padding: 0.25rem 0rem;
+    overflow: hidden;
+    border-radius: 0rem 0rem 0rem 0rem;
+    border-left-width: 0rem;
+    margin-top: 0rem;
+
+    &:active {
+      transform: none;
+      background-color: color('purple', 50);
+      color: white;
+    }
+
+    &:hover {
+      border-color: color('purple', 80);
+      color: color('purple', 80);
+    }
+
+    &_first {
+      border-radius: 10rem 0rem 0rem 10rem;
+      border-left-width: 1px;
+    }
+    &_last {
+      border-radius: 0rem 10rem 10rem 0rem;
+      border-left: none;
+    }
+    .base--radio + &:before {
+      display: none;
+    }
+    .base--radio:checked + & {
+      background-color: color('purple', 50);
+      color: white;
+    }
+  }
+}

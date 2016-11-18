@@ -1,0 +1,61 @@
+# See https://github.com/charlierudolph/dependency-lint/blob/v4.2.0/docs/configuration.md
+# for a detailed explanation of the options
+
+executedModules:
+  npmScripts:
+    dev:
+      - dev
+      - start
+      - build
+      - prepublish
+      - gh-pages
+      - lint
+      - autofix
+      - validate
+      - test
+  shellScripts:
+    dev: []
+    ignore: []
+    root: ''
+
+ignoreErrors:
+  missing: []
+  shouldBeDependency: []
+  shouldBeDevDependency: []
+  unused:
+    # babel plugins & presets
+    - babel-plugin-*
+    - babel-preset-*
+
+    # browserify plugins
+    - babelify
+    - browserify-global-shim
+    - minifyify
+    - uglifyify
+
+    # eslint parser, plugins, & config
+    - babel-eslint
+    - eslint-plugin-*
+    - eslint-config-*
+
+    # css dependencies
+    - watson-ui-component
+
+requiredModules:
+  files:
+    dev:
+      - '{features,spec,test}/**/*'
+      - '**/*{.,_,-}{spec,test}.js'
+      - 'gulpfile.js'
+      - 'example/src/**/*'
+    ignore:
+      - 'node_modules/**/*'
+      - 'dist/**/*'
+      - 'example/build/**/*'
+    root: '**/*.js'
+  stripLoaders: false
+  transpilers:
+    - extension: .js
+      fnName: transform
+      module: babel-core
+      resultKey: code

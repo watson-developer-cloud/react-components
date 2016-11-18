@@ -1,0 +1,53 @@
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  top: 0rem;
+  left: 0rem;
+  transition: 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 0rem;
+  z-index: 10000;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // to make sure modal doesn't appear on brief initial loading
+  &.hidden {
+    display: none;
+    transition: none;
+    z-index: -1;
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  padding: 1rem;
+  overflow: auto;
+
+  &--x {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    margin-top: 0rem;
+  }
+
+  @include breakpoint(get('small')) {
+    width: 30rem;
+    height: 20rem;
+  }
+}
