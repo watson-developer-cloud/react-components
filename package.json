@@ -1,6 +1,6 @@
 {
   "name": "watson-react-components",
-  "version": "0.1.0",
+  "version": "0.0.16",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",
   "repository": {
@@ -21,10 +21,6 @@
       "name": "Nathan Friedly",
       "email": "nfriedly@us.ibm.com",
       "url": "http://www.nfriedly.com/"
-    },
-    {
-      "name": "Joshua B. Smith",
-      "email": "joshua.b.smith@us.ibm.com"
     }
   ],
   "license": "Apache-2.0",
@@ -35,23 +31,12 @@
     "node": ">=6",
     "npm": ">=3"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0",
-      "react"
-    ],
-    "plugins": [
-      "transform-object-assign"
-    ]
-  },
   "scripts": {
     "dev": "gulp serve",
-    "start": "gulp serve",
     "build": "gulp build",
     "prepublish": "npm run build",
     "gh-pages": "gulp gh-pages",
-    "lint": "eslint . && dependency-lint",
+    "lint": "eslint .",
     "autofix": "eslint --fix .",
     "validate": "npm ls",
     "test": "npm run lint"
@@ -61,6 +46,9 @@
     "react-dom": "ReactDOM"
   },
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -68,10 +56,10 @@
     "babel-preset-react": "^6.11.0",
     "babel-preset-stage-0": "^6.5.0",
     "babelify": "^7.3.0",
+    "breakpoint-sass": "^2.7.0",
     "browser-sync": "^2.14.3",
     "browserify": "^13.1.0",
     "browserify-global-shim": "^1.0.3",
-    "dependency-lint": "^4.2.0",
     "eslint": "^3.3.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-plugin-import": "^1.15.0",
@@ -87,23 +75,28 @@
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "minifyify": "^7.1.0",
-    "react-dom": "~0.14.0 || ~15.3.0",
-    "uglifyify": "^3.0.2",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
+    "modular-scale": "^4.4.1",
+    "modularscale-sass": "^2.1.1",
     "prismjs": "^1.5.1",
-    "react": "~0.14 || ~15.3.0",
-    "react-dropzone": "^3.6.0",
-    "react-prism": "^4.0.0",
-    "react-radio-group": "^3.0.1",
+    "react": "^15.3.1",
+    "react-addons-pure-render-mixin": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-prism": "^3.2.1",
+    "uglifyify": "^3.0.2",
+    "vinyl-source-stream": "^1.1.0",
     "watson-ui-components": "^0.5.3"
   },
+  "dependencies": {
+    "react-radio-group": "^3.0.1"
+  },
   "peerDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "modular-scale": "^4.4.1",
+    "modularscale-sass": "^2.1.1",
     "watson-ui-components": "^0.5.3",
     "react": "~0.14 || ~15.3.0",
     "react-dom": "~0.14.0 || ~15.3.0",
-    "prismjs": "^1.5.1"
+    "prismjs": "^1.5.1",
+    "react-prism": "^3.2.1"
   }
 }

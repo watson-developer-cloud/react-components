@@ -146,7 +146,10 @@ gulp.task('example-css', () =>
 
 gulp.task('example-js', () =>
   browserify(paths.example_js)
-  .transform('babelify').bundle().on('error', (err) =>
+  .transform('babelify', {
+    presets: ['es2015', 'stage-0', 'react'],
+    plugins: ['transform-object-assign'],
+  }).bundle().on('error', (err) =>
     // eslint-disable-next-line
     console.log('[browserify error]', err.message)
   )
