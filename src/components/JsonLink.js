@@ -12,16 +12,16 @@ export default function JsonLink(props) {
   };
 
   return (
-    <div className="results--json">
+    <props.element className="results--json">
       <a
         onClick={handleClick}
         className="json-link base--a"
         rel="noopener noreferrer"
         href
       >
-        <span className="json-link--span">JSON</span> <Icon type="link-out" size="small" fill={Colors.blue_50} />
+        <span className="json-link--span">{props.children || 'JSON'}</span> <Icon type="link-out" size="small" fill={Colors.blue_50} />
       </a>
-    </div>
+    </props.element>
   );
 }
 
@@ -30,4 +30,13 @@ JsonLink.propTypes = {
     React.PropTypes.string,
     React.PropTypes.object,
   ]).isRequired,
+  element: React.PropTypes.string,
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.element,
+    React.PropTypes.arrayOf(React.PropTypes.element),
+  ]),
+};
+
+JsonLink.defaultProps = {
+  element: 'div',
 };
