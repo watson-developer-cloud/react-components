@@ -19,6 +19,7 @@ export default React.createClass({
     onDropRejected: React.PropTypes.func, // args: File image; when file is chosen unsuccessfully
     onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
     onUrlInputChange: React.PropTypes.func, // event when url input changes
+    onClosePreview: React.PropTypes.func, // event when preview image is closing
 
     // tile props
     images: React.PropTypes.arrayOf(React.PropTypes.shape({
@@ -183,6 +184,9 @@ export default React.createClass({
     this.setState({
       previewImage: null,
     });
+    if (this.props.onClosePreview) {
+      this.props.onClosePreview.call(this);
+    }
   },
 
   // boolean logic for showing preview image or not
@@ -256,10 +260,6 @@ export default React.createClass({
                       className="image-picker--preview-image"
                       src={this.state.previewImage.url}
                       alt={this.state.previewImage.alt}
-                      style={{
-                        width: '100%',
-                        height: 'auto',
-                      }}
                     />
                   </div>
                   ) : null}
