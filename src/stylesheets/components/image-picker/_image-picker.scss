@@ -67,6 +67,13 @@ $tile-padding: 0.2rem;
       @include grid(12);
       float: none;
     }
+
+    .arrow-box--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      right: calc(100% + 0.75rem);
+      top: calc(50% - 0.75rem);
+    }
   }
 
   &--url-input {
