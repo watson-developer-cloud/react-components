@@ -3,16 +3,12 @@ import Code from '../../../src/components/Code';
 import { Icon, IconTypes } from '../../../src/components/Icon';
 
 export default function IconExamples() {
-  const icons = IconTypes.map((iconName, index) => {
-    return (<div className="base--p icon-example" key={`icons-${index}`}>
+  const icons = IconTypes.map((iconName, index) => (<div className="base--p icon-example" key={`icons-${index}`}>
       <Icon type={iconName} />
       - {iconName}
-    </div>);
-  });
+    </div>));
 
-  const iconsCode = IconTypes.map((iconName) => {
-    return (`<Icon type="${iconName}" />\n`);
-  });
+  const iconsCode = IconTypes.map((iconName) => (`<Icon type="${iconName}" />\n`));
 
   return (
     <section id="Icon">
