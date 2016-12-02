@@ -24,6 +24,7 @@ export const IconTypes = [
   'ibm',
   'link-out',
   'play',
+  'stop',
   'upload',
   'microphone',
 ];
@@ -328,6 +329,21 @@ export class Icon extends React.Component {
           d="M15.6,2.1c-7.7,0-14,6.3-14,14s6.3,14,14,14s14-6.3,14-14S23.3,2.1,15.6,2.1z M15.6,28.1 c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S22.2,28.1,15.6,28.1z"
         />
         <polygon points="10.6,22.1 22.6,16.1 10.6,10.1 	" />
+      </svg>,
+    stop:
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        fill={colors.gray_100}
+        width="1rem"
+        height="1rem"
+        {...this.props}
+        className={this.createClassNames()}
+      >
+        <rect x="10" y="10" width="12" height="12" />
+        <path
+          d="M15.6,2.1c-7.7,0-14,6.3-14,14s6.3,14,14,14s14-6.3,14-14S23.3,2.1,15.6,2.1z M15.6,28.1 c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S22.2,28.1,15.6,28.1z"
+        />
       </svg>,
     upload:
       <svg
