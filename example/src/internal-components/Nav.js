@@ -11,11 +11,6 @@ export default function Nav() {
         </div>
         <div className="top-nav--spacer" />
         <nav role="menubar" className="top-nav--nav">
-          <a href="#components" role="menuitem" className="base--a top-nav--nav-li-link">
-            <li role="presentation" className="base--li top-nav--nav-li">
-              COMPONENTS
-            </li>
-          </a>
           <a
             href="https://github.com/watson-developer-cloud/react-components"
             target="_blank"

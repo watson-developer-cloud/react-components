@@ -123,6 +123,10 @@ gulp.task('gh-pages', ['prepare-site'], () =>
   gulp.src('gh-pages/**/*').pipe(ghPages({ force: true }))
 );
 
+gulp.task('example-images', ['images'], () =>
+  gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('example/images'))
+);
+
 gulp.task('example-css', () =>
   gulp.src(paths.example_css)
     .pipe(
@@ -157,7 +161,7 @@ gulp.task('example-js', () =>
 gulp.task('example-js-watch', ['example-js'], reloadBrowser);
 
 gulp.task('build', ['images', 'css', 'scss', 'components', 'js', 'example']);
-gulp.task('example', ['example-css', 'example-js']);
+gulp.task('example', ['example-css', 'example-js', 'example-images']);
 
 gulp.task('default', ['build']);
 

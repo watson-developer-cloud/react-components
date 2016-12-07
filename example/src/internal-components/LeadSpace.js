@@ -1,5 +1,7 @@
 import React from 'react';
 
+import pkg from '../../../package.json'
+
 export default function LeadSpace() {
   return (
     <section className="_full-width-row _full-width-row_gray jumbotron">
@@ -22,7 +24,7 @@ export default function LeadSpace() {
               The Watson Platform Component React Component Library translates
               Watson design language into React components to help develop web UI.
             </p>
-            <div className="header--version-tag">v0.0.6</div>
+            <div className="header--version-tag">v{pkg.version}</div>
           </div>
         </div>
 
