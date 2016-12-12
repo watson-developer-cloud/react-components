@@ -27,6 +27,7 @@ export const IconTypes = [
   'stop',
   'upload',
   'microphone',
+  'search',
 ];
 
 export class Icon extends React.Component {
@@ -372,6 +373,16 @@ export class Icon extends React.Component {
         <path
           d="M26,16.1h-2c0,4.4-3.6,8-8,8s-8-3.6-8-8H6c0,5.2,4,9.4,9,9.9v3.1h-3v2h3h2h3v-2h-3V26 C22,25.5,26,21.3,26,16.1z"
         />
+      </svg>,
+    search:
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        fill={colors.gray_100}
+        {...this.props}
+        className={this.createClassNames()}
+      >
+        <path d="M12,1C5.9,1,1,5.9,1,12s4.9,11,11,11s11-4.9,11-11S18.1,1,12,1z M12,21c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S17,21,12,21z M21,24 l3-3l7,7l-3,3L21,24z M21,20c0.6,0,1,0.4,1,1s-0.4,1-1,1s-1-0.4-1-1S20.4,20,21,20z" />
       </svg>,
   }
 
