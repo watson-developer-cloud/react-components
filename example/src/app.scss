@@ -543,3 +543,12 @@ code[class*="language-"], pre[class*="language-"] {
   display: block;
   padding: 1rem;
 }
+
+#Colors li {
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
