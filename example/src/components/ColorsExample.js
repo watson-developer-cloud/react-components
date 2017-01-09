@@ -13,7 +13,7 @@ export default function ColorsExamples() {
                 // 8947848 is #888888, converted to decimal - darker
             color: parseInt(Colors[c].substr(1), 16) > 8947848 ? 'black' : 'white',
           }}
-        >{c}</li>)
+        >{c}</li>),
         )}
       </ul>
       <Code language="jsx">{`

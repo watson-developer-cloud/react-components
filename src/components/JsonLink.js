@@ -4,7 +4,7 @@ import Colors from './Colors.js';
 
 export default function JsonLink(props) {
   // return a js object
-  const normalizeJson = (json) => (typeof json === 'string' ? JSON.parse(json) : json);
+  const normalizeJson = json => (typeof json === 'string' ? JSON.parse(json) : json);
 
   const handleClick = (e) => {
     e.preventDefault();

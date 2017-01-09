@@ -90,7 +90,7 @@ export default React.createClass({
     }
 
     // image tile is already selected
-    const index = this.props.images.map((e) => e.url).indexOf(this.props.initialPreviewImage.url);
+    const index = this.props.images.map(e => e.url).indexOf(this.props.initialPreviewImage.url);
     if (index !== -1) {
       state.selectedTile = index;
       return state;
@@ -225,7 +225,7 @@ export default React.createClass({
               // eslint-disable-next-line
               onClick={this.onClickTile.bind(null, index)}
               dataId={index}
-            />)
+            />),
           )}
           {!this.props.disableFileInput ? (
             <div className="image-picker--tile">

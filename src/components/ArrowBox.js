@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import { Icon, IconTypes } from './Icon';
 import Colors from './Colors';
 
-const getValue = (str) => str.match(/^[0-9]*/g)[0];
-const getUnit = (str) => str.match(/[^0-9].*/g)[0];
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+const getValue = str => str.match(/^[0-9]*/g)[0];
+const getUnit = str => str.match(/[^0-9].*/g)[0];
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 const hasUnit = (str) => {
   let bool = false;
   if (typeof str !== 'undefined' &&
@@ -16,7 +16,7 @@ const hasUnit = (str) => {
   }
   return bool;
 };
-const halfUnit = (str) => (getValue(str) / 2) + getUnit(str);
+const halfUnit = str => (getValue(str) / 2) + getUnit(str);
 
 export default React.createClass({
   propTypes: {
@@ -112,7 +112,7 @@ export default React.createClass({
           { width: this.props.width },
           { height: this.props.height },
           { backgroundColor: this.props.color },
-          this.props.style
+          this.props.style,
         )}
       >
         { // eslint-disable-next-line react/prop-types
@@ -121,7 +121,7 @@ export default React.createClass({
           className="arrow-box--arrow"
           style={Object.assign(
             borderStyle,
-            this.props.arrowStyle
+            this.props.arrowStyle,
           )}
         />
         { this.props.icon ?

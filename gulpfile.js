@@ -40,7 +40,7 @@ gulp.task('css', () =>
           './node_modules/',
         ],
         outputStyle: 'nested',
-      }).on('error', sass.logError)
+      }).on('error', sass.logError),
     )
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -50,12 +50,12 @@ gulp.task('css', () =>
     .pipe(gulp.dest(paths.build))
     .pipe(minifyCss({ compatibility: 'ie8' }))
     .pipe(rename(`css/${pkg.name}.min.css`))
-    .pipe(gulp.dest(paths.build))
+    .pipe(gulp.dest(paths.build)),
 );
 
 gulp.task('scss', () =>
   gulp.src(['src/stylesheets/**/*.scss', '!src/stylesheets/main.scss'])
-    .pipe(gulp.dest(`${paths.build}/scss`))
+    .pipe(gulp.dest(`${paths.build}/scss`)),
 );
 
 // concat, minimize, uglify components into a bundle
@@ -78,7 +78,7 @@ gulp.task('js', ['components'], () => {
       });
       bundler = bundler.plugin('uglifyify', { global: true });
     }
-    return bundler.bundle().on('error', (err) =>
+    return bundler.bundle().on('error', err =>
       // eslint-disable-next-line
       console.log('[browserify error] prod:', isProduction, err.message)
     )
@@ -102,29 +102,29 @@ gulp.task('components', () =>
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${paths.build}/components`))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream()),
 );
 
 // merge ui-component images and static images in this library
 gulp.task('images', () =>
   gulp.src(`${paths.static}/images/**`)
   .pipe(imagemin())
-  .pipe(gulp.dest(`${paths.build}/images`))
+  .pipe(gulp.dest(`${paths.build}/images`)),
 );
 
 gulp.task('prepare-site', ['build', 'example'], () =>
   [
     gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('gh-pages/images')),
     gulp.src(['example/**/*', '!example/src/**']).pipe(gulp.dest('gh-pages')),
-  ]
+  ],
 );
 
 gulp.task('gh-pages', ['prepare-site'], () =>
-  gulp.src('gh-pages/**/*').pipe(ghPages({ force: true }))
+  gulp.src('gh-pages/**/*').pipe(ghPages({ force: true })),
 );
 
 gulp.task('example-images', ['images'], () =>
-  gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('example/images'))
+  gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('example/images')),
 );
 
 gulp.task('example-css', () =>
@@ -137,7 +137,7 @@ gulp.task('example-css', () =>
           './node_modules/',
         ],
         outputStyle: 'nested',
-      }).on('error', sass.logError)
+      }).on('error', sass.logError),
     )
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -145,17 +145,17 @@ gulp.task('example-css', () =>
     }))
     .pipe(rename('bundle.css'))
     .pipe(gulp.dest(paths.example_build))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream()),
 );
 
 gulp.task('example-js', () =>
   browserify(paths.example_js)
-  .transform('babelify').bundle().on('error', (err) =>
+  .transform('babelify').bundle().on('error', err =>
     // eslint-disable-next-line
     console.log('[browserify error]', err.message)
   )
   .pipe(source('bundle.js'))
-  .pipe(gulp.dest(paths.example_build))
+  .pipe(gulp.dest(paths.example_build)),
 );
 
 gulp.task('example-js-watch', ['example-js'], reloadBrowser);

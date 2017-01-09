@@ -51,7 +51,7 @@ export default class ButtonsGroup extends React.Component {
                 'base--button',
                 'buttons-group--button',
                 { 'buttons-group--button_first': index === 0 },
-                { 'buttons-group--button_last': index === this.props.buttons.length - 1 }
+                { 'buttons-group--button_last': index === this.props.buttons.length - 1 },
               )}
               style={{
                 width: '100%',

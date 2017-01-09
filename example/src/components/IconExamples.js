@@ -8,7 +8,7 @@ export default function IconExamples() {
       - {iconName}
     </div>));
 
-  const iconsCode = IconTypes.map((iconName) => (`<Icon type="${iconName}" />\n`));
+  const iconsCode = IconTypes.map(iconName => (`<Icon type="${iconName}" />\n`));
 
   return (
     <section id="Icon">
