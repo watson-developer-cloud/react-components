@@ -40,7 +40,7 @@ gulp.task('css', () =>
           './node_modules/',
         ],
         outputStyle: 'nested',
-      }).on('error', sass.logError),
+      }).on('error', sass.logError)
     )
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
