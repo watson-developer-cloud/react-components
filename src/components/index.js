@@ -14,7 +14,7 @@ export Modal from './Modal';
 export ArrowBox from './ArrowBox';
 export JsonLink from './JsonLink';
 
-export Colors from './Colors'
+export Colors from './Colors';
 
 export { Icon } from './Icon';
 
