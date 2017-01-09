@@ -105,14 +105,14 @@ export default React.createClass({
           { 'arrow-box_left': this.props.direction === 'left' },
           { 'arrow-box_no-arrow': this.props.direction === 'none' },
           { 'arrow-box_hidden': !this.props.show },
-          this.props.className,
+          this.props.className
         )}
         style={Object.assign(
           directions[this.props.direction],
           { width: this.props.width },
           { height: this.props.height },
           { backgroundColor: this.props.color },
-          this.props.style,
+          this.props.style
         )}
       >
         { // eslint-disable-next-line react/prop-types
@@ -121,7 +121,7 @@ export default React.createClass({
           className="arrow-box--arrow"
           style={Object.assign(
             borderStyle,
-            this.props.arrowStyle,
+            this.props.arrowStyle
           )}
         />
         { this.props.icon ?

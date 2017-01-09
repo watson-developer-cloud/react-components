@@ -225,7 +225,7 @@ export default React.createClass({
               // eslint-disable-next-line
               onClick={this.onClickTile.bind(null, index)}
               dataId={index}
-            />),
+            />)
           )}
           {!this.props.disableFileInput ? (
             <div className="image-picker--tile">
@@ -250,7 +250,7 @@ export default React.createClass({
               <label
                 className={classNames(
                   'image-picker--tile-input-container',
-                  { 'image-picker--tile-input-container_error': this.props.fileError },
+                  { 'image-picker--tile-input-container_error': this.props.fileError }
                 )}
                 htmlFor="image-picker--file-input"
               >
@@ -268,7 +268,7 @@ export default React.createClass({
                   className={classNames(
                       'content',
                       'dropzone',
-                      { 'dropzone_on-drag': this.state.isDragging },
+                      { 'dropzone_on-drag': this.state.isDragging }
                   )}
                   disableClick={this.props.disableClick}
                   inputProps={this.props.inputProps}

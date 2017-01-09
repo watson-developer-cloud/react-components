@@ -59,7 +59,7 @@ export class Icon extends React.Component {
       'icon',
       this.props.className,
       { icon_large: this.props.size === 'large' },
-      { icon_small: this.props.size === 'small' },
+      { icon_small: this.props.size === 'small' }
     );
   }
 
