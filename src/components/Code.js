@@ -19,7 +19,7 @@ export default class CodeBlock extends React.Component {
   static languages = languages;
 
   static propTypes = {
-    children: PropTypes.string,
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]),
     language: PropTypes.oneOf(languages),
     type: PropTypes.string, // for backwards compatibility - don't use this
   };
