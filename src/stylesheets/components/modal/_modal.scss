@@ -44,6 +44,7 @@
     background: none;
     border: none;
     margin-top: 0rem;
+    padding: 0rem;
   }
 
   @include breakpoint(get('small')) {

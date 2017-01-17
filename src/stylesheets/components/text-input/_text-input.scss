@@ -1,9 +1,10 @@
 .text-input {
+  border: none;
   border-bottom: 1px solid color('gray', 10);
   display: block;
   position: relative;
 
-  &--input {
+  &--input[type="text"] {
     border: none;
     padding-left: 0rem;
     padding-right: 0rem;
