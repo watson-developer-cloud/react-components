@@ -98,7 +98,7 @@
     "react-dropzone": "^3.6.0",
     "react-prism": "^4.0.0",
     "react-radio-group": "^3.0.1",
-    "watson-ui-components": "^0.5.3"
+    "watson-ui-components": "^0.6.0"
   },
   "peerDependencies": {
     "watson-ui-components": "^0.5.3",
