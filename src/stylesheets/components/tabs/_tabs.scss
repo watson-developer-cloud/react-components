@@ -1,30 +1,59 @@
 .tab-panels {
   padding: 0rem;
-  background-color: #f4f4f4;
-  border: 1px solid #777677; }
-  .tab-panels--tab-list {
-    border-bottom: 1px solid #e0e0e0; }
-  .tab-panels--tab-list-item {
+  // min-height: 20rem;
+  background-color: color('white', 40);
+  border: 1px solid color('gray', 50);
+
+  &--tab-list {
+    border-bottom: 1px solid color('gray', 10);
+  }
+
+  &--tab-list-item {
     display: inline-block;
-    margin-top: 0rem; }
-  .tab-panels--tab {
+    margin-top: 0rem;
+  }
+
+  &--tab-list-item::before {
+    display: none;
+  }
+
+  &--tab {
     display: block;
     text-decoration: none;
-    padding: 0.66667rem 1.33333rem;
-    border-bottom: 6px solid transparent; }
-    .tab-panels--tab.base--a {
+    padding: get('rhythm') / 3 get('rhythm') / 1.5;
+    border-bottom: 6px solid transparent;
+
+    &.base--a {
       border-bottom: 6px solid transparent;
-      color: #121212; }
-    .tab-panels--tab:focus, .tab-panels--tab:hover {
-      border-bottom: 6px solid #734098; }
-    .tab-panels--tab.active {
-      border-bottom: 6px solid #734098; }
-  .tab-panels--tab-content {
+      color: color('gray', 90);
+    }
+
+    &:focus,
+    &:hover {
+      font-weight: get('bold weight font');
+      color: color('purple', 50);
+      border-bottom: 6px solid color('purple', 50);
+    }
+
+    &.active {
+      font-weight: get('bold weight font');
+      color: color('purple', 50);
+      border-bottom: 6px solid color('purple', 50);
+    }
+  }
+
+  &--tab-content {
     margin-top: 0rem;
-    padding: 2rem;
-    background-color: #fff; }
-  .tab-panels--tab-pane {
+    padding: get('rhythm');
+    background-color: color('white', 10);
+  }
+
+  &--tab-pane {
     display: none;
-    margin-top: 0; }
-    .tab-panels--tab-pane.active {
-      display: block; }
+    margin-top: 0;
+
+    &.active {
+      display: block;
+    }
+  }
+}
