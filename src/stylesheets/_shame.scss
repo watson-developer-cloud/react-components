@@ -1,0 +1,21 @@
+.base--button_fill {
+  $button--color: color('purple', 50);
+  background-color: $button--color;
+  border-color: $button--color;
+  color: white;
+  font-weight: get('weight light');
+  padding: 0.4em 2em;
+
+  &:visited {
+    background-color: $button--color;
+    border-color: $button--color;
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($button--color, 10%);
+    border-color: lighten($button--color, 10%);
+    color: white;
+  }
+}

@@ -66,7 +66,7 @@ export default function Jumbotron(props) {
                 <li className="jumbotron--nav-li base--li">
                   <a
                     href={props.startInBluemix}
-                    className="base--a jumbotron--nav-link"
+                    className="base--button base--button_fill jumbotron--nav-link"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
