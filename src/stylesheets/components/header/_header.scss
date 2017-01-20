@@ -25,6 +25,10 @@
     }
   }
 
+  &--wordmark-link {
+    border: none;
+  }
+
   &--wordmark-svg {
     height: 20px;
     width: 100px;
@@ -39,6 +43,10 @@
     @include breakpoint($wordmark-breakpoint) {
       display: none;
     }
+  }
+
+  &--wordmark-2-link {
+    border: none;
   }
 
   &--breadcrumbs {
