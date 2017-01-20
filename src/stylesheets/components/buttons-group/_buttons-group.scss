@@ -41,3 +41,11 @@
     }
   }
 }
+
+.base--radio + label::before {
+  border: 1px solid #323232;
+}
+.base--radio:checked + label::before {
+  background: radial-gradient(#9855d4 100%, transparent 0%);
+  border: 1px solid #9855d4;
+}

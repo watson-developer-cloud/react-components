@@ -1,0 +1,13 @@
+textarea, .base--textarea {
+    width: 100%;
+    padding: 0.6em 1em;
+    font-size: 1em;
+    font-weight: 300;
+    border: 1px solid color('gray', 90);
+    background-color: #fff;
+
+    &:focus, .base--textarea:focus {
+        outline: 4px solid color('purple', 50);
+        border-color: #9855d4;
+    }
+}
