@@ -67,18 +67,11 @@
   &--nav-ul {
     display: inline-block;
     width: auto;
-    margin-top: 0rem;
+    margin-top: 0.5rem;
   }
 
-  &--nav-ul.base--ul_inline .header--nav-li {
-    display: block;
-    margin-bottom: get('rhythm') / 8;
-
-    @include breakpoint($breakpoint-nav-items) {
-      margin-right: get('rhythm') / 2;
-      margin-bottom: 0rem;
-      display: inline-block;
-    }
+  &--nav-ul.base--ul_inline .jumbotron--nav-li {
+    margin-bottom: 0.5rem;
   }
 
   &--nav-link {
