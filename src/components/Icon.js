@@ -448,4 +448,3 @@ export class Icon extends React.Component {
     return <span><Type {...otherProps} /></span>;
   }
 }
-
