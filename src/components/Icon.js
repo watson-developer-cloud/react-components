@@ -258,7 +258,7 @@ const types = {
           width="1rem"
           height="1rem"
           {...otherProps}
-          className={createClassNames(size, className)}
+          className={`loader ${createClassNames(size, className)}`}
         >
           <circle cx="50" cy="50" r="20" className="loader--path" />
         </svg>
@@ -448,4 +448,3 @@ export class Icon extends React.Component {
     return <span><Type {...otherProps} /></span>;
   }
 }
-
