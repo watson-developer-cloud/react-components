@@ -58,7 +58,7 @@ export default React.createClass({
           className={classNames(
             'text-input--input',
             'base--input',
-            { empty: this.state.inputWidth === padding },
+            { empty: this.state.inputWidth === padding }
           )}
           style={{ width:
             (this.state.inputWidth > padding ?

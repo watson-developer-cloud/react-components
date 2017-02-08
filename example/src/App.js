@@ -16,6 +16,7 @@ import ImagePickerExamples from './components/ImagePickerExamples';
 import ButtonsGroupExamples from './components/ButtonsGroupExamples';
 import AlertExamples from './components/AlertExamples';
 import ArrowBoxExamples from './components/ArrowBoxExamples';
+import ColorsExample from './components/ColorsExample';
 import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
 import JsonLinkExamples from './components/JsonLinkExamples';
@@ -42,6 +43,7 @@ export default function App() {
             <AlertExamples />
             <ModalExamples />
             <ArrowBoxExamples />
+            <ColorsExample />
             <JsonLinkExamples />
           </ToC>
         </div>

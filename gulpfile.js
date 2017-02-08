@@ -78,7 +78,7 @@ gulp.task('js', ['components'], () => {
       });
       bundler = bundler.plugin('uglifyify', { global: true });
     }
-    return bundler.bundle().on('error', (err) =>
+    return bundler.bundle().on('error', err =>
       // eslint-disable-next-line
       console.log('[browserify error] prod:', isProduction, err.message)
     )
@@ -123,6 +123,10 @@ gulp.task('gh-pages', ['prepare-site'], () =>
   gulp.src('gh-pages/**/*').pipe(ghPages({ force: true }))
 );
 
+gulp.task('example-images', ['images'], () =>
+  gulp.src(`${paths.build}/images/**/*`).pipe(gulp.dest('example/images'))
+);
+
 gulp.task('example-css', () =>
   gulp.src(paths.example_css)
     .pipe(
@@ -146,7 +150,7 @@ gulp.task('example-css', () =>
 
 gulp.task('example-js', () =>
   browserify(paths.example_js)
-  .transform('babelify').bundle().on('error', (err) =>
+  .transform('babelify').bundle().on('error', err =>
     // eslint-disable-next-line
     console.log('[browserify error]', err.message)
   )
@@ -157,7 +161,7 @@ gulp.task('example-js', () =>
 gulp.task('example-js-watch', ['example-js'], reloadBrowser);
 
 gulp.task('build', ['images', 'css', 'scss', 'components', 'js', 'example']);
-gulp.task('example', ['example-css', 'example-js']);
+gulp.task('example', ['example-css', 'example-js', 'example-images']);
 
 gulp.task('default', ['build']);
 

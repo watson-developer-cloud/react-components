@@ -47,7 +47,7 @@ export default React.createClass({
         className={classNames(
           'overlay',
           { hide: this.state.initialHide },
-          { show: this.props.isOpen },
+          { show: this.props.isOpen }
         )}
       >
         <div className="modal" style={this.props.style || null}>

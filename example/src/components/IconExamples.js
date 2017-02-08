@@ -1,5 +1,6 @@
 import React from 'react';
 import Code from '../../../src/components/Code';
+import Colors from '../../../src/components/Colors';
 import { Icon, IconTypes } from '../../../src/components/Icon';
 
 export default function IconExamples() {
@@ -8,11 +9,12 @@ export default function IconExamples() {
       - {iconName}
     </div>));
 
-  const iconsCode = IconTypes.map((iconName) => (`<Icon type="${iconName}" />\n`));
+  const iconsCode = IconTypes.map(iconName => (`<Icon type="${iconName}" />\n`));
 
   return (
     <section id="Icon">
       <h2 className="base--h2">Icons</h2>
+
       <div className="row">
         <div className="block-example">
           {icons}
@@ -23,6 +25,7 @@ export default function IconExamples() {
           </Code>
         </div>
       </div>
+
       <div className="row">
         <div className="block-example">
           <div>
@@ -53,6 +56,24 @@ export default function IconExamples() {
           </Code>
         </div>
       </div>
+
+      <div className="row">
+        <div className="block-example">
+          <div>
+            <Icon type="microphone" fill={Colors.red_50} />
+          </div>
+          <div>
+            <Icon type="plus" fill="#4178BE" />
+          </div>
+        </div>
+        <div className="block-code">
+          <Code type="jsx">
+{`<Icon type="microphone" fill={Colors.red_50} />
+<Icon type="plus" fill="#4178BE" />`}
+          </Code>
+        </div>
+      </div>
+
     </section>
   );
 }

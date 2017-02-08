@@ -12,6 +12,7 @@ export default class ButtonsGroup extends React.Component {
       value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       id: PropTypes.string,
       text: PropTypes.string.isRequired,
+      selected: PropTypes.bool,
     })),
     onClick: PropTypes.func,
     onChange: PropTypes.func,
@@ -41,6 +42,7 @@ export default class ButtonsGroup extends React.Component {
               type={this.props.type}
               id={button.id || `${this.props.name}-${button.value}`}
               name={this.props.name}
+              checked={button.selected}
               value={button.value}
               onClick={this.props.onClick}
               onChange={this.props.onChange}

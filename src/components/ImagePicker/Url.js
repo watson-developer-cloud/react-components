@@ -45,7 +45,7 @@ const InputImageUrl = React.createClass({
           className={classNames(
             'image-picker--url-input',
             'base--input',
-            { 'image-picker--url-input_error': this.props.error },
+            { 'image-picker--url-input_error': this.props.error }
           )}
           onChange={this.handleInputChange}
           onKeyPress={this.handleKeyPress}

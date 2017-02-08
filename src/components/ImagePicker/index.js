@@ -90,7 +90,7 @@ export default React.createClass({
     }
 
     // image tile is already selected
-    const index = this.props.images.map((e) => e.url).indexOf(this.props.initialPreviewImage.url);
+    const index = this.props.images.map(e => e.url).indexOf(this.props.initialPreviewImage.url);
     if (index !== -1) {
       state.selectedTile = index;
       return state;
@@ -250,7 +250,7 @@ export default React.createClass({
               <label
                 className={classNames(
                   'image-picker--tile-input-container',
-                  { 'image-picker--tile-input-container_error': this.props.fileError },
+                  { 'image-picker--tile-input-container_error': this.props.fileError }
                 )}
                 htmlFor="image-picker--file-input"
               >
@@ -268,7 +268,7 @@ export default React.createClass({
                   className={classNames(
                       'content',
                       'dropzone',
-                      { 'dropzone_on-drag': this.state.isDragging },
+                      { 'dropzone_on-drag': this.state.isDragging }
                   )}
                   disableClick={this.props.disableClick}
                   inputProps={this.props.inputProps}

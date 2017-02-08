@@ -8,7 +8,7 @@ export default function ToC(props) {
   // and child.type.name (usually) gives the name of the constructor function
   // so, that's a good enough fallback for our use case.
 
-  const tocElements = props.children.map(c => {
+  const tocElements = props.children.map((c) => {
     const id = c.type.displayName || c.type.name;
     return (
       <li key={`${id}-toc-entry`} className="base--li">
@@ -20,7 +20,7 @@ export default function ToC(props) {
     );
   });
 
-  const children = props.children.map(c => {
+  const children = props.children.map((c) => {
     const id = c.type.displayName || c.type.name;
     return (
       <div id={id} key={`${id}-anchor`}>

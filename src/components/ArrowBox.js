@@ -4,9 +4,9 @@ import classNames from 'classnames';
 import { Icon, IconTypes } from './Icon';
 import Colors from './Colors';
 
-const getValue = (str) => str.match(/^[0-9]*/g)[0];
-const getUnit = (str) => str.match(/[^0-9].*/g)[0];
-const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+const getValue = str => str.match(/^[0-9]*/g)[0];
+const getUnit = str => str.match(/[^0-9].*/g)[0];
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 const hasUnit = (str) => {
   let bool = false;
   if (typeof str !== 'undefined' &&
@@ -16,7 +16,7 @@ const hasUnit = (str) => {
   }
   return bool;
 };
-const halfUnit = (str) => (getValue(str) / 2) + getUnit(str);
+const halfUnit = str => (getValue(str) / 2) + getUnit(str);
 
 export default React.createClass({
   propTypes: {
@@ -105,7 +105,7 @@ export default React.createClass({
           { 'arrow-box_left': this.props.direction === 'left' },
           { 'arrow-box_no-arrow': this.props.direction === 'none' },
           { 'arrow-box_hidden': !this.props.show },
-          this.props.className,
+          this.props.className
         )}
         style={Object.assign(
           directions[this.props.direction],
