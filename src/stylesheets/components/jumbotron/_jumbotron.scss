@@ -45,6 +45,7 @@
     margin-left: get('rhythm') / 4;
     font-weight: bold;
     vertical-align: middle;
+    font-size: 0.8rem;
   }
 
   &--version-tag {
@@ -82,6 +83,10 @@
     &:visited {
       color: color('gray', 90);
       border-bottom: 1px solid color('gray', 90);
+    }
+
+    &.base--button_fill {
+      text-decoration: none;
     }
   }
 }
