@@ -1,0 +1,51 @@
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: color('white', 100);
+  color: #373737;
+  padding: 0.66667rem 1.33333rem;
+  font-size: 1em;
+  border: 1px solid color('gray', 30);
+  cursor: pointer;
+  min-width: 200px;
+  text-align: left;
+}
+
+.drowndownicon {
+  transform: rotate(90deg);
+  float: right;
+  margin-top: 5px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+      background-color: color('white', 100);
+    }
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: color('white', 100);
+  min-width: 200px;
+  margin-top: 0;
+  border: 1px solid #C7C7C7;
+  border-top: none;
+
+  a {
+    color: black;
+    padding: 0.66667rem 1.33333rem;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+
+    &:hover {
+      background-color: color('purple', 10);
+    }
+  }
+
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

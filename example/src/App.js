@@ -20,6 +20,9 @@ import ColorsExample from './components/ColorsExample';
 import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
 import JsonLinkExamples from './components/JsonLinkExamples';
+import TextAreaExamples from './components/TextAreaExamples';
+import TableExamples from './components/TableExamples';
+import DropDownExamples from './components/DropDownExamples';
 
 export default function App() {
   return (
@@ -35,7 +38,10 @@ export default function App() {
             <FooterExamples />
             <JumbotronExamples />
             <TabsExamples />
+            <DropDownExamples />
             <TextInputExamples />
+            <TextAreaExamples />
+            <TableExamples />
             <RadioGroupExamples />
             <ButtonsGroupExamples />
             <CodeExamples />
