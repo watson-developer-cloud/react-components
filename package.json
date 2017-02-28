@@ -93,6 +93,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "map-range": "^0.1.2",
+    "numeral": "^2.0.4",
     "prismjs": "^1.5.1",
     "react": "~0.14 || ^15.3.0",
     "react-dropzone": "^3.6.0",

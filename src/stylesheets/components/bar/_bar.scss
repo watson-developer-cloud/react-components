@@ -1,0 +1,38 @@
+.bar {
+  $bar-color: color('gray', 50);
+  $score-label-width: 1.5rem;
+  $score-padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 6rem;
+
+  &--full-bar {
+    height: 0.5rem;
+    border: 1px solid $bar-color;
+    position: relative;
+    width: calc(100% - #{$score-label-width + $score-padding});
+    margin-right: $score-padding;
+
+    &_bar-only {
+      width: 100%;
+      margin-right: 0rem;
+    }
+  }
+
+  &--value-bar {
+    background-color: $bar-color;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  &--score {
+    width: $score-label-width;
+    text-align: right;
+    margin-top: 0rem;
+    vertical-align: right;
+    font-size: 0.8rem;
+  }
+}
