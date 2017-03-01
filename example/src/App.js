@@ -20,6 +20,7 @@ import ColorsExample from './components/ColorsExample';
 import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
 import JsonLinkExamples from './components/JsonLinkExamples';
+import BarExamples from './components/BarExamples';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
             <ArrowBoxExamples />
             <ColorsExample />
             <JsonLinkExamples />
+            <BarExamples />
           </ToC>
         </div>
       </div>
