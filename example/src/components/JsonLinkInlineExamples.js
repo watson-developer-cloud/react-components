@@ -1,5 +1,5 @@
 import React from 'react';
-import JsonLink2 from '../../../src/components/JsonLink2';
+import JsonLinkInline from '../../../src/components/JsonLinkInline';
 import Code from '../../../src/components/Code';
 
 const initialJson = {
@@ -46,23 +46,23 @@ export default React.createClass({
 
   render() {
     return (
-      <section id="JsonLink2">
-        <h2 className="base--h2">JsonLink2</h2>
+      <section id="JsonLinkInline">
+        <h2 className="base--h2">JsonLinkInline</h2>
         <div className="row">
-          <JsonLink2
+          <JsonLinkInline
             json={this.state.json}
             showJson={this.state.showJson}
             onExit={this.onExit}
             onShow={this.onShow}
-            description={<p>This is a description for the JsonLink2 component.</p>}
+            description={<p>This is a description for the JsonLinkInline component.</p>}
           />
           <Code type="jsx">
-{`<JsonLink2
+{`<JsonLinkInline
   json={{ some json object or string }}
   showJson={ boolean to toggle json display }
   onExit={ callback function for when exit button is clicked }
   onShow={ callback function for when json link is clicked }
-  description={<p>This is a description for the JsonLink2 component.</p>}
+  description={<p>This is a description for the JsonLinkInline component.</p>}
 />`}
           </Code>
         </div>
