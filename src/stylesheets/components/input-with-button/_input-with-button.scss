@@ -1,0 +1,15 @@
+.input-with-button {
+  width: calc(100% - 2rem);
+  position: relative;
+  margin-top: 1rem;
+
+  &--button {
+    position: absolute;
+    top: calc(50% - 0.82rem);
+    left: 100%;
+    margin-top: 0rem;
+    margin-left: 1rem;
+    border: none;
+    padding: 0rem;
+  }
+}
