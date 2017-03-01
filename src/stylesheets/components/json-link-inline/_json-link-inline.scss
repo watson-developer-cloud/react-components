@@ -1,0 +1,124 @@
+.json-link-inline {
+  position: relative;
+
+  @include breakpoint(get('medium')) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--desc {
+    @include breakpoint(get('medium')) {
+      width: calc(100% - 6rem);
+      margin-bottom: 1rem;
+    }
+  }
+
+  &--spacer {
+    flex-grow: 1;
+    margin: 0rem;
+  }
+
+  &--link {
+    display: inline-block;
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      cursor: pointer;
+    }
+
+    @include breakpoint(get('medium')) {
+      margin-top: 0rem;
+      width: 4rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      text-align: right;
+    }
+
+    .icon {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+
+  &--span {
+    border-bottom: 1px solid color('blue', 50);
+    color: color('blue', 50);
+    transition: 0.2s;
+
+    .json-link:hover &,
+    .json-link:focus & {
+      border-bottom: 1px solid color('blue', 30);
+      color: color('blue', 30);
+    }
+  }
+
+  &--icon-1 {
+    @include breakpoint(get('medium')) {
+      display: none;
+    }
+  }
+
+  &--icon-2 {
+    display: none;
+    transition: 0.3s;
+    @include breakpoint(get('medium')) {
+      display: inline-block;
+      margin-top: 0rem;
+      transform: rotate(90deg) scale(0.5);
+    }
+
+    &_show {
+      transform: rotate(-90deg) scale(0.5);
+    }
+  }
+
+  &--overlay {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    margin: 0rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: color('cool white', 30);
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: $z-index--overlay;
+    overflow: auto;
+    –webkit-overflow-scrolling: touch;
+    @include breakpoint(get('medium')) {
+      position: static;
+      opacity: 1;
+      max-height: 0px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    &_show {
+      visibility: visible;
+      opacity: 1;
+      @include breakpoint(get('medium')) {
+        max-height: 16rem;
+        overflow: auto;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &--button {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    padding: 0rem;
+    border: none;
+    margin: 0rem;
+    background-color: transparent;
+    @include breakpoint(get('medium')) {
+      display: none;
+    }
+  }
+}
