@@ -13,6 +13,7 @@ export Alert from './Alert';
 export Modal from './Modal';
 export ArrowBox from './ArrowBox';
 export JsonLink from './JsonLink';
+export InputWithButton from './InputWithButton';
 
 export Colors from './Colors';
 

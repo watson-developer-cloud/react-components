@@ -21,6 +21,7 @@ import ModalExamples from './components/ModalExamples';
 import TextInputExamples from './components/TextInputExamples';
 import JsonLinkExamples from './components/JsonLinkExamples';
 import JsonLinkInlineExamples from './components/JsonLinkInlineExamples';
+import InputWithButtonExamples from './components/InputWithButtonExamples';
 import BarExamples from './components/BarExamples';
 
 export default function App() {
@@ -48,6 +49,7 @@ export default function App() {
             <ColorsExample />
             <JsonLinkExamples />
             <JsonLinkInlineExamples />
+            <InputWithButtonExamples />
             <BarExamples />
           </ToC>
         </div>

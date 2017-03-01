@@ -1,7 +1,6 @@
 import React from 'react';
 import JsonLink from '../../../src/components/JsonLink';
 import Code from '../../../src/components/Code';
-// import { Icon } from '../../../src/components/Icon';
 
 const initialJson = {
   image_id: '6be7a2',
