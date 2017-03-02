@@ -3,7 +3,7 @@ import numeral from 'numeral';
 import map from 'map-range';
 
 function Bar(props) {
-  const mapped = map((x) => x, props.rangeStart, props.rangeEnd, 0, 1);
+  const mapped = map(x => x, props.rangeStart, props.rangeEnd, 0, 1);
   return (props.withScore ?
     <div className="bar">
       <div className="bar--full-bar">

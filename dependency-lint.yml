@@ -19,7 +19,11 @@ executedModules:
     root: ''
 
 ignoreErrors:
-  missing: []
+  missing:
+    - react-dom
+    - object-assign
+    - fbjs
+    - _process
   shouldBeDependency: []
   shouldBeDevDependency: []
   unused:
