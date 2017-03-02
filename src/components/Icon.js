@@ -22,8 +22,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -44,8 +44,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-4.9 9.1 24 24"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -65,8 +65,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 9.1"
       fill={fill || colors.green_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -80,8 +80,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.red_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -106,8 +106,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.red_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -124,8 +124,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.yellow_20}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -143,8 +143,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.blue_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -163,8 +163,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -184,8 +184,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.green_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -201,8 +201,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
       fill={fill || colors.green_50}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -220,8 +220,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -237,8 +237,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 16 16"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -255,8 +255,8 @@ const types = {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="25 25 50 50"
           fill={fill || colors.purple_50}
-          width="1rem"
-          height="1rem"
+          width="16"
+          height="16"
           {...otherProps}
           className={`loader ${createClassNames(size, className)}`}
         >
@@ -270,8 +270,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -287,8 +287,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 21.6 37.8"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -345,7 +345,7 @@ const types = {
       <path
         d="M15.6,2.1c-7.7,0-14,6.3-14,14s6.3,14,14,14s14-6.3,14-14S23.3,2.1,15.6,2.1z M15.6,28.1 c-6.6,0-12-5.4-12-12s5.4-12,12-12s12,5.4,12,12S22.2,28.1,15.6,28.1z"
       />
-      <polygon points="10.6,22.1 22.6,16.1 10.6,10.1 	" />
+      <polygon points="10.6,22.1 22.6,16.1 10.6,10.1" />
 
     </svg>);
   },
@@ -355,8 +355,8 @@ const types = {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       fill={fill || colors.gray_100}
-      width="1rem"
-      height="1rem"
+      width="16"
+      height="16"
       {...otherProps}
       className={createClassNames(size, className)}
     >
@@ -376,9 +376,9 @@ const types = {
       {...otherProps}
       className={createClassNames(size, className)}
     >
-      <polygon points="15.2,5.1 15.2,21.7 17.2,21.7 17.2,5.1 23.5,11.4 24.9,10 16.2,1.3 7.5,10 8.9,11.4 	" />
+      <polygon points="15.2,5.1 15.2,21.7 17.2,21.7 17.2,5.1 23.5,11.4 24.9,10 16.2,1.3 7.5,10 8.9,11.4" />
       <polygon
-        points="29.2,18.7 29.2,26.7 3.2,26.7 3.2,18.7 1.2,18.7 1.2,26.7 1.2,30.7 3.2,30.7 29.2,30.7 31.2,30.7 31.2,26.7 31.2,18.7 	"
+        points="29.2,18.7 29.2,26.7 3.2,26.7 3.2,18.7 1.2,18.7 1.2,26.7 1.2,30.7 3.2,30.7 29.2,30.7 31.2,30.7 31.2,26.7 31.2,18.7"
       />
 
     </svg>);
@@ -428,7 +428,8 @@ export class Icon extends React.Component {
     type: PropTypes.oneOf(IconTypes).isRequired,
     fill: PropTypes.string,
     className: PropTypes.string,
-    style: PropTypes.object,
+    // style is inline css style objects
+    style: PropTypes.object,  //eslint-disable-line
     size: PropTypes.oneOf([
       'small',
       'regular',

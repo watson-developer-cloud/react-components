@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react';
 
 import { PrismCode } from 'react-prism';
 import Prism from 'prismjs';
-import 'prismjs/components/prism-jsx.js';
-import 'prismjs/components/prism-json.js';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-json';
 
 // these aren't actually languages:
 const nonlangs = {
@@ -19,9 +19,8 @@ export default class CodeBlock extends React.Component {
   static languages = languages;
 
   static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]),
+    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]).isRequired,
     language: PropTypes.oneOf(languages),
-    type: PropTypes.string, // for backwards compatibility - don't use this
   };
 
   static defaultProps = {
@@ -29,7 +28,7 @@ export default class CodeBlock extends React.Component {
   };
 
   render() {
-    const lang = this.props.type || this.props.language;
+    const lang = this.props.language;
 
     return (
       <div className="code-block--code">

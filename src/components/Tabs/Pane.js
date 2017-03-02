@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 export default function Pane(props) {
   return (
-    <div>
+    <div data-id={props.label}>
       {props.children}
     </div>
   );

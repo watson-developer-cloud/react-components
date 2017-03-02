@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Icon, Colors, Code } from './index.js';
+import { Icon, Colors, Code } from './index';
 
 export default function JsonLinkInline(props) {
   // return a js object
@@ -67,12 +67,14 @@ JsonLinkInline.propTypes = {
   ]),
   showJson: React.PropTypes.bool,
   onExit: React.PropTypes.func,
-  onShow: React.PropTypes.func,
+  onShow: React.PropTypes.func,  // eslint-disable-line
   description: React.PropTypes.element,
 };
 
 JsonLinkInline.defaultProps = {
   showJson: false,
+  children: 'JSON',
+  description: <div />,
   onExit: () => {},
   onShow: () => {},
 };

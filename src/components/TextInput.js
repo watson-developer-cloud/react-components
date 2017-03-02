@@ -18,6 +18,7 @@ export default React.createClass({
     return {
       id: `textinput-${Math.round(Math.random() * 1000)}`,
       placeholder: 'Type Something',
+      onInput: () => {},
     };
   },
 

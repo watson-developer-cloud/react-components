@@ -13,7 +13,7 @@ export default class ButtonsGroup extends React.Component {
       id: PropTypes.string,
       text: PropTypes.string.isRequired,
       selected: PropTypes.bool,
-    })),
+    })).isRequired,
     onClick: PropTypes.func,
     onChange: PropTypes.func,
   };
@@ -22,6 +22,8 @@ export default class ButtonsGroup extends React.Component {
     type: 'button',
     isExpanded: true,
     minWidth: '10rem',
+    onClick: () => {},
+    onChange: () => {},
   };
 
   render() {

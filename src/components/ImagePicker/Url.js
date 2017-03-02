@@ -14,6 +14,9 @@ const InputImageUrl = React.createClass({
     return {
       url: '',
       placeholder: 'Sample Placeholder',
+      onSubmit: () => {},
+      onInputChange: () => {},
+      error: null,
     };
   },
   getInitialState() {
