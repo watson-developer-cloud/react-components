@@ -24,7 +24,8 @@ ignoreErrors:
     - object-assign
     - fbjs
     - _process
-  shouldBeDependency: []
+  shouldBeDependency:
+    - react-dom
   shouldBeDevDependency: []
   unused:
     # babel plugins & presets

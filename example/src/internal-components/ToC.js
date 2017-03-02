@@ -44,5 +44,5 @@ export default function ToC(props) {
 }
 
 ToC.propTypes = {
-  children: React.PropTypes.array.isRequired,
+  children: React.PropTypes.arrayOf(React.PropTypes.element).isRequired,
 };

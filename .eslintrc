@@ -11,23 +11,20 @@
       "extensions": [".js", ".jsx"]
     }],
     "react/prefer-es6-class": "off",
-
-    // new rules that came in in an update and cause lots of errors
-    // todo: fixup code and enable these
-    "react/require-default-props": "off",
-    "react/no-unused-prop-types": "off",
-    "react/forbid-prop-types": "off",
+    "react/require-default-props": "warn",
+    "react/no-unused-prop-types": "warn",
+    "react/forbid-prop-types": "warn",
     "react/no-array-index-key": "off",
-    "react/no-unescaped-entities": "off",
-    "import/extensions": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "no-tabs": "off",
+    "react/no-unescaped-entities": "warn",
+    "import/extensions": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "no-tabs": "error",
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",
       "imports": "never",
       "exports": "never",
-      "functions": "never", // this one was set to always or always-multiline, whic breaks gulp
+      "functions": "never", // this one was set to always or always multiline, whic breaks gulp
     }],
 
     "import/newline-after-import": "off",

@@ -10,6 +10,12 @@ const FooBarBazRadio = React.createClass({
     tabStyle: PropTypes.bool,
   },
 
+  getDefaultProps() {
+    return {
+      tabStyle: false,
+    };
+  },
+
   getInitialState() {
     return { selectedValue: 'foo' };
   },
@@ -47,7 +53,7 @@ export default function RadioGroupExample() {
           <h3>Tab Style:</h3>
           <FooBarBazRadio name="with-tabs" tabStyle />
           <h3>Notes:</h3>
-          <p>React prevents side-effects, so radio buttons will not act "clickable" without something
+          <p>React prevents side-effects, so radio buttons will not act &quot;clickable&quot; without something
             to handle the <code>onChange</code> event and set the <code>selectedValue</code>.</p>
           <p>The example code to the left wraps the RadioGroup and Radio buttons in a class that
             handles state and logs clicks to the console.</p>

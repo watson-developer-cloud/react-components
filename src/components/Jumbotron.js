@@ -95,4 +95,9 @@ Jumbotron.propTypes = {
 
 Jumbotron.defaultProps = {
   size: 'large',
+  documentation: '',
+  version: '',
+  apiReference: '/',
+  startInBluemix: '/',
+  repository: '/',
 };

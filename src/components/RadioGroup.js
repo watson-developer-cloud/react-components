@@ -51,4 +51,4 @@ export class RadioGroup extends ChengLouRadioGroup {
   }
 }
 RadioGroup.propTypes.tabStyle = PropTypes.bool;
-
+RadioGroup.defaultProps.tabStyle = false;

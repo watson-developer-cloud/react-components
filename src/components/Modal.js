@@ -9,14 +9,18 @@ import Colors from './Colors';
 export default React.createClass({
   propTypes: {
     isOpen: React.PropTypes.bool,
-    style: React.PropTypes.object,
+    // style is inline css style objects
+    style: React.PropTypes.object,  // eslint-disable-line
     onExit: React.PropTypes.func,
-    onEnter: React.PropTypes.func,
+    // onEnter is used in componentWillReceiveProps
+    onEnter: React.PropTypes.func,  // eslint-disable-line
   },
 
   getDefaultProps() {
     return {
       isOpen: false,
+      onExit: () => {},
+      onEnter: () => {},
     };
   },
 

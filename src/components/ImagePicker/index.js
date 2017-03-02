@@ -25,7 +25,7 @@ export default React.createClass({
     images: React.PropTypes.arrayOf(React.PropTypes.shape({
       url: React.PropTypes.string,
       alt: React.PropTypes.string,
-    })),
+    })).isRequired,
 
     // preview tile props
     disablePreviewImage: React.PropTypes.bool,
@@ -40,7 +40,8 @@ export default React.createClass({
     disableFileInput: React.PropTypes.bool, // option to remove File Input / Dropzone component
     accept: React.PropTypes.string, // accepted filetypes
     disableClick: React.PropTypes.bool, // option to make dropzone clickable or not
-    inputProps: React.PropTypes.object, // file chooser input properties
+    // file chooser input properties
+    inputProps: React.PropTypes.object, // eslint-disable-line
     maxSize: React.PropTypes.number,  // max file size
     minSize: React.PropTypes.number,  // min file size
     multiple: React.PropTypes.bool, // option for multiple files
@@ -53,29 +54,39 @@ export default React.createClass({
     urlError: React.PropTypes.string, // error message on url input
   },
 
-  getDefaultProps: () => ({
-    // eslint-disable-next-line
-    images: [0, 1, 2, 3].map((_, i) => {
-      return {
+  getDefaultProps() {
+    return {
+      images: [0, 1, 2, 3].map((_, i) => ({
         url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97150&w=200&h=150',
         alt: `Sample ${i}`,
-      };
-    }),
-    disablePreviewImage: false,
-    initialPreviewImage: null,
+      })),
+      disablePreviewImage: false,
+      initialPreviewImage: null,
 
-    disableFileInput: false,
-    accept: 'image/*',
-    disableClick: false,
-    inputProps: {},
-    maxSize: Infinity,
-    minSize: 0,
-    multiple: false,
-    name: 'file-chooser',
+      disableFileInput: false,
+      accept: 'image/*',
+      disableClick: false,
+      inputProps: {},
+      maxSize: Infinity,
+      minSize: 0,
+      multiple: false,
+      name: 'file-chooser',
 
-    disableUrlInput: false,
-    urlPlaceholder: 'Paste an image URL',
-  }),
+      disableUrlInput: false,
+      urlPlaceholder: 'Paste an image URL',
+
+      error: null,
+      fileError: null,
+      urlError: null,
+      onClickTile: () => {},
+      onDrop: () => {},
+      onDropAccepted: () => {},
+      onDropRejected: () => {},
+      onUrlSubmit: () => {},
+      onUrlInputChange: () => {},
+      onClosePreview: () => {},
+    };
+  },
 
   getInitialState() {
     const state = {

@@ -68,4 +68,8 @@ Header.propTypes = {
 Header.defaultProps = {
   hasWordmark: true,
   size: 'large',
+  mainBreadcrumbs: null,
+  mainBreadcrumbsUrl: null,
+  subBreadcrumbs: null,
+  subBreadcrumbsUrl: null,
 };

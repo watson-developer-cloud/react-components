@@ -2,7 +2,7 @@ const React = require('react');
 
 function Tile(prop) {
   return (
-    <div
+    <button
       className={prop.grayout ? 'image-picker--tile image-picker--tile_unselected' : 'image-picker--tile'}
       onClick={prop.onClick || ''}
       data-id={prop.dataId || ''}
@@ -16,7 +16,7 @@ function Tile(prop) {
           />
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
@@ -24,8 +24,12 @@ Tile.propTypes = {
   image: React.PropTypes.string.isRequired,
   alt: React.PropTypes.string.isRequired,
   grayout: React.PropTypes.bool.isRequired,
+  dataId: React.PropTypes.number.isRequired,
   onClick: React.PropTypes.func,
-  dataId: React.PropTypes.number,
+};
+
+Tile.defaultProps = {
+  onClick: () => {},
 };
 
 module.exports = Tile;

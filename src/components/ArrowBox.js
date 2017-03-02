@@ -29,10 +29,11 @@ export default React.createClass({
     // Offset from element that arrow box is relative to.
     // Ex. if relativeOffset = '50%', then the arrow box is
     // 50% of the main element's width or height
-    relativeOffset: React.PropTypes.string,
-    manualPositioning: React.PropTypes.string,
-    style: React.PropTypes.object,
-    arrowStyle: React.PropTypes.object,
+    relativeOffset: React.PropTypes.string,  // css values in string form
+    manualPositioning: React.PropTypes.string,  // css values in string form
+    // style and arrowStyle are inline css style objects
+    style: React.PropTypes.object,  // eslint-disable-line
+    arrowStyle: React.PropTypes.object,  // eslint-disable-line
     className: React.PropTypes.string,
   },
 
@@ -43,8 +44,10 @@ export default React.createClass({
       width: '15rem',
       height: 'auto',
       relativeOffset: '50%',
+      manualPositioning: null,
       icon: null,
       color: Colors.gray_50,
+      className: '',
     };
   },
 

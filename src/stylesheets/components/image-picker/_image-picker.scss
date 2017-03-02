@@ -23,6 +23,7 @@ $tile-padding: 0.2rem;
 @mixin image-tiles {
   &--tile {
     @include divisions(2);
+    border: none;
     transition: 0.2s;
     margin-top: 0;
     margin-bottom: get('rhythm') / 2;

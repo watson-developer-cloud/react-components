@@ -11,6 +11,7 @@ export default class Tabs extends React.Component {
   static defaultProps = {
     selected: 0,
     children: [],
+    onChange: () => {},
   };
 
   constructor(props) {

@@ -28,4 +28,5 @@ Alert.propTypes = {
 Alert.defaultProps = {
   type: 'info',
   color: 'gray',
+  icon: null,
 };
