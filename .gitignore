@@ -6,5 +6,4 @@ gh-pages
 .publish
 example/build
 example/images
-dist/**
-!dist/.gitkeep
+dist/

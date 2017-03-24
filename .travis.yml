@@ -5,15 +5,6 @@ script:
 - npm test
 - npm run build
 deploy:
-- provider: releases
-  api_key:
-    secure: bI8e2mZCMfy7pHM5jAwkhDEIGVT8YnK6pB13MrF85jEuvbp7WBk8bgeyMv8QbClhvFGsuHmfEw/nTU9n+X6E7n8OaKlKWwLPxViDoIAvS0oD3CJwjbNiJnOl183r8sOPxvbzGhINP7PmqXksupsckHpgXc9p8HeU0Kh+PWoLIy6jvtgNCmubv/uETPDuEeyDYolH80S8sxfFvgYg8JmOidVfCEsS1jZ/kCwPft5KbDdHDXy9/BJA+Yx7u75ZkkuPI1o92ZRfcURQK+jffiEcB1w0jGGTyygiKk4v5IOSwhTx6doqAIPozUq16eKccyFUL+z2aKclbYadzzMtpIw007lp9VpE3Gy+xYe5xy/bHthNj+yJG0st4mC0zjtOmcQk8Wy2SZ4VlTnLhHWzYJwlIjHYY+eQFGx/lB9FWdfrAj4iPvb3XQyP31ND7B7Ohf0s0ekkDAtiui97dKitbrzY5nQ422LnIo61soWSSgMSTIbwy4QKGL9Eiz/MjvIUew99kpzDsC/Je9dYf3J46LtSzeiV2w/OloII9mahmc/qr13ALHR63P02MkR/RiNbaYa4VMKUy5enxucJybIzMHXOaHSJpGueCY/DUUgnoAI8DkHF8J6iosArn/26gSPb8bINvfZS/uCFbWDyWcP3xMXZTl1FH8n+9bJ+0fWHyY9URiQ=
-  file_glob: true
-  file: dist/*
-  on:
-    tags: true
-    repo: watson-developer-cloud/react-components
-  skip_cleanup: true
 - provider: npm
   email: nathan@nfriedly.com
   api_key:

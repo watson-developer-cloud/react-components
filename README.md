@@ -29,7 +29,7 @@ Documentation: https://watson-developer-cloud.github.io/react-components/
    app.use(express.static('./node_modules/watson-react-components/dist/'));
    ```
 
-   For other environments, copy the contents of the `dist/` into your static folder.
+   For other environments, check out the code and run `npn install; npm run build` and then copy the contents of the `dist/` directory into your static folder.
 
 4. Add a reference to the stylesheet.
 
