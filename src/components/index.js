@@ -4,6 +4,7 @@ export Header from './Header';
 export Jumbotron from './Jumbotron';
 
 // Elements
+export Bar from './Bar';
 export Tabs from './Tabs';
 export Pane from './Tabs/Pane';
 export TabsPane from './Tabs/Pane';
