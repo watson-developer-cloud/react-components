@@ -1,11 +1,11 @@
 {
-  "name": "react-components",
+  "name": "watson-react-components",
   "version": "0.6.8",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aprilwebster/react-components.git"
+    "url": "https://github.com/watson-developer-cloud/react-components.git"
   },
   "author": "IBM Corp.",
   "contributors": [
@@ -29,7 +29,7 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/aprilwebster/react-components/issues"
+    "url": "https://github.com/watson-developer-cloud/react-components/issues"
   },
   "engines": {
     "node": ">=6",
