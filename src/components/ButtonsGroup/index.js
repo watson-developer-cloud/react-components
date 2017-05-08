@@ -11,7 +11,13 @@ export default class ButtonsGroup extends React.Component {
     buttons: PropTypes.arrayOf(PropTypes.shape({
       value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       id: PropTypes.string,
-      text: PropTypes.string.isRequired,
+      // text is either an element or string
+      text: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.arrayOf(React.PropTypes.node),
+        React.PropTypes.node,
+        PropTypes.string,
+      ]).isRequired,
       selected: PropTypes.bool,
     })).isRequired,
     onClick: PropTypes.func,
