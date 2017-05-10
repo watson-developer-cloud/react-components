@@ -1,6 +1,6 @@
 {
   "name": "watson-react-components",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "description": "A collection of react components to build web applications using the Watson APIs.",
   "main": "./dist/components/index",
   "repository": {
