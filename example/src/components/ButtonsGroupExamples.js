@@ -81,6 +81,28 @@ export default function ButtonsGroupExamples() {
             text: 'baz',
           }]}
         />
+        <h5 className="base--h5">ButtonsGroup with HTML Content</h5>
+        <ButtonsGroup
+          type="button"
+          name="buttons-with-html-content"
+          // eslint-disable-next-line no-console
+          onClick={e => console.log('checkbox clicked', e)}
+          // eslint-disable-next-line no-console
+          onChange={e => console.log('checkbox changed', e)}
+          buttons={[{
+            value: 1,
+            id: 'buttons-with-html-content-1',
+            text: <p><a href="https://github.com/watson-developer-cloud/node-sdk">wdc node-sdk</a></p>,
+          }, {
+            value: 2,
+            id: 'buttons-with-html-content-2',
+            text: <p><a href="https://github.com/watson-developer-cloud/python-sdk">wdc python-sdk</a></p>,
+          }, {
+            value: 3,
+            id: 'buttons-with-html-content-3',
+            text: <p><a href="https://github.com/watson-developer-cloud/java-sdk">wdc java-sdk</a></p>,
+          }]}
+        />
       </div>
       <Code type="jsx">
 {`<ButtonsGroup
