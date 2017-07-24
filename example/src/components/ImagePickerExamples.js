@@ -5,14 +5,15 @@ import ImagePicker from '../../../src/components/ImagePicker';
 import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class ImagePickerExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       urlError: null,
       fileError: null,
-      error: null,
+      error: null
     };
-  },
+  }
 
   render() {
     return (
@@ -105,5 +106,5 @@ export default React.createClass({
         </Code>
       </section>
     );
-  },
-});
+  }
+};

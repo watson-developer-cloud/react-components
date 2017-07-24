@@ -6,35 +6,20 @@ import Colors from './Colors';
 
 // error, alert, warning,
 
-export default React.createClass({
-  propTypes: {
-    isOpen: React.PropTypes.bool,
-    // style is inline css style objects
-    style: React.PropTypes.object,  // eslint-disable-line
-    onExit: React.PropTypes.func,
-    // onEnter is used in componentWillReceiveProps
-    onEnter: React.PropTypes.func,  // eslint-disable-line
-  },
-
-  getDefaultProps() {
-    return {
-      isOpen: false,
-      onExit: () => {},
-      onEnter: () => {},
+export default class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      initialHide: true
     };
-  },
-
-  getInitialState() {
-    return {
-      initialHide: true,
-    };
-  },
+    this.initialHide = this.initialHide.bind(this);
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isOpen && !this.props.isOpen) {
       nextProps.onEnter.call(this);
     }
-  },
+  }
 
   initialHide() {
     setTimeout(() => {
@@ -42,7 +27,7 @@ export default React.createClass({
         initialHide: false,
       });
     }, 2000);
-  },
+  }
 
   render() {
     this.initialHide();
@@ -63,5 +48,20 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
-});
+  }
+};
+
+Modal.propTypes = {
+  isOpen: React.PropTypes.bool,
+  // style is inline css style objects
+  style: React.PropTypes.object,  // eslint-disable-line
+  onExit: React.PropTypes.func,
+  // onEnter is used in componentWillReceiveProps
+  onEnter: React.PropTypes.func  // eslint-disable-line
+};
+
+Modal.defaultProps = {
+  isOpen: false,
+  onExit: () => {},
+  onEnter: () => {}
+};
