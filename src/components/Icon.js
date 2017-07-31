@@ -452,28 +452,28 @@ export const IconTypes = Object.keys(types);
 
 export class Icon extends React.Component {
 
-  static propTypes = {
-    type: PropTypes.oneOf(IconTypes).isRequired,
-    fill: PropTypes.string,
-    className: PropTypes.string,
-    // style is inline css style objects
-    style: PropTypes.object,  //eslint-disable-line
-    size: PropTypes.oneOf([
-      'small',
-      'regular',
-      'large',
-    ]),
-  }
-
-  static defaultProps = {
-    className: 'icon',
-    size: 'regular',
-  }
-
   render() {
     const { type, ...otherProps } = this.props;
     const Type = types[type];
 
     return <span><Type {...otherProps} /></span>;
   }
+}
+
+Icon.propTypes = {
+  type: PropTypes.oneOf(IconTypes).isRequired,
+  fill: PropTypes.string,
+  className: PropTypes.string,
+  // style is inline css style objects
+  style: PropTypes.object,  //eslint-disable-line
+  size: PropTypes.oneOf([
+    'small',
+    'regular',
+    'large',
+  ]),
+}
+
+Icon.defaultProps = {
+  className: 'icon',
+  size: 'regular',
 }
