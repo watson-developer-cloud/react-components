@@ -46,6 +46,11 @@ export default class JsonLinkExamples extends React.Component {
               className="base--pre"
               style={{ whiteSpace: 'pre', marginTop: '1rem' }}
               contentEditable
+              // making something content editable results in a warning every
+              // time the content is editted. Since we do want the content
+              // to be editable (it was intentional) we can suppress the
+              // warning with the next line
+              suppressContentEditableWarning
               onInput={(e) => {
                 this.setState({
                   json: e.target.textContent,
