@@ -24,17 +24,19 @@ export default class ImagePicker extends React.Component {
     // }
 
     // image tile is already selected
-    const index = this.props.images.map(e => e.url).indexOf(this.props.initialPreviewImage.url);
-    if (index !== -1) {
-      this.state.selectedTile = index;
-    }
+    if (this.props.initialPreviewImage && this.props.initialPreviewImage !== null) {
+      const index = this.props.images.map(e => e.url).indexOf(this.props.initialPreviewImage.url);
+      if (index !== -1) {
+        this.state.selectedTile = index;
+      }
 
-    // url image selected
-    if (this.props.initialPreviewImage.url) {
-      this.state.previewImage = {
-        url: this.props.initialPreviewImage.url,
-        alt: this.props.initialPreviewImage.alt || 'User supplied url',
-      };
+      // url image selected
+      if (this.props.initialPreviewImage.url) {
+        this.state.previewImage = {
+          url: this.props.initialPreviewImage.url,
+          alt: this.props.initialPreviewImage.alt || 'User supplied url',
+        };
+      }
     }
   }
 
