@@ -60,15 +60,16 @@ export default function RadioGroupExample() {
         </div>
         <div className="block-code">
           <Code type="jsx">
-                {`const FooBarBazRadio = React.createClass({
-  getInitialState() {
-    return {selectedValue: 'foo'};
-  },
+                {`class FooBarBazRadio extends React.Component {
+  constructor() {
+    super(props);
+    state = {selectedValue: 'foo',};
+  }
 
   handleChange(value) {
     console.log('FooBarBazRadio Clicked', value)
     this.setState({selectedValue: value});
-  },
+  }
 
   render() {
     return (
@@ -82,7 +83,7 @@ export default function RadioGroupExample() {
       </RadioGroup>
     );
   }
-});`}
+}`}
           </Code>
         </div>
       </div>

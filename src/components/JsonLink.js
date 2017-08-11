@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from './Icon';
 import Colors from './Colors';
 
@@ -26,16 +27,16 @@ export default function JsonLink(props) {
 }
 
 JsonLink.propTypes = {
-  json: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object,
+  json: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
   ]).isRequired,
   // element is used in props.element above
-  element: React.PropTypes.string,  // eslint-disable-line
+  element: PropTypes.string,  // eslint-disable-line
   // if specified, replaces the text with children
-  children: React.PropTypes.oneOfType([  // eslint-disable-line
-    React.PropTypes.element,
-    React.PropTypes.arrayOf(React.PropTypes.element),
+  children: PropTypes.oneOfType([  // eslint-disable-line
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
   ]),
 };
 

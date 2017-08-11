@@ -1,143 +1,62 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import Dropzone from 'react-dropzone';
 import { Icon } from '../Icon';
 import Colors from '../Colors';
 import ArrowBox from '../ArrowBox';
-const Dropzone = require('react-dropzone');
 
 const Tile = require('./Tile');
 const InputImageUrl = require('./Url');
 
-export default React.createClass({
-  propTypes: {
-    error: React.PropTypes.string,
-
-    // Event Handlers
-    onClickTile: React.PropTypes.func, // args: image obj this.props.images, index; when file is clicked
-    onDrop: React.PropTypes.func, // args: File image; when file is chosen or dragged and dropped
-    onDropAccepted: React.PropTypes.func, // args: File image; when file is chosen successfully
-    onDropRejected: React.PropTypes.func, // args: File image; when file is chosen unsuccessfully
-    onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
-    onUrlInputChange: React.PropTypes.func, // event when url input changes
-    onClosePreview: React.PropTypes.func, // event when preview image is closing
-
-    // tile props
-    images: React.PropTypes.arrayOf(React.PropTypes.shape({
-      url: React.PropTypes.string,
-      alt: React.PropTypes.string,
-    })).isRequired,
-
-    // preview tile props
-    disablePreviewImage: React.PropTypes.bool,
-    initialPreviewImage: React.PropTypes.shape({
-      url: React.PropTypes.string.isRequired,
-      alt: React.PropTypes.string,
-    }), // have component display a preview image by default
-
-    // file input props
-    // detailed documentation on dropzone properties can be found at
-    // https://github.com/okonet/react-dropzone
-    disableFileInput: React.PropTypes.bool, // option to remove File Input / Dropzone component
-    accept: React.PropTypes.string, // accepted filetypes
-    disableClick: React.PropTypes.bool, // option to make dropzone clickable or not
-    // file chooser input properties
-    inputProps: React.PropTypes.object, // eslint-disable-line
-    maxSize: React.PropTypes.number,  // max file size
-    minSize: React.PropTypes.number,  // min file size
-    multiple: React.PropTypes.bool, // option for multiple files
-    name: React.PropTypes.string,
-    fileError: React.PropTypes.string, // error message on file input
-
-    // url input props
-    disableUrlInput: React.PropTypes.bool,  // option to remove url input component
-    urlPlaceholder: React.PropTypes.string, // placeholder text for url input
-    urlError: React.PropTypes.string, // error message on url input
-  },
-
-  getDefaultProps() {
-    return {
-      images: [0, 1, 2, 3].map((_, i) => ({
-        url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97150&w=200&h=150',
-        alt: `Sample ${i}`,
-      })),
-      disablePreviewImage: false,
-      initialPreviewImage: null,
-
-      disableFileInput: false,
-      accept: 'image/*',
-      disableClick: false,
-      inputProps: {},
-      maxSize: Infinity,
-      minSize: 0,
-      multiple: false,
-      name: 'file-chooser',
-
-      disableUrlInput: false,
-      urlPlaceholder: 'Paste an image URL',
-
-      error: null,
-      fileError: null,
-      urlError: null,
-      onClickTile: () => {},
-      onDrop: () => {},
-      onDropAccepted: () => {},
-      onDropRejected: () => {},
-      onUrlSubmit: () => {},
-      onUrlInputChange: () => {},
-      onClosePreview: () => {},
-    };
-  },
-
-  getInitialState() {
-    const state = {
+export default class ImagePicker extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       previewImage: null,  // { url: string, alt: string }
       selectedTile: -1,
       isDragging: false,
     };
 
     // no image selected
-    if (!this.props.initialPreviewImage || this.props.initialPreviewImage === null) {
-      return state;
-    }
+    // if (!this.props.initialPreviewImage || this.props.initialPreviewImage === null) {
+    //   this.state;
+    // }
 
     // image tile is already selected
     const index = this.props.images.map(e => e.url).indexOf(this.props.initialPreviewImage.url);
     if (index !== -1) {
-      state.selectedTile = index;
-      return state;
+      this.state.selectedTile = index;
     }
 
     // url image selected
     if (this.props.initialPreviewImage.url) {
-      state.previewImage = {
+      this.state.previewImage = {
         url: this.props.initialPreviewImage.url,
         alt: this.props.initialPreviewImage.alt || 'User supplied url',
       };
-      return state;
     }
+  }
 
-    return state;
-  },
-
-  componentDidMount() {
+  componentDidMount = () => {
     document.addEventListener('dragover', this.onDragOver, false);
     document.addEventListener('dragleave', this.onDragLeave, false);
-  },
+  }
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     document.removeEventListener('dragover', this.onDragOver);
     document.removeEventListener('dragover', this.onDragLeave);
-  },
+  }
 
-  onDragOver() {
+  onDragOver = () => {
     this.setState({ isDragging: true });
-  },
+  }
 
-  onDragLeave() {
+  onDragLeave = () => {
     this.setState({ isDragging: false });
-  },
+  }
 
-  onUrlSubmit(event, url) {
+  onUrlSubmit = (event, url) => {
     this.setState({
       previewImage: {
         url,
@@ -148,16 +67,16 @@ export default React.createClass({
     if (this.props.onUrlSubmit) {
       this.props.onUrlSubmit.call(this, { url });
     }
-  },
+  }
 
-  onDrop(files) {
+  onDrop = (files) => {
     const image = files[0];
     if (this.props.onDrop) {
       this.props.onDrop.call(this, image);
     }
-  },
+  }
 
-  onDropAccepted(files) {
+  onDropAccepted = (files) => {
     const image = files[0];
     this.setState({
       previewImage: { url: image.preview, alt: 'preview image' },
@@ -167,9 +86,9 @@ export default React.createClass({
     if (this.props.onDropAccepted) {
       this.props.onDropAccepted.call(this, image);
     }
-  },
+  }
 
-  onDropRejected(files) {
+  onDropRejected = (files) => {
     const image = files[0];
     this.setState({
       previewImage: null,
@@ -179,9 +98,9 @@ export default React.createClass({
     if (this.props.onDropRejected) {
       this.props.onDropRejected.call(this, image);
     }
-  },
+  }
 
-  onClickTile(index) {
+  onClickTile = (index) => {
     this.setState({
       selectedTile: index,
       previewImage: null,
@@ -189,36 +108,34 @@ export default React.createClass({
     if (this.props.onClickTile) {
       this.props.onClickTile.call(this, this.props.images[index], index);
     }
-  },
+  }
 
-  onClosePreview() {
+  onClosePreview = () => {
     this.setState({
       previewImage: null,
     });
     if (this.props.onClosePreview) {
       this.props.onClosePreview.call(this);
     }
-  },
+  }
 
   // boolean logic for showing preview image or not
-  showPreview() {
-    return !this.props.disablePreviewImage &&
+  showPreview = () =>
+    !this.props.disablePreviewImage &&
       this.state.previewImage &&
       !(this.props.fileError || this.props.urlError || this.props.error);
-  },
 
   // boolean logic for showing url input or not
-  showUrlInput() {
+  showUrlInput = () =>
     // if there is no previewImage, or the previewImage is disabled,
     // and urlInput is not disabled, and there are any error messages,
     // then show the url input
-    return (((!this.state.previewImage ||
+    (((!this.state.previewImage ||
       (this.state.previewImage && this.disablePreviewImage)) &&
       !this.props.disableUrlInput) ||
       this.props.fileError ||
       this.props.urlError ||
       this.props.error);
-  },
 
   render() {
     return (
@@ -329,5 +246,82 @@ export default React.createClass({
         ) : null}
       </div>
     );
-  },
-});
+  }
+}
+
+ImagePicker.propTypes = {
+  error: PropTypes.string,
+
+  // Event Handlers
+  onClickTile: PropTypes.func, // args: image obj this.props.images, index; when file is clicked
+  onDrop: PropTypes.func, // args: File image; when file is chosen or dragged and dropped
+  onDropAccepted: PropTypes.func, // args: File image; when file is chosen successfully
+  onDropRejected: PropTypes.func, // args: File image; when file is chosen unsuccessfully
+  onUrlSubmit: PropTypes.func,  // when hitting enter as url input is focused
+  onUrlInputChange: PropTypes.func, // event when url input changes
+  onClosePreview: PropTypes.func, // event when preview image is closing
+
+  // tile props
+  images: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string,
+    alt: PropTypes.string,
+  })).isRequired,
+
+  // preview tile props
+  disablePreviewImage: PropTypes.bool,
+  initialPreviewImage: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    alt: PropTypes.string,
+  }), // have component display a preview image by default
+
+  // file input props
+  // detailed documentation on dropzone properties can be found at
+  // https://github.com/okonet/react-dropzone
+  disableFileInput: PropTypes.bool, // option to remove File Input / Dropzone component
+  accept: PropTypes.string, // accepted filetypes
+  disableClick: PropTypes.bool, // option to make dropzone clickable or not
+  // file chooser input properties
+  inputProps: PropTypes.object, // eslint-disable-line
+  maxSize: PropTypes.number,  // max file size
+  minSize: PropTypes.number,  // min file size
+  multiple: PropTypes.bool, // option for multiple files
+  name: PropTypes.string,
+  fileError: PropTypes.string, // error message on file input
+
+  // url input props
+  disableUrlInput: PropTypes.bool,  // option to remove url input component
+  urlPlaceholder: PropTypes.string, // placeholder text for url input
+  urlError: PropTypes.string, // error message on url input
+};
+
+ImagePicker.defaultProps = {
+  images: [0, 1, 2, 3].map((_, i) => ({
+    url: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=200%C3%97150&w=200&h=150',
+    alt: `Sample ${i}`,
+  })),
+  disablePreviewImage: false,
+  initialPreviewImage: null,
+
+  disableFileInput: false,
+  accept: 'image/*',
+  disableClick: false,
+  inputProps: {},
+  maxSize: Infinity,
+  minSize: 0,
+  multiple: false,
+  name: 'file-chooser',
+
+  disableUrlInput: false,
+  urlPlaceholder: 'Paste an image URL',
+
+  error: null,
+  fileError: null,
+  urlError: null,
+  onClickTile: () => {},
+  onDrop: () => {},
+  onDropAccepted: () => {},
+  onDropRejected: () => {},
+  onUrlSubmit: () => {},
+  onUrlInputChange: () => {},
+  onClosePreview: () => {},
+};

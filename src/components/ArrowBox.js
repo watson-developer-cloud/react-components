@@ -19,7 +19,7 @@ const hasUnit = (str) => {
 };
 const halfUnit = str => (getValue(str) / 2) + getUnit(str);
 
-const ArrowBox = (props) => {
+export default function ArrowBox(props) {
   // Use manualPositioning first.
   // If no manualPositioning, but height/width has a defined unit value
   // in css, then use half of that. Or else just use 0px.
@@ -104,7 +104,7 @@ const ArrowBox = (props) => {
         />) : null }
     </div>
   );
-};
+}
 
 ArrowBox.propTypes = {
   direction: PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'none']),
@@ -135,4 +135,3 @@ ArrowBox.defaultProps = {
   color: Colors.gray_50,
   className: '',
 };
-export { ArrowBox as default };

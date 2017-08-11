@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from '../../../src/components/Icon';
-
 
 export default function ToC(props) {
   // the docs mention a displayName property, but I don't see it on most elements.
@@ -44,5 +44,5 @@ export default function ToC(props) {
 }
 
 ToC.propTypes = {
-  children: React.PropTypes.arrayOf(React.PropTypes.element).isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

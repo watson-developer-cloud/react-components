@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from './Icon';
 import sizes from './Sizes';
 
@@ -83,14 +84,14 @@ export default function Jumbotron(props) {
 }
 
 Jumbotron.propTypes = {
-  documentation: React.PropTypes.string,
-  version: React.PropTypes.string,
-  description: React.PropTypes.string.isRequired,
-  serviceName: React.PropTypes.string.isRequired,
-  apiReference: React.PropTypes.string,
-  startInBluemix: React.PropTypes.string,
-  repository: React.PropTypes.string,
-  size: React.PropTypes.oneOf(sizes),
+  documentation: PropTypes.string,
+  version: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  serviceName: PropTypes.string.isRequired,
+  apiReference: PropTypes.string,
+  startInBluemix: PropTypes.string,
+  repository: PropTypes.string,
+  size: PropTypes.oneOf(sizes),
 };
 
 Jumbotron.defaultProps = {

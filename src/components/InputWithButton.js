@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from './index';
 
 let value = '';
@@ -34,7 +35,7 @@ function InputWithButton(props) {
 }
 
 InputWithButton.propTypes = {
-  onSubmit: React.PropTypes.func,
+  onSubmit: PropTypes.func,
 };
 
 InputWithButton.defaultProps = {

@@ -1,5 +1,6 @@
 /* eslint max-len:off */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Icon, IconTypes } from './Icon';
 import Colors from './Colors';
 
@@ -20,9 +21,9 @@ export default function Alert(props) {
 }
 
 Alert.propTypes = {
-  type: React.PropTypes.oneOf(IconTypes),
-  color: React.PropTypes.oneOf(['red', 'yellow', 'green', 'blue', 'gray']),
-  icon: React.PropTypes.element,
+  type: PropTypes.oneOf(IconTypes),
+  color: PropTypes.oneOf(['red', 'yellow', 'green', 'blue', 'gray']),
+  icon: PropTypes.element,
 };
 
 Alert.defaultProps = {

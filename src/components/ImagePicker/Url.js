@@ -1,8 +1,8 @@
+import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import ArrowBox from '../ArrowBox';
 import Colors from '../Colors';
-const React = require('react');
-const classNames = require('classnames');
 
 class InputImageUrl extends React.Component {
   constructor(props) {

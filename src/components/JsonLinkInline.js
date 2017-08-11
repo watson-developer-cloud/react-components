@@ -64,7 +64,8 @@ JsonLinkInline.propTypes = {
   ]).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.element,
-    PropTypes.arrayOf(React.PropTypes.element),
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.string,
   ]),
   showJson: PropTypes.bool,
   onExit: PropTypes.func,

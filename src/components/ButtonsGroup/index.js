@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default class ButtonsGroup extends React.Component {
@@ -14,8 +15,8 @@ export default class ButtonsGroup extends React.Component {
       // text is either an element or string
       text: PropTypes.oneOfType([
         PropTypes.element,
-        PropTypes.arrayOf(React.PropTypes.node),
-        React.PropTypes.node,
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node,
         PropTypes.string,
       ]).isRequired,
       selected: PropTypes.bool,

@@ -1,5 +1,6 @@
 /* eslint max-len:off */
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Icon } from './Icon';
 import Colors from './Colors';
@@ -52,12 +53,12 @@ export default class Modal extends React.Component {
 }
 
 Modal.propTypes = {
-  isOpen: React.PropTypes.bool,
+  isOpen: PropTypes.bool,
   // style is inline css style objects
-  style: React.PropTypes.object,  // eslint-disable-line
-  onExit: React.PropTypes.func,
+  style: PropTypes.object,  // eslint-disable-line
+  onExit: PropTypes.func,
   // onEnter is used in componentWillReceiveProps
-  onEnter: React.PropTypes.func  // eslint-disable-line
+  onEnter: PropTypes.func  // eslint-disable-line
 };
 
 Modal.defaultProps = {

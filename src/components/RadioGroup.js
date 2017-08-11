@@ -1,6 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { RadioGroup as ChengLouRadioGroup, Radio as ChengLouRadio } from 'react-radio-group'; // This component was created by Cheng Lou of Facebook
-
 
 export class Radio extends ChengLouRadio {
   render() {
