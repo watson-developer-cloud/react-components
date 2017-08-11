@@ -1,6 +1,6 @@
 /* eslint max-len: 0 */
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import colors from './Colors';
@@ -449,15 +449,12 @@ const types = {
 
 export const IconTypes = Object.keys(types);
 
-export class Icon extends React.Component {
+export const Icon = (props) => {
+  const { type, ...otherProps } = props;
+  const Type = types[type];
 
-  render() {
-    const { type, ...otherProps } = this.props;
-    const Type = types[type];
-
-    return <span><Type {...otherProps} /></span>;
-  }
-}
+  return <span><Type {...otherProps} /></span>;
+};
 
 Icon.propTypes = {
   type: PropTypes.oneOf(IconTypes).isRequired,
