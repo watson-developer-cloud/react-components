@@ -28,7 +28,7 @@ export default class JsonLinkExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      json: initialJson
+      json: initialJson,
     };
   }
 
@@ -69,4 +69,4 @@ export default class JsonLinkExamples extends React.Component {
       </section>
     );
   }
-};
+}

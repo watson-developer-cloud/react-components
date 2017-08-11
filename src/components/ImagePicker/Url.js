@@ -8,7 +8,7 @@ class InputImageUrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      url: ''
+      url: '',
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
@@ -60,21 +60,21 @@ class InputImageUrl extends React.Component {
       </div>
     );
   }
-};
+}
 
 InputImageUrl.defaultProps = {
-    url: '',
-    placeholder: 'Sample Placeholder',
-    onSubmit: () => {},
-    onInputChange: () => {},
-    error: null
+  url: '',
+  placeholder: 'Sample Placeholder',
+  onSubmit: () => {},
+  onInputChange: () => {},
+  error: null,
 };
 
 InputImageUrl.propTypes = {
   onSubmit: React.PropTypes.func,
   onInputChange: React.PropTypes.func,
   placeholder: React.PropTypes.string,
-  error: React.PropTypes.string
+  error: React.PropTypes.string,
 };
 
 module.exports = InputImageUrl;

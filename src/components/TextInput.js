@@ -11,9 +11,9 @@ const padding = 2;
 
 export default class TextInput extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      inputWidth: padding
+      inputWidth: padding,
     };
     this.onInput = this.onInput.bind(this);
   }
@@ -63,15 +63,15 @@ export default class TextInput extends React.Component {
       </label>
     );
   }
-};
+}
 
   // all html input[type="text"] properties are valid
 TextInput.propTypes = {
-  onInput: React.PropTypes.func
+  onInput: React.PropTypes.func,
 };
 
 TextInput.defaultProps = {
   id: `textinput-${Math.round(Math.random() * 1000)}`,
   placeholder: 'Type Something',
-  onInput: () => {}
+  onInput: () => {},
 };

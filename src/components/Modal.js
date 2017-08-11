@@ -10,7 +10,7 @@ export default class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialHide: true
+      initialHide: true,
     };
     this.initialHide = this.initialHide.bind(this);
   }
@@ -49,7 +49,7 @@ export default class Modal extends React.Component {
       </div>
     );
   }
-};
+}
 
 Modal.propTypes = {
   isOpen: React.PropTypes.bool,
@@ -63,5 +63,5 @@ Modal.propTypes = {
 Modal.defaultProps = {
   isOpen: false,
   onExit: () => {},
-  onEnter: () => {}
+  onEnter: () => {},
 };

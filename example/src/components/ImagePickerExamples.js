@@ -11,7 +11,7 @@ export default class ImagePickerExamples extends React.Component {
     this.state = {
       urlError: null,
       fileError: null,
-      error: null
+      error: null,
     };
   }
 
@@ -107,4 +107,4 @@ export default class ImagePickerExamples extends React.Component {
       </section>
     );
   }
-};
+}

@@ -449,7 +449,6 @@ const types = {
 
 export const IconTypes = Object.keys(types);
 
-
 export class Icon extends React.Component {
 
   render() {
@@ -471,9 +470,9 @@ Icon.propTypes = {
     'regular',
     'large',
   ]),
-}
+};
 
 Icon.defaultProps = {
   className: 'icon',
   size: 'regular',
-}
+};

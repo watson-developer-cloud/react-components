@@ -61,10 +61,10 @@ JsonLinkInline.propTypes = {
     React.PropTypes.string,
     React.PropTypes.object,
   ]).isRequired,
-  //children: React.PropTypes.oneOfType([
-    //React.PropTypes.element,
-    //React.PropTypes.arrayOf(React.PropTypes.element),
-  //]),
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.element,
+    React.PropTypes.arrayOf(React.PropTypes.element),
+  ]),
   showJson: React.PropTypes.bool,
   onExit: React.PropTypes.func,
   onShow: React.PropTypes.func,  // eslint-disable-line

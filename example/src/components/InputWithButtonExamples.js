@@ -6,7 +6,7 @@ export default class InputWithButtonExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      submitText: ''
+      submitText: '',
     };
   }
 
@@ -34,4 +34,4 @@ export default class InputWithButtonExamples extends React.Component {
       </section>
     );
   }
-};
+}

@@ -109,7 +109,7 @@ export default class ArrowBox extends React.Component {
       </div>
     );
   }
-};
+}
 
 ArrowBox.propTypes = {
   direction: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'none']),

@@ -5,9 +5,9 @@ import Code from '../../../src/components/Code';
 
 export default class ModalExamples extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      toggleModal: false
+      toggleModal: false,
     };
   }
 
@@ -88,4 +88,4 @@ const onEnter = () => {
       </section>
     );
   }
-};
+}

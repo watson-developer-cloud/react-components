@@ -6,7 +6,7 @@ export default class TextInputExamples extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: '',
     };
   }
 
@@ -43,4 +43,4 @@ export default class TextInputExamples extends React.Component {
       </section>
     );
   }
-};
+}

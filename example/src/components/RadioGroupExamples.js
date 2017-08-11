@@ -7,7 +7,7 @@ export class FooBarBazRadio extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedValue: 'foo'
+      selectedValue: 'foo',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -31,15 +31,15 @@ export class FooBarBazRadio extends React.Component {
       </RadioGroup>
     );
   }
-};
+}
 
 FooBarBazRadio.defaultProps = {
-  tabStyle: false
+  tabStyle: false,
 };
 
 FooBarBazRadio.propTypes = {
   name: PropTypes.string.isRequired,
-  tabStyle: PropTypes.bool
+  tabStyle: PropTypes.bool,
 };
 
 export default function RadioGroupExample() {

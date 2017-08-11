@@ -29,7 +29,7 @@ export default class JsonLinkInlineExamples extends React.Component {
     super(props);
     this.state = {
       json: initialJson,
-      showJson: false
+      showJson: false,
     };
     this.onExit = this.onExit.bind(this);
     this.onShow = this.onShow.bind(this);
@@ -72,4 +72,4 @@ export default class JsonLinkInlineExamples extends React.Component {
       </section>
     );
   }
-};
+}
