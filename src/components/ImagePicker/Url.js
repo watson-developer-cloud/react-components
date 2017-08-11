@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import ArrowBox from '../ArrowBox';
 import Colors from '../Colors';
 const React = require('react');
 const classNames = require('classnames');
-import PropTypes from 'prop-types';
 
 class InputImageUrl extends React.Component {
   constructor(props) {
@@ -71,10 +71,10 @@ InputImageUrl.defaultProps = {
 };
 
 InputImageUrl.propTypes = {
-  onSubmit: React.PropTypes.func,
-  onInputChange: React.PropTypes.func,
-  placeholder: React.PropTypes.string,
-  error: React.PropTypes.string,
+  onSubmit: PropTypes.func,
+  onInputChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  error: PropTypes.string,
 };
 
 module.exports = InputImageUrl;

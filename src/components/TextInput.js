@@ -67,7 +67,7 @@ export default class TextInput extends React.Component {
 
   // all html input[type="text"] properties are valid
 TextInput.propTypes = {
-  onInput: React.PropTypes.func,
+  onInput: PropTypes.func,
 };
 
 TextInput.defaultProps = {

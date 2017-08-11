@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { RadioGroup, Radio } from '../../../src/components';
 import Code from '../../../src/components/Code';
-import PropTypes from 'prop-types';
 
 export class FooBarBazRadio extends React.Component {
   constructor(props) {

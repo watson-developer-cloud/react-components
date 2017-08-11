@@ -1,9 +1,9 @@
 /* eslint max-len:off */
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Icon, IconTypes } from './Icon';
 import Colors from './Colors';
-import PropTypes from 'prop-types';
 
 const getValue = str => str.match(/^[0-9]*/g)[0];
 const getUnit = str => str.match(/[^0-9].*/g)[0];
@@ -20,9 +20,6 @@ const hasUnit = (str) => {
 const halfUnit = str => (getValue(str) / 2) + getUnit(str);
 
 export default class ArrowBox extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     // Use manualPositioning first.
     // If no manualPositioning, but height/width has a defined unit value
@@ -112,21 +109,21 @@ export default class ArrowBox extends React.Component {
 }
 
 ArrowBox.propTypes = {
-  direction: React.PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'none']),
-  show: React.PropTypes.bool,
-  icon: React.PropTypes.oneOf([].concat(IconTypes, null)),
-  color: React.PropTypes.string,
-  width: React.PropTypes.string,
-  height: React.PropTypes.string,
+  direction: PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'none']),
+  show: PropTypes.bool,
+  icon: PropTypes.oneOf([].concat(IconTypes, null)),
+  color: PropTypes.string,
+  width: PropTypes.string,
+  height: PropTypes.string,
   // Offset from element that arrow box is relative to.
   // Ex. if relativeOffset = '50%', then the arrow box is
   // 50% of the main element's width or height
-  relativeOffset: React.PropTypes.string,  // css values in string form
-  manualPositioning: React.PropTypes.string,  // css values in string form
+  relativeOffset: PropTypes.string,  // css values in string form
+  manualPositioning: PropTypes.string,  // css values in string form
   // style and arrowStyle are inline css style objects
-  style: React.PropTypes.object,  // eslint-disable-line
-  arrowStyle: React.PropTypes.object,  // eslint-disable-line
-  className: React.PropTypes.string,
+  style: PropTypes.object,  // eslint-disable-line
+  arrowStyle: PropTypes.object,  // eslint-disable-line
+  className: PropTypes.string,
 };
 
 ArrowBox.defaultProps = {
