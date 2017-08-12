@@ -1,18 +1,18 @@
 /* eslint max-len: 0 */
-
 import React from 'react';
 import ImagePicker from '../../../src/components/ImagePicker';
 import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class ImagePickerExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       urlError: null,
       fileError: null,
       error: null,
     };
-  },
+  }
 
   render() {
     return (
@@ -64,46 +64,46 @@ export default React.createClass({
         <Code language="js">
 {`{
   // Event Handlers
-  onClickTile: React.PropTypes.func, // args: image obj this.props.images, index; when file is clicked
-  onDrop: React.PropTypes.func, // args: File image; when file is chosen or dragged and dropped
-  onDropAccepted: React.PropTypes.func, // args: File image; when file is chosen successfully
-  onDropRejected: React.PropTypes.func, // args: File image; when file is chosen unsuccessfully
-  onUrlSubmit: React.PropTypes.func,  // when hitting enter as url input is focused
-  onUrlInputChange: React.PropTypes.func, // event when url input changes
+  onClickTile: PropTypes.func, // args: image obj this.props.images, index; when file is clicked
+  onDrop: PropTypes.func, // args: File image; when file is chosen or dragged and dropped
+  onDropAccepted: PropTypes.func, // args: File image; when file is chosen successfully
+  onDropRejected: PropTypes.func, // args: File image; when file is chosen unsuccessfully
+  onUrlSubmit: PropTypes.func,  // when hitting enter as url input is focused
+  onUrlInputChange: PropTypes.func, // event when url input changes
 
   // tile props
-  images: React.PropTypes.arrayOf(React.PropTypes.shape({
-    url: React.PropTypes.string,
-    alt: React.PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string,
+    alt: PropTypes.string,
   })),
 
   // preview tile props
-  disablePreviewImage: React.PropTypes.bool,
-  initialPreviewImage: React.PropTypes.shape({
-    url: React.PropTypes.string.isRequired,
-    alt: React.PropTypes.string,
+  disablePreviewImage: PropTypes.bool,
+  initialPreviewImage: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    alt: PropTypes.string,
   }), // have component display a preview image by default
 
   // file input props
   // detailed documentation on dropzone properties can be found at
   // https://github.com/okonet/react-dropzone
-  disableFileInput: React.PropTypes.bool, // option to remove File Input / Dropzone component
-  accept: React.PropTypes.string, // accepted filetypes
-  disableClick: React.PropTypes.bool, // option to make dropzone clickable or not
-  inputProps: React.PropTypes.object, // file chooser input properties
-  maxSize: React.PropTypes.number,  // max file size
-  minSize: React.PropTypes.number,  // min file size
-  multiple: React.PropTypes.bool, // option for multiple files
-  name: React.PropTypes.string,
-  fileError: React.PropTypes.string, // error message on file input
+  disableFileInput: PropTypes.bool, // option to remove File Input / Dropzone component
+  accept: PropTypes.string, // accepted filetypes
+  disableClick: PropTypes.bool, // option to make dropzone clickable or not
+  inputProps: PropTypes.object, // file chooser input properties
+  maxSize: PropTypes.number,  // max file size
+  minSize: PropTypes.number,  // min file size
+  multiple: PropTypes.bool, // option for multiple files
+  name: PropTypes.string,
+  fileError: PropTypes.string, // error message on file input
 
   // url input props
-  disableUrlInput: React.PropTypes.bool,  // option to remove url input component
-  urlPlaceholder: React.PropTypes.string, // placeholder text for url input
-  urlError: React.PropTypes.string, // error message on url input
+  disableUrlInput: PropTypes.bool,  // option to remove url input component
+  urlPlaceholder: PropTypes.string, // placeholder text for url input
+  urlError: PropTypes.string, // error message on url input
 }`}
         </Code>
       </section>
     );
-  },
-});
+  }
+}

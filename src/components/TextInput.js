@@ -5,28 +5,18 @@ https://conversation-simple.mybluemix.net/
 
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const padding = 2;
 
-export default React.createClass({
-  // all html input[type="text"] properties are valid
-  propTypes: {
-    onInput: React.PropTypes.func,
-  },
-
-  getDefaultProps() {
-    return {
-      id: `textinput-${Math.round(Math.random() * 1000)}`,
-      placeholder: 'Type Something',
-      onInput: () => {},
-    };
-  },
-
-  getInitialState() {
-    return {
+export default class TextInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       inputWidth: padding,
     };
-  },
+    this.onInput = this.onInput.bind(this);
+  }
 
   onInput(e) {
     const dummy = e.target.nextSibling;
@@ -45,7 +35,7 @@ export default React.createClass({
     if (this.props.onInput) {
       this.props.onInput.call(this, e);
     }
-  },
+  }
 
   render() {
     return (
@@ -72,5 +62,16 @@ export default React.createClass({
         <span className="text-input--dummy" />
       </label>
     );
-  },
-});
+  }
+}
+
+  // all html input[type="text"] properties are valid
+TextInput.propTypes = {
+  onInput: PropTypes.func,
+};
+
+TextInput.defaultProps = {
+  id: `textinput-${Math.round(Math.random() * 1000)}`,
+  placeholder: 'Type Something',
+  onInput: () => {},
+};

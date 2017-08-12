@@ -1,27 +1,18 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import ArrowBox from '../ArrowBox';
 import Colors from '../Colors';
-const React = require('react');
-const classNames = require('classnames');
 
-const InputImageUrl = React.createClass({
-  propTypes: {
-    onSubmit: React.PropTypes.func,
-    onInputChange: React.PropTypes.func,
-    placeholder: React.PropTypes.string,
-    error: React.PropTypes.string,
-  },
-  getDefaultProps() {
-    return {
+class InputImageUrl extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       url: '',
-      placeholder: 'Sample Placeholder',
-      onSubmit: () => {},
-      onInputChange: () => {},
-      error: null,
     };
-  },
-  getInitialState() {
-    return { url: '' };
-  },
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
   /**
    * During changes to the url input
    */
@@ -30,7 +21,7 @@ const InputImageUrl = React.createClass({
     if (this.props.onInputChange) {
       this.props.onInputChange.call(this, e);
     }
-  },
+  }
   /**
    * On Input url key press
    */
@@ -40,7 +31,7 @@ const InputImageUrl = React.createClass({
         this.props.onSubmit.call(this, e, this.state.url);
       }
     }
-  },
+  }
   render() {
     return (
       <div style={{ position: 'relative' }}>
@@ -68,7 +59,22 @@ const InputImageUrl = React.createClass({
         </ArrowBox>
       </div>
     );
-  },
-});
+  }
+}
+
+InputImageUrl.defaultProps = {
+  url: '',
+  placeholder: 'Sample Placeholder',
+  onSubmit: () => {},
+  onInputChange: () => {},
+  error: null,
+};
+
+InputImageUrl.propTypes = {
+  onSubmit: PropTypes.func,
+  onInputChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  error: PropTypes.string,
+};
 
 module.exports = InputImageUrl;

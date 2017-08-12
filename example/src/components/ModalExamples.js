@@ -3,12 +3,13 @@ import Modal from '../../../src/components/Modal';
 import Alert from '../../../src/components/Alert';
 import Code from '../../../src/components/Code';
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class ModalExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       toggleModal: false,
     };
-  },
+  }
 
   render() {
     return (
@@ -86,5 +87,5 @@ const onEnter = () => {
         </Code>
       </section>
     );
-  },
-});
+  }
+}

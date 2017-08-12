@@ -2,13 +2,13 @@ import React from 'react';
 import TextInput from '../../../src/components/TextInput';
 import Code from '../../../src/components/Code';
 
-export default React.createClass({
-
-  getInitialState() {
-    return {
+export default class TextInputExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       text: '',
     };
-  },
+  }
 
   render() {
     return (
@@ -42,5 +42,5 @@ export default React.createClass({
         </div>
       </section>
     );
-  },
-});
+  }
+}

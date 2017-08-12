@@ -1,40 +1,26 @@
 /* eslint max-len:off */
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Icon } from './Icon';
 import Colors from './Colors';
 
 // error, alert, warning,
 
-export default React.createClass({
-  propTypes: {
-    isOpen: React.PropTypes.bool,
-    // style is inline css style objects
-    style: React.PropTypes.object,  // eslint-disable-line
-    onExit: React.PropTypes.func,
-    // onEnter is used in componentWillReceiveProps
-    onEnter: React.PropTypes.func,  // eslint-disable-line
-  },
-
-  getDefaultProps() {
-    return {
-      isOpen: false,
-      onExit: () => {},
-      onEnter: () => {},
-    };
-  },
-
-  getInitialState() {
-    return {
+export default class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       initialHide: true,
     };
-  },
+    this.initialHide = this.initialHide.bind(this);
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isOpen && !this.props.isOpen) {
       nextProps.onEnter.call(this);
     }
-  },
+  }
 
   initialHide() {
     setTimeout(() => {
@@ -42,7 +28,7 @@ export default React.createClass({
         initialHide: false,
       });
     }, 2000);
-  },
+  }
 
   render() {
     this.initialHide();
@@ -63,5 +49,20 @@ export default React.createClass({
         </div>
       </div>
     );
-  },
-});
+  }
+}
+
+Modal.propTypes = {
+  isOpen: PropTypes.bool,
+  // style is inline css style objects
+  style: PropTypes.object,  // eslint-disable-line
+  onExit: PropTypes.func,
+  // onEnter is used in componentWillReceiveProps
+  onEnter: PropTypes.func  // eslint-disable-line
+};
+
+Modal.defaultProps = {
+  isOpen: false,
+  onExit: () => {},
+  onEnter: () => {},
+};

@@ -24,12 +24,13 @@ const initialJson = {
   },
 };
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class JsonLinkExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       json: initialJson,
     };
-  },
+  }
 
   render() {
     return (
@@ -45,6 +46,11 @@ export default React.createClass({
               className="base--pre"
               style={{ whiteSpace: 'pre', marginTop: '1rem' }}
               contentEditable
+              // making something content editable results in a warning every
+              // time the content is editted. Since we do want the content
+              // to be editable (it was intentional) we can suppress the
+              // warning with the next line
+              suppressContentEditableWarning
               onInput={(e) => {
                 this.setState({
                   json: e.target.textContent,
@@ -62,5 +68,5 @@ export default React.createClass({
         </div>
       </section>
     );
-  },
-});
+  }
+}

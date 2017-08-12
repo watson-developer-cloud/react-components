@@ -1,4 +1,5 @@
-const React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Tile(prop) {
   return (
@@ -21,11 +22,11 @@ function Tile(prop) {
 }
 
 Tile.propTypes = {
-  image: React.PropTypes.string.isRequired,
-  alt: React.PropTypes.string.isRequired,
-  grayout: React.PropTypes.bool.isRequired,
-  dataId: React.PropTypes.number.isRequired,
-  onClick: React.PropTypes.func,
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  grayout: PropTypes.bool.isRequired,
+  dataId: PropTypes.number.isRequired,
+  onClick: PropTypes.func,
 };
 
 Tile.defaultProps = {

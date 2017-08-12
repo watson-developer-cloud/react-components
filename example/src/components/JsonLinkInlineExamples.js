@@ -24,25 +24,28 @@ const initialJson = {
   },
 };
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class JsonLinkInlineExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       json: initialJson,
       showJson: false,
     };
-  },
+    this.onExit = this.onExit.bind(this);
+    this.onShow = this.onShow.bind(this);
+  }
 
   onExit() {
     this.setState({
       showJson: false,
     });
-  },
+  }
 
   onShow() {
     this.setState({
       showJson: !this.state.showJson,
     });
-  },
+  }
 
   render() {
     return (
@@ -68,5 +71,5 @@ export default React.createClass({
         </div>
       </section>
     );
-  },
-});
+  }
+}

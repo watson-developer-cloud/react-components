@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { PrismCode } from 'react-prism';
 import Prism from 'prismjs';
@@ -18,15 +19,6 @@ export default class CodeBlock extends React.Component {
 
   static languages = languages;
 
-  static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]).isRequired,
-    language: PropTypes.oneOf(languages),
-  };
-
-  static defaultProps = {
-    language: 'js',
-  };
-
   render() {
     const lang = this.props.language;
 
@@ -41,3 +33,12 @@ export default class CodeBlock extends React.Component {
     );
   }
 }
+
+CodeBlock.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]).isRequired,
+  language: PropTypes.oneOf(languages),
+};
+
+CodeBlock.defaultProps = {
+  language: 'js',
+};

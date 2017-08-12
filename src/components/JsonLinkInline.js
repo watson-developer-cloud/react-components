@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Icon, Colors, Code } from './index';
 
@@ -57,18 +58,19 @@ export default function JsonLinkInline(props) {
 }
 
 JsonLinkInline.propTypes = {
-  json: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object,
+  json: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
   ]).isRequired,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.arrayOf(React.PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.string,
   ]),
-  showJson: React.PropTypes.bool,
-  onExit: React.PropTypes.func,
-  onShow: React.PropTypes.func,  // eslint-disable-line
-  description: React.PropTypes.element,
+  showJson: PropTypes.bool,
+  onExit: PropTypes.func,
+  onShow: PropTypes.func,  // eslint-disable-line
+  description: PropTypes.element,
 };
 
 JsonLinkInline.defaultProps = {

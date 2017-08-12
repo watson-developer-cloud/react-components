@@ -2,12 +2,13 @@ import React from 'react';
 import InputWithButton from '../../../src/components/InputWithButton';
 import Code from '../../../src/components/Code';
 
-export default React.createClass({
-  getInitialState() {
-    return {
+export default class InputWithButtonExamples extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       submitText: '',
     };
-  },
+  }
 
   render() {
     return (
@@ -32,5 +33,5 @@ export default React.createClass({
         </div>
       </section>
     );
-  },
-});
+  }
+}

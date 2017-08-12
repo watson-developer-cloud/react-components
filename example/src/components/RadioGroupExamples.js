@@ -1,29 +1,21 @@
-
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { RadioGroup, Radio } from '../../../src/components';
 import Code from '../../../src/components/Code';
 
-
-const FooBarBazRadio = React.createClass({
-  propTypes: {
-    name: PropTypes.string.isRequired,
-    tabStyle: PropTypes.bool,
-  },
-
-  getDefaultProps() {
-    return {
-      tabStyle: false,
+export class FooBarBazRadio extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedValue: 'foo',
     };
-  },
-
-  getInitialState() {
-    return { selectedValue: 'foo' };
-  },
+    this.handleChange = this.handleChange.bind(this);
+  }
 
   handleChange(value) {
     console.log('Clicked', value); // eslint-disable-line no-console
     this.setState({ selectedValue: value });
-  },
+  }
 
   render() {
     return (
@@ -38,9 +30,17 @@ const FooBarBazRadio = React.createClass({
         <Radio value="baz">Baz</Radio>
       </RadioGroup>
     );
-  },
-});
+  }
+}
 
+FooBarBazRadio.defaultProps = {
+  tabStyle: false,
+};
+
+FooBarBazRadio.propTypes = {
+  name: PropTypes.string.isRequired,
+  tabStyle: PropTypes.bool,
+};
 
 export default function RadioGroupExample() {
   return (
@@ -60,15 +60,16 @@ export default function RadioGroupExample() {
         </div>
         <div className="block-code">
           <Code type="jsx">
-                {`const FooBarBazRadio = React.createClass({
-  getInitialState() {
-    return {selectedValue: 'foo'};
-  },
+                {`class FooBarBazRadio extends React.Component {
+  constructor() {
+    super(props);
+    state = {selectedValue: 'foo',};
+  }
 
   handleChange(value) {
     console.log('FooBarBazRadio Clicked', value)
     this.setState({selectedValue: value});
-  },
+  }
 
   render() {
     return (
@@ -82,7 +83,7 @@ export default function RadioGroupExample() {
       </RadioGroup>
     );
   }
-});`}
+}`}
           </Code>
         </div>
       </div>

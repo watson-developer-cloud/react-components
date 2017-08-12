@@ -1,5 +1,6 @@
 /* eslint max-len:off */
 import React from 'react';
+import PropTypes from 'prop-types';
 import sizes from './Sizes';
 
 export default function Header(prop) {
@@ -57,12 +58,12 @@ export default function Header(prop) {
 }
 
 Header.propTypes = {
-  mainBreadcrumbs: React.PropTypes.string,
-  mainBreadcrumbsUrl: React.PropTypes.string,
-  subBreadcrumbs: React.PropTypes.string,
-  subBreadcrumbsUrl: React.PropTypes.string,
-  hasWordmark: React.PropTypes.bool,
-  size: React.PropTypes.oneOf(sizes),
+  mainBreadcrumbs: PropTypes.string,
+  mainBreadcrumbsUrl: PropTypes.string,
+  subBreadcrumbs: PropTypes.string,
+  subBreadcrumbsUrl: PropTypes.string,
+  hasWordmark: PropTypes.bool,
+  size: PropTypes.oneOf(sizes),
 };
 
 Header.defaultProps = {
