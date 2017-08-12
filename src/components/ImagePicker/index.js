@@ -18,10 +18,6 @@ export default class ImagePicker extends React.Component {
       isDragging: false,
     };
 
-    // no image selected
-    // if (!this.props.initialPreviewImage || this.props.initialPreviewImage === null) {
-    //   this.state;
-    // }
 
     // image tile is already selected
     if (this.props.initialPreviewImage && this.props.initialPreviewImage !== null) {
