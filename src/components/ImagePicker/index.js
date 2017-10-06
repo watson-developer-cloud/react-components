@@ -207,7 +207,7 @@ export default class ImagePicker extends React.Component {
                   onDropRejected={this.onDropRejected}
                 >
                   <div className="image-picker--tile-input-description">
-                    Select or drag an image relative to the shopping category
+                    Select or drag an image
                   </div>
                   <div className="image-picker--tile-input-icon">
                     <Icon type="plus" size="regular" />
