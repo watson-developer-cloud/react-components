@@ -22,11 +22,11 @@ export default class CodeBlock extends React.Component {
 
   render() {
     const lang = this.props.language;
-    const lineNum = this.props.lineNumbers;
+    const lineNum = this.props.lineNumbers ? 'line-numbers' : '';
 
     return (
       <div className="code-block--code">
-        <pre className={`base--pre ${lineNum ? 'line-numbers' : '' }`}>
+        <pre className={`base--pre ${lineNum}`}>
           <PrismCode className={`prism language-${lang}`}>
             {this.props.children}
           </PrismCode>
