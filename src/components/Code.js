@@ -39,8 +39,10 @@ export default class CodeBlock extends React.Component {
 CodeBlock.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.element]).isRequired,
   language: PropTypes.oneOf(languages),
+  lineNumbers: PropTypes.bool,
 };
 
 CodeBlock.defaultProps = {
   language: 'js',
+  lineNumbers: false,
 };
