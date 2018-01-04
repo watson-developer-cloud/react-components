@@ -88,6 +88,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.2.3",
     "minifyify": "^7.1.0",
+    "pre-commit": "^1.2.2",
     "react-dom": "^15.4.2",
     "uglifyify": "^3.0.2",
     "vinyl-source-stream": "^1.1.0"
@@ -109,5 +110,8 @@
     "react": "^0.14.0 || ^15.3.0",
     "react-dom": "^0.14.0 || ^15.3.0",
     "prismjs": "^1.5.1"
-  }
+  },
+  "pre-commit": [
+    "test"
+  ]
 }

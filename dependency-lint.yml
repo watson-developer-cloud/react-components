@@ -46,6 +46,8 @@ ignoreErrors:
     # css dependencies
     - watson-ui-component
 
+    # pre-commit
+    - pre-commit
 requiredModules:
   files:
     dev:
