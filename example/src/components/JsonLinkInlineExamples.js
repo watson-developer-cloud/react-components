@@ -59,7 +59,7 @@ export default class JsonLinkInlineExamples extends React.Component {
             onShow={this.onShow}
             description={<p>This is a description for the JsonLinkInline component.</p>}
           />
-          <Code type="jsx">
+          <Code type="jsx" lineNumbers>
 {`<JsonLinkInline
   json={{ some json object or string }}
   showJson={ boolean to toggle json display }
