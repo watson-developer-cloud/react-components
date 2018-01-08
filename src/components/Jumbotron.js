@@ -71,7 +71,7 @@ export default function Jumbotron(props) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Start free in Bluemix
+                    Start for free in IBM Cloud
                   </a>
                 </li>
               ) : null}
