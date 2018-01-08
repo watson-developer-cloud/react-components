@@ -17,7 +17,6 @@ export default function CodeExamples() {
   </ul>
 </div>`}
           </Code>
-
         </div>
         <div className="block-code">
           <Code language="jsx">
@@ -42,6 +41,37 @@ import { Code } from 'watson-react-components';
           <p>See the PrismJS website for a list of <a className="base--a" href="http://prismjs.com/#languages-list">available languages</a>.</p>
         </div>
       </div>
+
+
+      <div className="row">
+        <div className="block-example">
+        <p>&nbsp;</p>
+          <Code language="html" lineNumbers>
+{`<div>
+  <ul>
+    <li> foo </li>
+    <li> bar </li>
+  </ul>
+</div>`}
+          </Code>
+        </div>
+        <div className="block-code">
+          <p>To enable line numbers, add <code>lineNumbers</code> attribute</p>
+
+          <Code language="jsx">
+{`<Code language="html" lineNumbers>
+{\`<div>
+  <ul>
+    <li> foo </li>
+    <li> bar </li>
+  </ul>
+</div>\`}
+</Code>
+`}</Code>
+        </div>
+      </div>
+
+
     </section>
   );
 }
