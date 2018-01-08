@@ -30,6 +30,7 @@ export default class JsonLinkInlineExamples extends React.Component {
     this.state = {
       json: initialJson,
       showJson: false,
+      lineNumbers: true,
     };
     this.onExit = this.onExit.bind(this);
     this.onShow = this.onShow.bind(this);
@@ -58,6 +59,7 @@ export default class JsonLinkInlineExamples extends React.Component {
             onExit={this.onExit}
             onShow={this.onShow}
             description={<p>This is a description for the JsonLinkInline component.</p>}
+            lineNumbers={this.state.lineNumbers}
           />
           <Code type="jsx">
 {`<JsonLinkInline
@@ -66,6 +68,7 @@ export default class JsonLinkInlineExamples extends React.Component {
   onExit={ callback function for when exit button is clicked }
   onShow={ callback function for when json link is clicked }
   description={<p>This is a description for the JsonLinkInline component.</p>}
+  lineNumbers={ boolean to toggle line numbers }
 />`}
           </Code>
         </div>

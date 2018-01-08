@@ -41,7 +41,7 @@ export default function JsonLinkInline(props) {
           { 'json-link-inline--overlay_show': props.showJson }
         )}
       >
-        <Code language="json">
+        <Code language="json" lineNumbers={props.lineNumbers}>
           {JSON.stringify(normalizeJson(props.json), null, 1)}
         </Code>
         <button
@@ -79,4 +79,5 @@ JsonLinkInline.defaultProps = {
   description: <div />,
   onExit: () => {},
   onShow: () => {},
+  lineNumbers: false,
 };
