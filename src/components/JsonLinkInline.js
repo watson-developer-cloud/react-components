@@ -71,6 +71,7 @@ JsonLinkInline.propTypes = {
   onExit: PropTypes.func,
   onShow: PropTypes.func,  // eslint-disable-line
   description: PropTypes.element,
+  lineNumbers: PropTypes.bool,
 };
 
 JsonLinkInline.defaultProps = {
