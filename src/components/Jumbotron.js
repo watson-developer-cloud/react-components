@@ -15,6 +15,9 @@ export default function Jumbotron(props) {
           </h2>
           <p className="base--p jumbotron--description description">
             {props.description}
+            <br />
+            <br />
+            This system is for demonstration purposes only and is not intended to process Personal Data. No Personal Data is to be entered into this system as it may not have the necessary controls in place to meet the requirements of the General Data Protection Regulation (EU) 2016/679.
           </p>
         </div>
         {props.version !== 'GA' ?
