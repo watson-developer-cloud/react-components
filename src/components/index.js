@@ -21,6 +21,6 @@ export Colors from './Colors';
 
 export { Icon } from './Icon';
 
-export { RadioGroup, Radio } from './RadioGroup.js';
-export TextInput from './TextInput.js';
+export { RadioGroup, Radio } from './RadioGroup';
+export TextInput from './TextInput';
 export ButtonsGroup from './ButtonsGroup';

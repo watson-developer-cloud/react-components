@@ -1,6 +1,6 @@
 language: node_js
 sudo: true
-node_js: 6
+node_js: 8
 cache:
   directories:
     - node_modules
@@ -9,13 +9,11 @@ script:
 - npm run build
 - npm install -g gulp
 deploy:
-- provider: npm
-  email: nathan@nfriedly.com
-  api_key:
-    secure: I674Sseu3U7cJSIqEDIhiQUQy16CvOdQNc7hJVVb07GVzlGk7J8dTDroT+5MoWsepVZK2qBfW+whEyVSzwefCOyQca6aGvhcBpAWmyAY68YsGasCZL573XAL/rXAVT1mcFTz1vk2KUilNqDaP5ADV1tisH0xzTUXW4JMEWYOZ2h1IlLuPCFtv83m9mErzYHLsvxO5Qd043C2qG92zqAAZ4ek88SLzXC6fXl2Behk6PzS/Fc3ZiPp0n35CE0RW0XTmJqXnDSV6aXAYhxGdM+vVoAVZv5noOG301YM/FX89RvpAfR0gTSMno6cANgAkPDGoCP5HZk4q076YE7o3go+0XrIBDK599W3sN1LxomM5NFst6q+8syz59pvGaKbLFZpbfFEqhXF38F7HKqDtMQQetDgJ2MEZHRDZFjL8Sz2E83KxpcWyWW3rgtYszilmaxXTO/Lv4blhQqVeXS30Jsyx1q9eF1SyWw73RiZ2HNRw3PWo6LL4gDntmmgGE7Vq3sOsLohFm9B8hg5Gixs9sLH2SPqDJZl1iMx59Ly5uChLN+0bgrLZq3eTJzbVmA27nQZh5G9aWvEGPB583x5i75JWIZFyrz5nLR+oqUOaghPXV50FDsZf5P7wE1X3DGYUcUQ+0ayAL+3BPQShDHxbxQwIdLR2yqTSb8LaUlFxNmSD80=
+- provider: script
+  skip_cleanup: true
+  script: npx semantic-release
   on:
-    tags: true
-    repo: watson-developer-cloud/react-components
+    node: 8
 - provider: script
   script: sh scripts/deploy-gh-pages.sh
   on:

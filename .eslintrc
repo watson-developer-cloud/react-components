@@ -6,7 +6,7 @@
   ],
   "parser": "babel-eslint",
   "rules": {
-    "react/require-extension": "off", // deprecated and prints a warning unless explicitly disabled
+    "react/require-extension": "off",
     "react/jsx-filename-extension": ["warn", {
       "extensions": [".js", ".jsx"]
     }],
@@ -24,7 +24,7 @@
       "objects": "always-multiline",
       "imports": "never",
       "exports": "never",
-      "functions": "never", // this one was set to always or always multiline, whic breaks gulp
+      "functions": "never"
     }],
 
     "import/newline-after-import": "off",
