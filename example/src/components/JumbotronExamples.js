@@ -13,8 +13,8 @@ export default function JumbotronExamples() {
           <Jumbotron
             serviceName="Demo title"
             repository="https://github.com/watson-developer-cloud/react-components"
-            documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
-            apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
+            documentation="https://cloud.ibm.com/docs/services/visual-recognition/"
+            apiReference="https://cloud.ibm.com/apidocs/visual-recognition"
             startInBluemix="https://console.ng.bluemix.net/registration/?target=/catalog/services/visual-recognition/"
             version="Beta"
             serviceIcon="images/service-icon.svg"
@@ -26,8 +26,8 @@ export default function JumbotronExamples() {
 {`<Jumbotron
   serviceName="Demo title"
   repository="https://github.com/watson-developer-cloud/react-components"
-  documentation="https://www.ibm.com/watson/developercloud/doc/visual-recognition/"
-  apiReference="https://www.ibm.com/watson/developercloud/visual-recognition/api/v3"
+  documentation="https://cloud.ibm.com/docs/services/visual-recognition/"
+  apiReference="https://cloud.ibm.com/apidocs/visual-recognition/"
   startInBluemix="https://console.ng.bluemix.net/registration/?target=/catalog/services/visual-recognition/"
   version="Beta"
   serviceIcon="images/service-icon.svg"
