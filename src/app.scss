@@ -1,0 +1,596 @@
+// import library sass
+@import '../../src/stylesheets/main.scss';
+
+#root {
+  margin-top: 0px;
+}
+
+.react-icon {
+  text-align: left;
+}
+
+.react-icon-image {
+  margin-top: 0.5rem;
+  max-width: 7rem;
+  max-height: 7rem;
+}
+
+.github-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.top-nav {
+  $top-nav--border-width: 4px;
+
+  background-color: #404041;
+  margin-top: 0;
+  position: relative;
+  z-index: 1000;
+
+  ._container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+  }
+
+  &--wordmark {
+    display: none;
+
+    @include breakpoint(get('medium')) {
+      display: inline-block;
+    }
+  }
+
+  &--wordmark-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:visited {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &--spacer {
+    flex-grow: 1;
+    display: none;
+
+    @include breakpoint(get('medium')) {
+      display: inline-block;
+    }
+  }
+
+  &--nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 0rem;
+    height: 100%;
+
+    @include breakpoint(get('medium')) {
+      width: auto;
+      justify-content: flex-start;
+    }
+  }
+
+  &--nav-li-link {
+    border: none;
+    margin-top: 0rem;
+    height: 100%;
+
+    @include breakpoint(get('medium')) {
+      margin-left: get('rhythm') / 2;
+    }
+
+    &:focus,
+    &:hover {
+      border: none;
+    }
+
+    &:visited {
+      color: color('gray', 20);
+      border: none;
+    }
+  }
+
+  &--nav-li {
+    margin-top: 0rem;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: ms(-1);
+    color: color('gray', 20);
+    border-bottom: $top-nav--border-width solid transparent;
+    border-top: $top-nav--border-width solid transparent;
+    transition: 0.2s;
+
+    .top-nav--nav-li-link.selected &,
+    .top-nav--nav-li-link:hover & {
+      color: #fff;
+      border-bottom: $top-nav--border-width solid color('purple', 10);
+    }
+  }
+
+  @include breakpoint(get('medium')) {
+    padding-bottom: 0;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.flex-layout {
+  display: block;
+  position: static;
+  height: auto;
+  width: auto;
+
+  &--box-1 {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+  }
+
+  @include breakpoint(get('medium')) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0rem;
+    position: absolute;
+    top: 0rem;
+    padding-top: 3rem;
+  }
+}
+
+.home {
+
+  &--left {
+    margin-top: 0;
+
+    @include breakpoint(get('medium')) {
+      @include grid(5);
+    }
+  }
+
+  &--right {
+    margin-top: get('rhythm') / 3;
+
+    @include breakpoint(get('medium')) {
+      @include grid(7, $has-right-gutter: false);
+      margin-top: 0;
+    }
+  }
+
+  &--header {
+    font-size: 0.875em;
+    font-weight: 900;
+    color: color('gray', 50);
+  }
+
+  &--description {
+    font-size: 0.875em;
+    color: color('gray', 80);
+  }
+
+  &--link {
+    color: color('purple', 70);
+
+    &:visited {
+      color: color('purple', 70);
+    }
+
+    &:hover,
+    &:focus {
+      color: color('purple', 50);
+    }
+  }
+}
+
+.navigation {
+
+  &--block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: get('rhythm') * 4;
+    cursor: pointer;
+    color: color('purple', 70);
+
+    &_COOL {
+      background-color: color('cool white', 40);
+
+      @include breakpoint(get('medium')) {
+        @include grid(6);
+        margin-top: 0rem;
+      }
+    }
+
+    &_WARM {
+      background-color: color('warm white', 40);
+
+      @include breakpoint(get('medium')) {
+        @include grid(6, $has-right-gutter: false);
+        margin-top: 0rem;
+      }
+    }
+  }
+
+  &--text {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.content {
+  &--description {
+    margin: get('rhythm') * 2 auto;
+  }
+
+  &--session-container {
+    margin-top: get('rhythm') * 2;
+  }
+
+  &--session-title {
+    color: color('gray', 50);
+    font-size: 0.875rem;
+  }
+
+  &--session-text {
+    color: color('gray', 80);
+    font-size: 0.875rem;
+  }
+
+  &--session-pre {
+    background-color: color('warm white', 30);
+    font-size: 0.875rem;
+  }
+
+  &--content-title {
+    color: color('gray', 50);
+    font-size: 0.875em;
+  }
+
+  &--content-item-container {
+    border-left: 4px solid color('purple', 30);
+    padding-left: get('rhythm') * 7 / 8;
+  }
+
+  &--content-item-container a {
+    text-decoration: none;
+
+    &:nth-of-type(1) .content--content-item {
+      margin-top: 0rem;
+    }
+  }
+
+  &--content-item {
+    font-size: 0.875em;
+    margin-top: get('rhythm') / 4;
+    color: color('purple', 60);
+    text-decoration: none;
+  }
+
+  &--content-container {
+    margin-top: get('rhythm') * 2.5;
+    margin-bottom: get('rhythm') * 2.5;
+  }
+}
+
+.basic-header {
+  color: color('purple', 60);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: ms(0);
+}
+
+.code-block {
+  margin-top: get('rhythm') * 1.5;
+  margin-bottom: get('rhythm') * 2;
+
+  &--ui {
+    margin-top: 0rem;
+    text-align: center;
+  }
+
+  &--code {
+
+  }
+
+  .base--pre {
+    transition: 0.2s;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+.color-tile {
+  height: 8rem;
+  width: 8rem;
+  padding: get('rhythm') / 4;
+  display: inline-block;
+  float: left;
+  margin: 0;
+  $index: 1;
+  $colors: ('purple', 'teal', 'gray', 'white');
+  @each $key in $colors {
+    @each $tone,
+    $color in map-get($ColorPalette, $key) {
+      &:nth-of-type(#{$index}) {
+        background-color: $color;
+        font-weight: get('weight medium');
+
+        &::after {
+          content: "#{$key} #{$tone} | #{$color}";
+          display: none;
+        }
+
+        .base--p {
+          color: set-text-color($color);
+          text-transform: capitalize;
+        }
+      }
+
+      $index: $index + 1;
+    }
+  }
+
+  &--details {
+    margin-top: 0;
+  }
+}
+
+.column-1 {
+  @include grid(6);
+  background-color: color('purple', 50);
+  height: 3rem;
+}
+
+.column-2 {
+  @include grid(3);
+  background-color: color('teal', 50);
+  height: 3rem;
+  margin-top: 0;
+}
+
+.column-3 {
+  @include grid(3, $has-right-gutter: false);
+  background-color: color('gray', 50);
+  height: 3rem;
+  margin-top: 0;
+}
+
+.left-division {
+  @include divisions(2);
+  background-color: color('purple', 30);
+  height: 7rem;
+}
+
+.right-division {
+  @include divisions(2);
+  margin-top: 0;
+  background-color: color('teal', 30);
+  height: 7rem;
+}
+
+.grid-item {
+  @include divisions(5);
+  background-color: color('purple', 50);
+  height: 3rem;
+  margin-top: 0;
+
+  &:nth-of-type(2n) {
+    background-color: color('teal', 50);
+  }
+}
+
+.breakpoint-example-1 {
+  display: block;
+  background-color: color('purple', 50);
+  padding: get('rhythm') / 2;
+  color: get('white');
+
+  @include breakpoint(get('large')) {
+    @include grid(6);
+  }
+}
+
+.breakpoint-example-2 {
+  display: block;
+  background-color: color('teal', 50);
+  padding: get('rhythm') / 2;
+  color: get('white');
+  margin-top: 0;
+
+  @include breakpoint(get('large')) {
+    @include grid(6, $has-right-gutter: false);
+  }
+}
+
+.element-with-dark-text {
+  display: block;
+  padding: get('rhythm') / 2;
+  background-color: color('purple', 20);
+  color: set-text-color(color('purple', 20));
+}
+
+.element-with-light-text {
+  display: block;
+  padding: get('rhythm') / 2;
+  background-color: color('purple', 80);
+  color: set-text-color(color('purple', 80));
+}
+
+.lots-of-colors {
+  display: block;
+  padding: get('rhythm') / 2;
+  background-color: color('white', 40);
+
+  span:nth-of-type(1) {
+    color: color('green', 50);
+  }
+
+  span:nth-of-type(2) {
+    color: color('blue', 40);
+  }
+
+  span:nth-of-type(3) {
+    color: color('yellow', 30);
+  }
+}
+
+.get-example {
+  display: block;
+  padding: get('rhythm') / 2;
+  background-color: get('secondary color');
+  color: get('white');
+  margin-top: 0;
+
+  @include breakpoint(get('medium')) {
+    @include grid(6);
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+  }
+}
+
+.right-pane {
+  height: 100%;
+  width: 75%;
+  margin-left: 25%;
+  margin-top: 0;
+}
+
+.right-pane ._container {
+  margin-left: get('rhythm') * 3 / 2;
+}
+
+.base--pre {
+  .components & {
+    background-color: color('cool white', 30);
+  }
+
+  .style & {
+    background-color: color('warm white', 30);
+  }
+}
+
+// example sass goes here
+
+code[class*="language-"], pre[class*="language-"] {
+    -moz-hyphens: none;
+    -moz-tab-size: 0;
+    tab-size: 0;
+    color: #000;
+    direction: ltr;
+    line-height: 1.5;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+}
+
+.example {
+  padding: 1em;
+}
+.block, .example {
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  height: 100%;
+}
+
+.icon-example .icon {
+  margin-right: .3em;
+  vertical-align: middle;
+}
+
+.block-example {
+  display: block;
+  padding: get('rhythm') / 2;
+  //color: get('white');
+
+  @include breakpoint(get('large')) {
+    @include grid(6);
+  }
+}
+
+.block-code {
+  display: block;
+  padding: get('rhythm') / 2;
+  //color: get('white');
+  margin-top: 0;
+
+  @include breakpoint(get('large')) {
+    @include grid(6, $has-right-gutter: false);
+  }
+}
+
+#ArrowBox .arrow-box .base--p {
+  color: white;
+}
+
+.arrow-box-container {
+  width: 10rem;
+  margin: auto;
+  background-color: color('gray', 10);
+  display: block;
+  padding: 1rem;
+}
+
+#Colors li {
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+  > code {
+    position: relative;
+    white-space: inherit;
+    overflow-y: visible;
+  }
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  margin-top: 0;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+  margin-top: 0;
+  &:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+  }
+}
