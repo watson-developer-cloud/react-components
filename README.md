@@ -1,5 +1,7 @@
 # Watson Developer Cloud React Components
 
+DEPRECATED: this repo is no longer actively maintained. It can still be used as reference, but may contain outdated or unpatched code. If you are looking to build React UIs following IBM's design guidelines, please refer to the [Carbon Design System](https://github.com/carbon-design-system/carbon).
+
 [![Build Status](https://travis-ci.org/watson-developer-cloud/react-components.svg?branch=master)](https://travis-ci.org/watson-developer-cloud/react-components)
 [![npm-version](https://img.shields.io/npm/v/watson-react-components.svg)](https://www.npmjs.com/package/watson-react-components)
 
@@ -7,6 +9,8 @@
 A collection of [React](https://facebook.github.io/react/) components to write web applications using the Watson APIs.
 
 Documentation: https://watson-developer-cloud.github.io/react-components/
+
+
 
 ## Getting Started
 
